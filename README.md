@@ -1,7 +1,41 @@
-# Vue 3 + Vite
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# Cisco Training portal
 
-## Recommended IDE Setup
+E' un sito per allenarsi a imparare gli argomenti che vanno dal capitolo 1 al capitolo 10 di cisco versione 7.0
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+
+## Acknowledgements
+
+ - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+ - [Awesome README](https://github.com/matiassingers/awesome-readme)
+ - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+
+
+## API Reference
+
+#### Get all items
+
+```http
+  GET /api/file.json
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | **Required**. Your API key |
+
+#### Get item
+
+
+## Authors
+
+- [@Matteo0099](https://www.github.com/Matteo0099)
+- [@snakeout96](https://www.github.com/snakeout96)
+## Demo
+
+Insert gif or link to demo
+
+- [site](https://ciscotraining.vercel.app)
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
