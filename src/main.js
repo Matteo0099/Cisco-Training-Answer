@@ -2,6 +2,10 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import './style.css'
 
+//analytics vercel
+import { inject } from '@vercel/analytics';
+inject();
+
 //Create router
 import { createRouter, createWebHistory } from 'vue-router'
 // all pages
