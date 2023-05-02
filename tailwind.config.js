@@ -4,13 +4,6 @@ export default {
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
-  theme: {
-    extend: {
-      fontFamily: {
-        "Roboto": ["Roboto", "sans - serif"],
-        "mono": ["monospace", "sans - serif"],
-      }
-    },
-  },
+  theme: {},
   plugins: [],
 }
