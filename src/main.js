@@ -10,11 +10,16 @@ inject();
 import { createRouter, createWebHistory } from 'vue-router'
 // all pages
 import cap1 from './views/cap1.vue'
-//cap1
-//cap2
-//cap3
-//cap4
-//...
+import cap2 from './views/cap2.vue'
+import cap3 from './views/cap3.vue'
+import cap4 from './views/cap4.vue'
+import cap5 from './views/cap5.vue'
+import cap6 from './views/cap6.vue'
+import cap7 from './views/cap7.vue'
+import cap8 from './views/cap8.vue'
+import cap9 from './views/cap9.vue'
+import cap10 from './views/cap10.vue'
+
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -27,6 +32,51 @@ const router = createRouter({
       path: '/cap1',
       name: 'cap1',
       component: cap1
+    },
+    {
+      path: '/cap2',
+      name: 'cap2',
+      component: cap2
+    },
+    {
+      path: '/cap3',
+      name: 'cap3',
+      component: cap3
+    },
+    {
+      path: '/cap4',
+      name: 'cap4',
+      component: cap4
+    },
+    {
+      path: '/cap5',
+      name: 'cap5',
+      component: cap5
+    },
+    {
+      path: '/cap6',
+      name: 'cap6',
+      component: cap6
+    },
+    {
+      path: '/cap7',
+      name: 'cap7',
+      component: cap7
+    },
+    {
+      path: '/cap8',
+      name: 'cap8',
+      component: cap8
+    },
+    {
+      path: '/cap9',
+      name: 'cap9',
+      component: cap9
+    },
+    {
+      path: '/cap10',
+      name: 'cap10',
+      component: cap10
     },
   ]
 })

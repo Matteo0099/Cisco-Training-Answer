@@ -6,13 +6,14 @@ import Footer from './components/Footer.vue';
 </script>
 
 <template>
-  <div class="w-full h-full">
-    <main
-      class="container h-screen font-sans grid mx-auto max-w-2xl rounded-xl">
+  <div class="w-full min-h-full">
+    <div class="btn-dark absolute right-6 top-6 md:right-8">
+      <button><i class="bi bi-moon text-2xl sm:text3xl"></i></button>
+    </div>
+    <main class="container min-h-screen font-sans grid mx-auto max-w-2xl rounded-xl">
       <!-- <Navbar></Navbar> -->
       <Navbar></Navbar> <!-- pagine renderizzate ↓ -->
-      <div class="pages container mx-auto mt-16 max-w-3xl 
-        text-left min-h-fit">
+      <div class="pages container mx-auto max-w-3xl text-left min-h-fit">
         <!-- for content of the page -->
         <router-view v-slot="{ Component, route }">
           <div :key="route.name" class="container mx-auto max-w-full min-h-full overflow-x-hidden bg-white">
@@ -20,7 +21,7 @@ import Footer from './components/Footer.vue';
           </div>
         </router-view>
       </div>
-      <Footer class="mt-auto"></Footer>
+      <Footer class="relative"></Footer>
     </main>
   </div>
 </template>
@@ -28,19 +29,4 @@ import Footer from './components/Footer.vue';
 <style lang="css">
 /* icons */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 275ms ease;
-  -webkit-transition: all 275ms ease;
-  -moz-transition: all 275ms ease;
-  -o-transition: all 275ms ease;
-  -ms-transition: all 275ms ease;
-  opacity: 1;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0
-}
 </style>
