@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full">
+  <div class="w-full mt-16">
     <h1 class="font-bold text-xl sm:text-2xl my-4 mx-auto">
       Cisco Answers cap1-10
     </h1>

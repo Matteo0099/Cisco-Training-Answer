@@ -2,23 +2,25 @@
 /**routerlink */
 import { RouterView } from 'vue-router';
 import Navbar from './components/nav/Navbar.vue';
+import Footer from './components/Footer.vue';
 </script>
 
 <template>
   <div class="w-full h-full">
     <main
-      class="container h-screen min-h-[100dvh] font-sans flex flex-col justify-center items-center mx-auto max-w-2xl rounded-xl">
+      class="container h-screen font-sans grid mx-auto max-w-2xl rounded-xl">
       <!-- <Navbar></Navbar> -->
       <Navbar></Navbar> <!-- pagine renderizzate ↓ -->
-      <div class="pages container mx-auto mt-16 max-w-3xl flex flex-col 
-        text-left justify-center items-center min-h-fit">
+      <div class="pages container mx-auto mt-16 max-w-3xl 
+        text-left min-h-fit">
         <!-- for content of the page -->
         <router-view v-slot="{ Component, route }">
-          <div :key="route.name" class="container mx-auto max-w-full overflow-x-hidden flex flex-col bg-white">
+          <div :key="route.name" class="container mx-auto max-w-full min-h-full overflow-x-hidden bg-white">
             <component :is="Component"></component>
           </div>
         </router-view>
       </div>
+      <Footer class="mt-auto"></Footer>
     </main>
   </div>
 </template>
