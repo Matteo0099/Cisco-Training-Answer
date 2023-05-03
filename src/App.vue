@@ -8,9 +8,10 @@ import btnDark from './components/btn-dark.vue';
 
 <template>
   <div class="w-full min-h-full top-0">
-    <div class="btn-dark absolute right-8 top-2 md:right-16">
+    <div class="btn-dark absolute right-8 top-8 md:right-16">
       <btnDark />
-      <div id="google_translate_element"></div>
+      <!-- google translate -->
+      <translate />
     </div>
     <main class="container min-h-screen font-sans grid px-4 sm:p-0 sm:mx-auto max-w-2xl rounded-xl">
       <!-- <Navbar></Navbar> -->
@@ -41,14 +42,10 @@ import btnDark from './components/btn-dark.vue';
   border-radius: 8px !important;
 }
 
-/*.goog-te-gadget:not(.goog-te-gadget.thenew) {
-  display: none !important;
-}*/
-
 .light-theme,
 .dark-theme,
 html {
-  transition: background 250ms ease
+  transition: all 250ms ease !important
 }
 
 .light-theme,
