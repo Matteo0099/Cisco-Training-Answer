@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full mt-[33%] h-fit">
+  <div class="w-full mt-[17.5%] 2xl:mt-[25%] h-fit">
     <h1 class="font-bold text-xl sm:text-2xl my-4 mx-auto">
       Cisco Answers cap1-10
     </h1>
