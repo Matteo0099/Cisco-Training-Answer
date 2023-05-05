@@ -5,8 +5,8 @@
         Answer of cap 2
       </h1>
       <!-- container 1-->
-      <!-- <ul class="min-h-screen list-none relative mt-4 pl-4">
-        <li v-for="(question, index) in data.chapters[0].questions" class="py-4 m-2 sm:mx-auto px-2">
+      <ul class="min-h-screen list-none relative mt-4 pl-4">
+        <li v-for="(question, index) in data.questions" class="py-4 m-2 sm:mx-auto px-2">
           <h1 class="home text-2xl"> {{ index + 1 }} - {{ question.question }} </h1>
           <ul class="list-disc w-full pl-8">
             <li v-for="option in question.options">
@@ -17,7 +17,7 @@
             Answer: <span class="font-bold text-lg sm:text-xl text-red-500">{{ question.answer }}</span>
           </p>
         </li>
-      </ul> -->
+      </ul>
     </div>
   </div>
 </template>

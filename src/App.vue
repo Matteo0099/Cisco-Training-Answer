@@ -7,7 +7,7 @@ import btnDark from './components/btn-dark.vue';
 </script>
 
 <template>
-  <div class="w-full min-h-full top-0">
+  <div class="w-full max-w-full min-h-full top-0">
     <div class="btn-dark absolute right-4 top-2 md:top-8 md:right-16">
       <btnDark />
       <!-- google translate -->
