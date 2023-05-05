@@ -3,7 +3,7 @@
     <footer class="w-full min-h-[85px] border p-2 mt-10 rounded-lg flex flex-col justify-center items-center text-base">
       <div class="mx-auto min-h-full max-w-3xl text-center flex flex-col">
         <span>copyright Cisco Answer &copy; 2023</span>
-        <span>by @noyaz86 @Matteo0099</span>
+        <span>by @noyazz @Matteo0099</span>
         <!-- info -->
         <button @click="openModal">more info</button>
         <dialog class="modal rounded-lg">

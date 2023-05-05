@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts">
-import data from '../data/ITE_datas_1.json'
+import data from "../../src/data/ITE/5.json"
 export default {
   data() {
     return {

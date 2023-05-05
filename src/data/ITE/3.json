@@ -1,0 +1,543 @@
+{
+    "examData": {
+        "holder": "Cisco Netacad",
+        "examName": "IT Essentials",
+        "abbreviation": "ITE",
+        "cap": 1,
+        "versionName": "v7",
+        "versions": [
+            7,
+            7.2
+        ],
+        "years": [
+            2022,
+            2023
+        ]
+    },
+    "questions": [
+        {
+            "question": "Which two considerations would be of the greatest importance when building a workstation that will run multiple virtual machines? (Choose two.)",
+            "options": [
+                "amount of RAM",
+                "number of CPU cores",
+                "water cooling",
+                "powerful video card",
+                "high-end sound card"
+            ],
+            "answer": [
+                "amount of RAM",
+                "number of CPU cores"
+            ]
+        },
+        {
+            "question": "Which two components are commonly replaced when a computer system with a newer motherboard is being upgraded? (Choose two.)",
+            "options": [
+                "RAM",
+                "hard disk drive",
+                "CPU",
+                "optical drive",
+                "CMOS battery",
+                "adapter card"
+            ],
+            "answer": [
+                "RAM",
+                "CPU"
+            ]
+        },
+        {
+            "question": "What are two reasons for installing a second hard disk drive inside an existing computer? (Choose two.)",
+            "options": [
+                "to support a RAID array",
+                "to store BIOS configuration settings",
+                "to store the system swap file",
+                "to increase CPU speed",
+                "to allow access to a secondary display output"
+            ],
+            "answer": [
+                "to support a RAID array",
+                "to store the system swap file"
+            ]
+        },
+        {
+            "question": "A technician has just finished assembling a new computer. When the computer is powered up for the first time, the POST discovers a problem. How does the POST indicate the error?",
+            "options": [
+                "It issues a number of short beeps.",
+                "The LED on the front of the computer case flashes a number of times.",
+                "It places an error message in the BIOS.",
+                "It locks the keyboard."
+            ],
+            "answer": "It issues a number of short beeps."
+        },
+        {
+            "question": "What is a function of the BIOS?",
+            "options": [
+                "enables a computer to connect to a network",
+                "provides temporary data storage for the CPU",
+                "performs a check on all internal components",
+                "provides graphic capabilities for games and applications"
+            ],
+            "answer": "performs a check on all internal components"
+        },
+        {
+            "question": "A technician has assembled a new computer and must now configure the BIOS. At which point must a key be pressed to start the BIOS setup program?",
+            "options": [
+                "before the computer is powered on",
+                "during the Windows load process",
+                "during the POST",
+                "after the POST, but before Windows starts to load"
+            ],
+            "answer": "during the POST"
+        },
+        {
+            "question": "How does an inline UPS protect computer equipment against electrical power brownouts and blackouts?",
+            "options": [
+                "by grounding excess electrical voltage",
+                "by using a battery to supply a constant level of voltage",
+                "by switching from main power to a standby power source",
+                "by stopping the flow of voltage to the computer"
+            ],
+            "answer": "by using a battery to supply a constant level of voltage"
+        },
+        {
+            "question": "Which condition refers to a reduced voltage level of AC power that lasts for an extended period of time?",
+            "options": [
+                "brownout",
+                "sag",
+                "spike",
+                "surge"
+            ],
+            "answer": "brownout"
+        },
+        {
+            "question": "How should a technician dispose of an empty inkjet printer cartridge?",
+            "options": [
+                "Refill it.",
+                "Throw it away.",
+                "Follow local regulations for disposal.",
+                "Give it back to the customer."
+            ],
+            "answer": "Follow local regulations for disposal."
+        },
+        {
+            "question": "What makes CRT monitor disposal dangerous for a technician who is handling the disposal?",
+            "options": [
+                "potential breathing hazards",
+                "potential explosive materials",
+                "potential residual high voltage",
+                "potential health-damaging chemicals"
+            ],
+            "answer": "potential residual high voltage"
+        },
+        {
+            "question": "Which type of interface was originally developed for high-definition televisions and is also popular to use with computers to connect audio and video devices?",
+            "options": [
+                "FireWire",
+                "DVI",
+                "HDMI",
+                "USB",
+                "VGA"
+            ],
+            "answer": "HDMI"
+        },
+        {
+            "question": "What is indicated by the contrast ratio of a monitor?",
+            "options": [
+                "the difference in the intensity of light between the brightest white and darkest black that can be displayed",
+                "how often the picture image is refreshed",
+                "the total number of pixels that make up the picture",
+                "the ratio of the horizontal and vertical viewing areas of the monitor"
+            ],
+            "answer": "the difference in the intensity of light between the brightest white and darkest black that can be displayed"
+        },
+        {
+            "question": "What electrical unit refers to the number of electrons moving through a circuit per second?",
+            "options": [
+                "current",
+                "voltage",
+                "resistance",
+                "power"
+            ],
+            "answer": "current"
+        },
+        {
+            "question": "What characteristic of electricity is expressed in watts?",
+            "options": [
+                "the amount of work required to move electrons through a circuit",
+                "the resistance to the flow of current in a circuit",
+                "the amount of electrons flowing through a circuit per second",
+                "the work required to move electrons through a circuit multiplied by the number of electrons flowing through a circuit per second"
+            ],
+            "answer": "the work required to move electrons through a circuit multiplied by the number of electrons flowing through a circuit per second"
+        },
+        {
+            "question": "Which is a BIOS security feature that can prevent data from being read from a hard drive even if the hard drive is moved to another computer?",
+            "options": [
+                "drive encryption",
+                "RAID",
+                "secure boot",
+                "BIOS passwords"
+            ],
+            "answer": "drive encryption"
+        },
+        {
+            "question": "What data is stored in the CMOS memory chip?",
+            "options": [
+                "BIOS settings",
+                "Windows configuration settings",
+                "user login information",
+                "device driver"
+            ],
+            "answer": "BIOS settings"
+        },
+        {
+            "question": "What is the purpose of LoJack?",
+            "options": [
+                "It allows the owner of a device to remotely locate, lock, or delete all files from the device.",
+                "It ensures that a computer will only boot an operating system that is trusted by the motherboard manufacturer.",
+                "It provides passwords for different levels of access to the BIOS.",
+                "It encrypts data on hard drives to prevent access without the correct password."
+            ],
+            "answer": "It allows the owner of a device to remotely locate, lock, or delete all files from the device."
+        },
+        {
+            "question": "What is one purpose of adjusting the clock speed within the BIOS configuration settings?",
+            "options": [
+                "to allow a computer to run multiple operating systems in files or partitions",
+                "to change the order of the bootable partitions",
+                "to disable devices that are not needed or used by the computer",
+                "to allow the computer to run slower and cooler"
+            ],
+            "answer": "to allow the computer to run slower and cooler"
+        },
+        {
+            "question": "A user playing a game on a gaming PC with a standard EIDE 5400 RPM hard drive finds the performance unsatisfactory. Which hard drive upgrade would improve performance while providing more reliability and more energy efficiency?",
+            "options": [
+                "a 7200 RPM EIDE hard drive",
+                "a 7200 RPM SATA hard drive",
+                "a 10,000 RPM SATA hard drive",
+                "an SSD"
+            ],
+            "answer": "an SSD"
+        },
+        {
+            "question": "Which security feature in modern CPUs protects memory areas that contain part of the operating system from malware attacks?",
+            "options": [
+                "encryption",
+                "TPM",
+                "execute disable bit",
+                "LoJack"
+            ],
+            "answer": "execute disable bit"
+        },
+        {
+            "question": "A user reports that every morning when a particular computer is turned on, the configuration settings on that computer have to be reset. What action should be taken to remedy this situation?",
+            "options": [
+                "Replace the motherboard.",
+                "Replace the CMOS battery.",
+                "Move the jumpers.",
+                "Upgrade the BIOS."
+            ],
+            "answer": "Replace the CMOS battery."
+        },
+        {
+            "question": "A data analyst has asked a technician to help protect locally stored data by installing a RAID. What is the minimum number of drives the technician has to install if configuring a RAID level 6?",
+            "options": [
+                "3",
+                "5",
+                "6",
+                "7"
+            ],
+            "answer": "3"
+        },
+        {
+            "question": "A data analyst has asked a technician to help protect locally stored data by installing a RAID. What is the minimum number of drives the technician has to install if configuring a RAID level 10?",
+            "options": [
+                "4",
+                "5",
+                "6",
+                "7"
+            ],
+            "answer": "4"
+        },
+        {
+            "question": "A data analyst has asked a technician to help protect locally stored data by installing a RAID. What is the minimum number of drives the technician has to install if configuring a RAID level 10?",
+            "options": [
+                "4",
+                "6",
+                "10",
+                "7"
+            ],
+            "answer": "4"
+        },
+        {
+            "question": "A data analyst has asked a technician to help protect locally stored data by installing a RAID. What is the minimum number of drives the technician has to install if configuring a RAID level 1?",
+            "options": [
+                "2",
+                "6",
+                "10",
+                "7"
+            ],
+            "answer": "2"
+        },
+        {
+            "question": "A data analyst has asked a technician to help protect locally stored data by installing a RAID. What is the minimum number of drives the technician has to install if configuring a RAID level 5?",
+            "options": [
+                "3",
+                "7",
+                "6",
+                "10"
+            ],
+            "answer": "3"
+        },
+        {
+            "question": "A data analyst has asked a technician to help protect locally stored data by installing a RAID. What is the minimum number of drives the technician has to install if configuring a RAID level 5?",
+            "options": [
+                "3",
+                "1",
+                "7",
+                "10"
+            ],
+            "answer": "3"
+        },
+        {
+            "question": "A data analyst has asked a technician to help protect locally stored data by installing a RAID. What is the minimum number of drives the technician has to install if configuring a RAID level 6?",
+            "options": [
+                "3",
+                "1",
+                "7",
+                "10"
+            ],
+            "answer": "3"
+        },
+        {
+            "question": "A data analyst has asked a technician to help protect locally stored data by installing a RAID. What is the minimum number of drives the technician has to install if configuring a RAID level 6?",
+            "options": [
+                "3",
+                "1",
+                "5",
+                "6"
+            ],
+            "answer": "3"
+        },
+        {
+            "question": "A data analyst has asked a technician to help protect locally stored data by installing a RAID. What is the minimum number of drives the technician has to install if configuring a RAID level 10?",
+            "options": [
+                "4",
+                "5",
+                "1",
+                "6"
+            ],
+            "answer": "4"
+        },
+        {
+            "question": "A data analyst has asked a technician to help protect locally stored data by installing a RAID. What is the minimum number of drives the technician has to install if configuring a RAID level 1?",
+            "options": [
+                "2",
+                "6",
+                "1",
+                "5"
+            ],
+            "answer": "2"
+        },
+        {
+            "question": "A technician has been asked to configure several computers with RAID. The customer needs protection if one drive fails, fast access, and drive capacity. Which RAID should the technician install?",
+            "options": [
+                "RAID 5",
+                "RAID 4",
+                "RAID 2",
+                "RAID 3"
+            ],
+            "answer": "RAID 5"
+        },
+        {
+            "question": "A technician has been asked to configure several computers with RAID. The customer needs protection if two drive fails and wants as much drive capacity as possible. Which RAID should the technician install?",
+            "options": [
+                "RAID 6",
+                "RAID 7",
+                "RAID 2",
+                "RAID 3"
+            ],
+            "answer": "RAID 6"
+        },
+        {
+            "question": "A technician has been asked to configure several computers with RAID. The customer needs protection if two drive fails and wants as much drive capacity as possible. Which RAID should the technician install?",
+            "options": [
+                "RAID 6",
+                "RAID 7",
+                "RAID 8",
+                "RAID 4"
+            ],
+            "answer": "RAID 6"
+        },
+        {
+            "question": "A technician has been asked to configure several computers with RAID. The customer needs protection for one drive failure and only has room in the computer for two drives. Which RAID should the technician install?",
+            "options": [
+                "RAID 1",
+                "RAID 7",
+                "RAID 8",
+                "RAID 4"
+            ],
+            "answer": "RAID 1"
+        },
+        {
+            "question": "A technician has been asked to configure several computers with RAID. The customer wants RAID and full drive capacity, but does not care about a drive failure, because all data is constantly backed up. The computer where the RAID is to be installed only has room for two drives. Which RAID should the technician install?",
+            "options": [
+                "RAID 0",
+                "RAID 8",
+                "RAID 7",
+                "RAID 4"
+            ],
+            "answer": "RAID 0"
+        },
+        {
+            "question": "A technician has been asked to configure several computers with RAID. The customer wants data to be stored on two drives that are used to maximum capacity and does not care if a single drive fails, because data is backed up hourly. Which RAID should the technician install?",
+            "options": [
+                "RAID 0",
+                "RAID 8",
+                "RAID 7",
+                "RAID 4"
+            ],
+            "answer": "RAID 0"
+        },
+        {
+            "question": "A technician has been asked to configure several computers with RAID. The customer wants data to be stored on three drives and protection for one drive failure. Which RAID should the technician install?",
+            "options": [
+                "RAID 5",
+                "RAID 2",
+                "RAID 8",
+                "RAID 7"
+            ],
+            "answer": "RAID 5"
+        },
+        {
+            "question": "A technician has been asked to configure several computers with RAID. The customer wants three drives to be used and protection if one drive fails. Which RAID should the technician install?",
+            "options": [
+                "RAID 5",
+                "RAID 2",
+                "RAID 4",
+                "RAID 3"
+            ],
+            "answer": "RAID 5"
+        },
+        {
+            "question": "A technician has been asked to configure several computers with RAID. The customer wants to incorporate mirroring and striping as part of the RAID. Which RAID should the technician install?",
+            "options": [
+                "RAID 10",
+                "RAID 3",
+                "RAID 4",
+                "RAID 2"
+            ],
+            "answer": "RAID 10"
+        },
+        {
+            "question": "A technician has been asked to configure several computers with RAID. The customer wants the best RAID possible with three drives used. Which RAID should the technician install?",
+            "options": [
+                "RAID 6",
+                "RAID 3",
+                "RAID 4",
+                "RAID 2"
+            ],
+            "answer": "RAID 6"
+        },
+        {
+            "question": "A technician is selecting a PC that will be used by a user as a thin client. What is a major consideration that needs to be taken into account?",
+            "options": [
+                "network connection to a server",
+                "multiple SCSI drives",
+                "optical drive",
+                "multiple touch screens"
+            ],
+            "answer": "network connection to a server"
+        },
+        {
+            "question": "A technician is selecting a web server that will be used to host multiple gaming applications. What is a major consideration that needs to be taken into account?",
+            "options": [
+                "powerful processor",
+                "multiple SCSI drives",
+                "optical drive",
+                "multiple touch screens"
+            ],
+            "answer": "powerful processor"
+        },
+        {
+            "question": "A technician is selecting a web server that will be used to host multiple gaming applications. What is a major consideration that needs to be taken into account?",
+            "options": [
+                "powerful processor",
+                "read-only memory modules",
+                "multiple touch screens",
+                "multiple SCSI drives"
+            ],
+            "answer": "powerful processor"
+        },
+        {
+            "question": "A technician is selecting a PC that will be used by a songwriter to mix tracks. What is a major consideration that needs to be taken into account?",
+            "options": [
+                "specialized audio card",
+                "dual-fan power supply",
+                "smart card reader",
+                "Thunderbolt connector"
+            ],
+            "answer": "specialized audio card"
+        },
+        {
+            "question": "A technician is selecting a laptop that will be used by a teleworker for connecting to the internet while traveling anywhere. What is a major consideration that needs to be taken into account?",
+            "options": [
+                "cellular card",
+                "Thunderbolt connector",
+                "smart card reader",
+                "dual-fan power supply"
+            ],
+            "answer": "cellular card"
+        },
+        {
+            "question": "A technician is selecting a server that will be used by a cloud provider for data storage. What is a major consideration that needs to be taken into account?",
+            "options": [
+                "multiple large hard drives",
+                "smart card reader",
+                "Thunderbolt connector",
+                "dual-fan power supply"
+            ],
+            "answer": "multiple large hard drives"
+        },
+        {
+            "question": "A technician is selecting a server that will be used by a cloud provider to provide fault tolerance for large quantities of stored data. What is a major consideration that needs to be taken into account?",
+            "options": [
+                "RAID",
+                "smart card reader",
+                "Thunderbolt connector",
+                "dual-fan power supply"
+            ],
+            "answer": "RAID"
+        },
+        {
+            "question": "A technician is selecting a server that will be used by a cloud provider to provide fault tolerance for large quantities of stored data. What is a major consideration that needs to be taken into account?",
+            "options": [
+                "RAID",
+                "motherboard that supports dual-channeling",
+                "smart card reader",
+                "Thunderbolt connector"
+            ],
+            "answer": "RAID"
+        },
+        {
+            "question": "A technician is selecting a PC that will be used by an employee who wants to share a keyboard and mouse among three devices. What is a major consideration that needs to be taken into account?",
+            "options": [
+                "KVM switch",
+                "motherboard that supports dual-channeling",
+                "smart card reader",
+                "Thunderbolt connector"
+            ],
+            "answer": "KVM switch"
+        },
+        {
+            "question": "A technician is selecting a PC that will be used by an employee who wants to share a keyboard and mouse among three devices. What is a major consideration that needs to be taken into account?",
+            "options": [
+                "KVM switch",
+                "UEFI BIOS",
+                "dual-fan power supply",
+                "read-only memory modules"
+            ],
+            "answer": "KVM switch"
+        }
+    ]
+}
