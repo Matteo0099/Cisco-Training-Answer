@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div class="mx-3 sm:mx-auto mt-8 min-h-screen">
+    <div class="mx-auto md:mx-3 sm:mx-auto mt-8 min-h-screen">
       <h1 class="home text-2xl">
         Answer of cap 6
       </h1>
       <!-- container 1-->
-      <ul class="min-h-screen list-none relative mt-4 pl-4">
-        <li v-for="(question, index) in data.questions" class="py-4 m-2 sm:mx-auto px-2">
-          <h1 class="home text-2xl"> {{ index + 1 }} - {{ question.question }} </h1>
-          <ul class="list-disc w-full pl-8">
+      <ul class="min-h-screen list-none text-xs md:text-lg break-words relative mt-4 md:pl-4">
+        <li v-for="(question, index) in data.questions" class="py-4 md:m-2 text-xs md:text-lg break-words sm:mx-auto md:px-2">
+          <h1 class="home text-xs sm:text-base md:text-xl"> {{ index + 1 }} - {{ question.question }} </h1>
+          <ul class="list-disc w-full pl-2 md:pl-8 text-[10px] sm:text-sm md:text-lg break-words">
             <li v-for="option in question.options">
               {{ option }}
             </li>

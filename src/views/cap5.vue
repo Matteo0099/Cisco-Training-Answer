@@ -1,4 +1,4 @@
-<template>
+  <template>
   <div>
     <div class="mx-3 sm:mx-auto mt-8 min-h-screen">
       <h1 class="home text-2xl">

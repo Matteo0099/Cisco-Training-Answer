@@ -41,9 +41,7 @@ export default {
           e.clientX > dialogDimensions.right ||
           e.clientY < dialogDimensions.top ||
           e.clientY > dialogDimensions.bottom
-        ) {
-          dialog.close() // Closes the dialog if the click occurred outside of it
-        }
+        ) { dialog.close() } /*Closes the dialog (click outside)*/ 
       })
     },
     closeModal() {

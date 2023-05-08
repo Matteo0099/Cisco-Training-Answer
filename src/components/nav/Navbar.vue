@@ -4,8 +4,9 @@
       Cisco Answers cap1-10
     </h1>
     <backToHome></backToHome>
-    <select v-model="selectedOption" @change="navigate" class="navbar rounded-xl flex flex-col w-full min-h-8 p-4 bg-gray-200  
-    text-black justify-center items-center gap-2">
+    <select v-model="selectedOption" @change="navigate" 
+    class="navbar rounded-xl flex flex-col w-full min-h-8 p-4 bg-gray-200  
+          text-black justify-center items-center gap-2">
       <option disabled value="">Select an option</option>
       <option value="/cap1">cap1</option>
       <option value="/cap2">cap2</option>
