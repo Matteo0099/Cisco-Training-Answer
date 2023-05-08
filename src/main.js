@@ -26,6 +26,10 @@ import cap7 from './views/cap7.vue'
 import cap8 from './views/cap8.vue'
 import cap9 from './views/cap9.vue'
 import cap10 from './views/cap10.vue'
+import cap11 from './views/cap11.vue'
+import cap12 from './views/cap12.vue'
+import cap13 from './views/cap13.vue'
+import cap14 from './views/cap14.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -85,6 +89,26 @@ const router = createRouter({
       name: 'cap10',
       component: cap10
     },
+    {
+      path: '/cap11',
+      name: 'cap11',
+      component: cap11
+    },
+    {
+      path: '/cap12',
+      name: 'cap12',
+      component: cap12
+    },
+    {
+      path: '/cap13',
+      name: 'cap13',
+      component: cap13
+    },
+    {
+      path: '/cap14',
+      name: 'cap14',
+      component: cap14
+    }
   ]
 })
 

@@ -7,7 +7,13 @@
 
 //avoid useless and dangerous queries
 const shittyElements = document.querySelectorAll('table')
+const shittyEl2 = document.querySelectorAll('figure > a')
+const figureShit = document.querySelectorAll('li > figure')
+const addShit = document.querySelectorAll('li > div > figure')
 shittyElements.forEach(shit => shit.remove())
+shittyEl2.forEach(shitty2 => shitty2.remove())
+figureShit.forEach(shitty =>shitty.remove())
+addShit.forEach(shittyAdd => shittyAdd.remove())
 
 const questions = document.querySelectorAll('ol > li h3')
 const options = document.querySelectorAll('ol > li ul')
@@ -32,7 +38,7 @@ const obj = {
         ]
     },
     "questions": [
-                
+
     ]
 }
 
@@ -42,7 +48,7 @@ const regex = /<span style="color: #ff0000;">/;
 
 questions.forEach((question, index) => {
     const optionsArr = [], answerArr = []
-    
+
     Array.from(options[index].children).forEach(option => {
         optionsArr.push(option.textContent)
         if (regex.test(option.innerHTML))

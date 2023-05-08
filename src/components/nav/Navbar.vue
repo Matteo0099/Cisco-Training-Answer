@@ -18,6 +18,10 @@
       <option value="/cap8">cap8</option>
       <option value="/cap9">cap9</option>
       <option value="/cap10">cap10</option>
+      <option value="/cap11">cap11</option>
+      <option value="/cap12">cap12</option>
+      <option value="/cap13">cap13</option>
+      <option value="/cap14">cap14</option>
     </select>
   </div>
 </template>
