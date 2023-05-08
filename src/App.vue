@@ -7,19 +7,21 @@ import btnDark from './components/btn-dark.vue';
 </script>
 
 <template>
-  <div class="w-full max-w-full min-h-full top-0">
+  <div class="w-full max-w-full h-[100vh] min-h-full top-0" data-aos="fade-down" data-aos-anchor-placement="bottom"
+    data-aos-duration="375" data-aos-dealy="0">
     <div class="btn-dark absolute right-4 top-2 md:top-8 md:right-16">
-      <btnDark />
+      <btnDark data-aos="zoom-in" data-aos-duration="375" data-aos-delay="125" />
       <!-- google translate -->
-      <translate />
+      <!-- <translate /> -->
     </div>
     <main class="container min-h-screen font-sans grid px-4 sm:p-0 sm:mx-auto max-w-2xl rounded-xl">
       <!-- <Navbar></Navbar> -->
-      <Navbar></Navbar> <!-- pagine renderizzate ↓ -->
+      <Navbar data-aos="zoom-out" data-aos-duration="400" data-aos-delay="150"></Navbar> <!-- pagine renderizzate ↓ -->
       <div class="pages container mx-auto max-w-3xl text-left min-h-fit">
         <!-- for content of the page -->
         <router-view v-slot="{ Component, route }">
-          <div :key="route.name" class="container mx-auto max-w-full min-h-full overflow-x-hidden">
+          <div :key="route.name" data-aos="fade-in" data-aos-duration="600" data-aos-easing="ease" data-aos-dealy="100"
+            class="container mx-auto max-w-full min-h-full overflow-x-hidden">
             <component :is="Component"></component>
           </div>
         </router-view>

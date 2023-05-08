@@ -6,6 +6,13 @@ import './style.css'
 import { inject } from '@vercel/analytics';
 inject();
 
+
+//aos
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+render: (h) => h(App)
+AOS.init()
+
 //Create router
 import { createRouter, createWebHistory } from 'vue-router'
 // all pages

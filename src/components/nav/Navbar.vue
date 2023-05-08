@@ -5,8 +5,8 @@
     </h1>
     <backToHome></backToHome>
     <select v-model="selectedOption" @change="navigate" 
-    class="navbar rounded-xl flex flex-col w-full min-h-8 p-4 bg-gray-200  
-          text-black justify-center items-center gap-2">
+    class="block w-full mt-2 py-2 mx-auto rounded-md shadow-sm bg-gray-100 
+          border-transparent focus:border-gray-400 focus:bg-white focus:ring-0">
       <option disabled value="">Select an option</option>
       <option value="/cap1">cap1</option>
       <option value="/cap2">cap2</option>
