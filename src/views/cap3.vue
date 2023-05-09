@@ -4,27 +4,13 @@
       <h1 class="home text-2xl"> Answer of cap 3 </h1>
       <!-- drag and drop -->
       <p>implementation drag and drop:</p>
-      <div class="drop-zone">
-        <div
-          class="drag-el"
-          v-for="item in listTwo"
-          :key="item.title"
-          draggable
-          @dragstart="startDrag($event, item)"
-        >
-          {{ item.title }}
-        </div>
-      </div>
-      <div class="drop-zone">
-        <div
-        class="drag-el"
-        v-for="item in listTwo"
-        :key="item.title"
-        draggable
-        @dragstart="startDrag($event, item)"
-      >
-        {{ item.title }}
-      </div>
+      <div class="container">
+        <!-- elements da sorteggiare -->
+        <ul class="list-group">
+          <li class="list-group-item">Foo</li>
+          <li class="list-group-item">Bar</li>
+          <li class="list-group-item">Baz</li>
+        </ul>
       </div>
 
       <!-- container 1-->
@@ -48,62 +34,16 @@
 
 <script>
 import data from "../../src/data/ITE/3.json"
+// import { applyDrag, generateItems } from "./utils";
 export default {
   data() {
     return {
-      data,
-      items: [
-        {
-          id: 0,
-          title: 'Item A',
-          list: 1,
-        },
-        {
-          id: 1,
-          title: 'Item B',
-          list: 1,
-        },
-        {
-          id: 2,
-          title: 'Item C',
-          list: 2,
-        },
-      ],
+      data
     };
   },
   methods: {
-    startDrag(evt, item) {
-      evt.dataTransfer.dropEffect = 'move'
-      evt.dataTransfer.effectAllowed = 'move'
-      evt.dataTransfer.setData('itemID', item.id)
-    },
-    onDrop(evt, list) {
-      const itemID = evt.dataTransfer.getData('itemID')
-      const item = this.items.find((item) => item.id == itemID)
-      item.list = list
-    },
-  },
-  computed: {
-    listOne() {
-      return this.items.filter((item) => item.list === 1)
-    },
-    listTwo() {
-      return this.items.filter((item) => item.list === 2)
-    },
-  },
+  }
 }
 </script>
 
-<style scoped>
-.drop-zone {
-  background-color: #eee;
-  margin-bottom: 10px;
-  padding: 10px;
-}
-
-.drag-el {
-  background-color: #fff;
-  margin-bottom: 10px;
-  padding: 5px;
-}
-</style>
+<style scoped></style>

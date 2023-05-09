@@ -6,7 +6,6 @@ import './style.css'
 import { inject } from '@vercel/analytics';
 inject();
 
-
 //aos
 import AOS from 'aos'
 import 'aos/dist/aos.css'
