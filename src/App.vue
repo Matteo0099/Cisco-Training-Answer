@@ -22,7 +22,9 @@ import btnDark from './components/btn-dark.vue';
         <router-view v-slot="{ Component, route }">
           <div :key="route.name" data-aos="fade-in" data-aos-duration="600" data-aos-easing="ease" data-aos-dealy="100"
             class="container mx-auto max-w-full min-h-full overflow-x-hidden">
-            <component :is="Component"></component>
+            <keep-alive>
+              <component :is="Component"></component>
+            </keep-alive>
           </div>
         </router-view>
       </div>

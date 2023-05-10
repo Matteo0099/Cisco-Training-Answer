@@ -13,25 +13,25 @@ render: (h) => h(App)
 AOS.init()
 
 //Create router
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createMemoryHistory } from 'vue-router'
 // all pages
-import cap1 from './views/cap1.vue'
-import cap2 from './views/cap2.vue'
-import cap3 from './views/cap3.vue'
-import cap4 from './views/cap4.vue'
-import cap5 from './views/cap5.vue'
-import cap6 from './views/cap6.vue'
-import cap7 from './views/cap7.vue'
-import cap8 from './views/cap8.vue'
-import cap9 from './views/cap9.vue'
-import cap10 from './views/cap10.vue'
-import cap11 from './views/cap11.vue'
-import cap12 from './views/cap12.vue'
-import cap13 from './views/cap13.vue'
-import cap14 from './views/cap14.vue'
+const cap1 = () => import('./views/cap1.vue')
+const cap2 = () => import('./views/cap2.vue')
+const cap3 = () => import('./views/cap3.vue')
+const cap4 = () => import('./views/cap4.vue')
+const cap5 = () => import('./views/cap5.vue')
+const cap6 = () => import('./views/cap6.vue')
+const cap7 = () => import('./views/cap7.vue')
+const cap8 = () => import('./views/cap8.vue')
+const cap9 = () => import('./views/cap9.vue')
+const cap10 = () => import('./views/cap10.vue')
+const cap11 = () => import('./views/cap11.vue')
+const cap12 = () => import('./views/cap12.vue')
+const cap13 = () => import('./views/cap13.vue')
+const cap14 = () => import('./views/cap14.vue')
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createMemoryHistory(),
   routes: [
     {
       path: '/App',
