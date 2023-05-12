@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form @submit.prevent="submitForm" class="text-black">
+    <!-- <form @submit.prevent="submitForm" class="text-black">
       <div v-for="(question, index) in questions" :key="index">
         <p>{{ question.text }}</p>
         <template v-if="isArray(question.answers)">
@@ -21,12 +21,12 @@
         </template>
       </div>
       <button type="submit">Submit</button>
-    </form>
+    </form> -->
   </div>
 </template>
 
 
-<script>
+<!-- <script>
 import data from "../../src/data/ITE/1.json"
 export default {
   data() {
@@ -47,7 +47,7 @@ export default {
     }
   }
 }
-</script>
+</script> -->
 
 
 <!-- <template>
