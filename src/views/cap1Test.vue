@@ -9,7 +9,7 @@
             {{ answer }}
           </label>
         </template>
-        <!-- <template v-else>
+        <template v-else>
           <label>
             <input type="radio" name="radio-{{ index }}" value="true" v-model="selectedAnswers[index]">
             True
@@ -18,7 +18,7 @@
             <input type="radio" name="radio-{{ index }}" value="false" v-model="selectedAnswers[index]">
             False
           </label>
-        </template> -->
+        </template>
       </div>
       <button type="submit">Submit</button>
     </form>
