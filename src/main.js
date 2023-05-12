@@ -29,6 +29,20 @@ const cap11 = () => import('./views/cap11.vue')
 const cap12 = () => import('./views/cap12.vue')
 const cap13 = () => import('./views/cap13.vue')
 const cap14 = () => import('./views/cap14.vue')
+const cap1Test = () => import('./views/cap1Test.vue')
+const cap2Test = () => import('./views/cap2Test.vue')
+const cap3Test = () => import('./views/cap3Test.vue')
+const cap4Test = () => import('./views/cap4Test.vue')
+const cap5Test = () => import('./views/cap5Test.vue')
+const cap6Test = () => import('./views/cap6Test.vue')
+const cap7Test = () => import('./views/cap7Test.vue')
+const cap8Test = () => import('./views/cap8Test.vue')
+const cap9Test = () => import('./views/cap9Test.vue')
+const cap10Test = () => import('./views/cap10Test.vue')
+const cap11Test = () => import('./views/cap11Test.vue')
+const cap12Test = () => import('./views/cap12Test.vue')
+const cap13Test = () => import('./views/cap13Test.vue')
+const cap14Test = () => import('./views/cap14Test.vue')
 
 const router = createRouter({
   history: createMemoryHistory(),
@@ -44,9 +58,19 @@ const router = createRouter({
       component: cap1
     },
     {
+      path: '/cap1Test',
+      name: 'cap1Test',
+      component: cap1Test
+    },
+    {
       path: '/cap2',
       name: 'cap2',
       component: cap2
+    },
+    {
+      path: '/cap2Test',
+      name: 'cap2Test',
+      component: cap2Test
     },
     {
       path: '/cap3',
@@ -54,9 +78,19 @@ const router = createRouter({
       component: cap3
     },
     {
+      path: '/cap3Test',
+      name: 'cap3Test',
+      component: cap3Test
+    },
+    {
       path: '/cap4',
       name: 'cap4',
       component: cap4
+    },
+    {
+      path: '/cap4Test',
+      name: 'cap4Test',
+      component: cap4Test
     },
     {
       path: '/cap5',
@@ -64,9 +98,19 @@ const router = createRouter({
       component: cap5
     },
     {
+      path: '/cap5Test',
+      name: 'cap5Test',
+      component: cap5Test
+    },
+    {
       path: '/cap6',
       name: 'cap6',
       component: cap6
+    },
+    {
+      path: '/cap6Test',
+      name: 'cap6Test',
+      component: cap6Test
     },
     {
       path: '/cap7',
@@ -74,9 +118,19 @@ const router = createRouter({
       component: cap7
     },
     {
+      path: '/cap7Test',
+      name: 'cap7Test',
+      component: cap7Test
+    },
+    {
       path: '/cap8',
       name: 'cap8',
       component: cap8
+    },
+    {
+      path: '/cap8Test',
+      name: 'cap8Test',
+      component: cap8Test
     },
     {
       path: '/cap9',
@@ -84,9 +138,19 @@ const router = createRouter({
       component: cap9
     },
     {
+      path: '/cap9Test',
+      name: 'cap9Test',
+      component: cap9Test
+    },
+    {
       path: '/cap10',
       name: 'cap10',
       component: cap10
+    },
+    {
+      path: '/cap10Test',
+      name: 'cap10Test',
+      component: cap10Test
     },
     {
       path: '/cap11',
@@ -94,9 +158,19 @@ const router = createRouter({
       component: cap11
     },
     {
+      path: '/cap11Test',
+      name: 'cap11Test',
+      component: cap11Test
+    },
+    {
       path: '/cap12',
       name: 'cap12',
       component: cap12
+    },
+    {
+      path: '/cap12Test',
+      name: 'cap12Test',
+      component: cap12Test
     },
     {
       path: '/cap13',
@@ -104,10 +178,20 @@ const router = createRouter({
       component: cap13
     },
     {
+      path: '/cap13Test',
+      name: 'cap13Test',
+      component: cap13Test
+    },
+    {
       path: '/cap14',
       name: 'cap14',
       component: cap14
-    }
+    },
+    {
+      path: '/cap14Test',
+      name: 'cap14Test',
+      component: cap14Test
+    },
   ]
 })
 
