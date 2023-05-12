@@ -1,10 +1,10 @@
 <template>
   <div class="w-full mt-[17.5%] 2xl:mt-[25%] h-fit">
-    <backToHome></backToHome>
+    <backToHome class="cursor-pointer"></backToHome>
     <h1 class="font-bold text-xl sm:text-2xl mt-8 mb-4 mx-auto">
-      Cisco Answers cap 1-14
+      Cisco <span class="m-0 p-0 underline">Answers</span> cap 1-14
     </h1>
-    <select v-model="selectedOption" @change="navigate" class="block w-full mt-2 py-2 mx-auto rounded-md shadow-sm bg-gray-100 
+    <select v-model="selectedOption" @change="navigate" class="block cursor-pointer text-neutral-900 w-full mt-2 py-2 mx-auto rounded-md shadow-sm bg-gray-100 
           border-transparent focus:border-gray-400 focus:bg-white focus:ring-0">
       <option disabled value="">Select an option</option>
       <option value="/cap1">cap1</option>
@@ -22,8 +22,8 @@
       <option value="/cap13">cap13</option>
       <option value="/cap14">cap14</option>
     </select>
-    <h1 class="font-bold text-xl sm:text-2xl mt-8 mb-4 mx-auto">Cisco Test cap 1-14</h1>
-    <select v-model="selectedOption" @change="navigate" class="block w-full mt-2 py-2 mx-auto rounded-md shadow-sm bg-gray-100 
+    <h1 class="font-bold text-xl sm:text-2xl mt-8 mb-4 mx-auto">Cisco <span class="m-0 p-0 underline">Test</span> cap 1-14</h1>
+    <select v-model="selectedOption" @change="navigate" class="block text-neutral-900 cursor-pointer w-full mt-2 py-2 mx-auto rounded-md shadow-sm bg-gray-100 
           border-transparent focus:border-gray-400 focus:bg-white focus:ring-0">
       <option disabled value="">Select an option</option>
       <option value="/cap1Test">Test cap1</option>
