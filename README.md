@@ -52,11 +52,7 @@ Insert gif or link to demo
 
 - [@Matteo0099](https://www.github.com/Matteo0099)
 - [@snakeout96](https://www.github.com/snakeout96)
-## Demo
 
-Insert gif or link to demo
-
-- [site](https://ciscotraining.vercel.app)
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
