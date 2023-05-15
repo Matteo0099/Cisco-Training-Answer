@@ -17,7 +17,8 @@
           </label>
         </template>
       </ul>
-      <button type="submit" role="button" class="py-2 px-4 border rounded-lg mt-8 mb-4 w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto">Submit</button>
+      <button type="submit" role="button"
+        class="py-2 px-4 border rounded-lg mt-8 mb-4 w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto">Submit</button>
     </form>
     <p v-if="submitted" class="font-semibold text-xl sm:text-2xl mt-8 mb-12 mx-auto w-fit">
       You got {{ correctAnswers }} out of {{ totalQuestions }} correct !
@@ -29,6 +30,8 @@
 import data from "../../src/data/ITE/3.json";
 export default {
   data() {
+    data.questions.sort(() => Math.random() - 0.5)
+    data.questions.forEach(question => question.options.sort(() => Math.random() - 0.5))
     return {
       questions: data.questions,
       selectedAnswers: [],

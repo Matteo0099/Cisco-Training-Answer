@@ -29,6 +29,8 @@
 import data from "../../src/data/ITE/10.json";
 export default {
   data() {
+    data.questions.sort(() => Math.random() - 0.5)
+    data.questions.forEach(question => question.options.sort(() => Math.random() - 0.5))
     return {
       questions: data.questions,
       selectedAnswers: [],
