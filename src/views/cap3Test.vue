@@ -17,8 +17,11 @@
           </label>
         </template>
       </ul>
-      <button type="submit" role="button"
-        class="py-2 px-4 border rounded-lg mt-8 mb-4 w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto">Submit</button>
+      <button type="submit" role="button" :disabled="formSubmitted"
+        class="py-2 px-4 border rounded-lg mt-8 mb-4 w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto">
+        <span v-if="!formSubmitted">Submit</span>
+        <span v-else>Submitting...</span>
+      </button>
     </form>
     <p v-if="submitted" class="font-semibold text-xl sm:text-2xl mt-8 mb-12 mx-auto w-fit">
       You got {{ correctAnswers }} out of {{ totalQuestions }} correct !
@@ -38,7 +41,8 @@ export default {
       submitted: false,
       correctAnswers: 0,
       totalQuestions: 0,
-      numCap: data.examData.cap
+      numCap: data.examData.cap,
+      formSubmitted: false
     };
   },
   created() {
@@ -46,19 +50,27 @@ export default {
     this.totalQuestions = this.questions.length;
   },
   methods: {
-    submitForm() {
+    async submitForm() {
+      this.formSubmitted = true;
+      await this.checkAnswers();
       this.submitted = true;
-      this.checkAnswers();
-    }, checkAnswers() {
+    },
+    checkAnswers() {
       this.questions.forEach((question, index) => {
         const selected = this.selectedAnswers[index];
         const correctAnswer = question.answer;
-        if (question.options.length > 2) {
-          selected.forEach(answer => {
-            if (correctAnswer.includes(answer)) {
+        if (Array.isArray(correctAnswer)) {
+          if (Array.isArray(selected)) {
+            selected.forEach(answer => {
+              if (correctAnswer.includes(answer)) {
+                this.correctAnswers++;
+              }
+            });
+          } else {
+            if (correctAnswer.includes(selected)) {
               this.correctAnswers++;
             }
-          });
+          }
         } else {
           if (selected === correctAnswer) {
             this.correctAnswers++;
@@ -68,4 +80,4 @@ export default {
     }
   }
 }; 
-</script> 
+</script>
