@@ -11,7 +11,7 @@ import btnDark from './components/btn-dark.vue';
     data-aos-duration="375" data-aos-dealy="0">
     <div class="btn-dark absolute right-4 top-2 md:top-8 md:right-16">
       <btnDark data-aos="zoom-in" data-aos-duration="375" data-aos-delay="125" />
-      <!-- google translate -->
+      <!-- google translate (to implement => api google.translate.it)-->
       <!-- <translate /> -->
     </div>
     <main class="container min-h-screen font-sans grid px-4 sm:p-0 sm:mx-auto max-w-2xl rounded-xl">
