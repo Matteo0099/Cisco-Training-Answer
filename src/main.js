@@ -43,6 +43,14 @@ const cap11Test = () => import('./views/cap11Test.vue')
 const cap12Test = () => import('./views/cap12Test.vue')
 const cap13Test = () => import('./views/cap13Test.vue')
 const cap14Test = () => import('./views/cap14Test.vue')
+//ccna
+const module_1_3 = () => import('./views/module1-3.vue')
+const module_4_7 = () => import('./views/module4-7.vue')
+const module_8_10 = () => import('./views/module8-10.vue')
+const module_11_13 = () => import('./views/module11-13.vue')
+const module_14_15 = () => import('./views/module14-15.vue')
+const module_16_17 = () => import('./views/module16-17.vue')
+const finalExam = () => import('./views/module-FinalExam.vue')
 
 const router = createRouter({
   history: createMemoryHistory(),
@@ -191,6 +199,41 @@ const router = createRouter({
       path: '/cap14Test',
       name: 'cap14Test',
       component: cap14Test
+    },
+    {
+      path: '/module1-3',
+      name: 'module1-3',
+      component: module_1_3
+    },
+    {
+      path: '/module_4_7',
+      name: 'module_4_7',
+      component: module_4_7
+    },
+    {
+      path: '/module_8_10', 
+      name: 'module_8_10',
+      component: module_8_10
+    },
+    {
+      path: '/module_11_13',
+      name: 'module_11_13',
+      component: module_11_13
+    },
+    {
+      path: '/module_14_15', 
+      name: 'module_14_15',
+      component: module_14_15
+    },
+    {
+      path: '/module_16_17',
+      name: 'module_16_17',
+      component: module_16_17
+    },
+    {
+      path: '/module-FinalExam',
+      name: finalExam,
+      component: finalExam
     },
   ]
 })

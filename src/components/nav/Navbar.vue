@@ -41,6 +41,18 @@
       <option value="/cap13Test">Test cap13</option>
       <option value="/cap14Test">Test cap14</option>
     </select>
+    <h1 class="font-bold text-xl sm:text-2xl mt-8 mb-4 mx-auto">Cisco <span class="m-0 p-0 underline">CCNA</span> 11 MODULES &#40; cooming soon &#41;</h1>
+    <select v-model="selectedOption" @change="navigate" class="block text-neutral-900 cursor-pointer w-full mt-2 py-2 mx-auto rounded-md shadow-sm bg-gray-100 
+          border-transparent focus:border-gray-400 focus:bg-white focus:ring-0">
+      <option disabled value="">Select an option</option>
+      <option value="/module1-3">module 1-3</option>
+      <option value="/module4-7">module 4-7</option>
+      <option value="/module8-10">module 8-10</option>
+      <option value="/module11-13">module 11-13</option>
+      <option value="/module14-15">module 14-15</option>
+      <option value="/module16-17">module 16-17</option>
+      <option value="/module-FinalExam">Final exam Answers</option>
+    </select>
   </div>
 </template>
 

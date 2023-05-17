@@ -1,6 +1,6 @@
 <template>
   <div>
-    <footer class="w-full min-h-[85px] border p-2 mt-10 rounded-lg flex flex-col justify-center items-center text-base">
+    <footer class="w-full min-h-[75px] border p-2 mt-28 rounded-lg flex flex-col justify-center items-center text-base">
       <div class="mx-auto min-h-full leading-loose max-w-3xl py-4 px-0 text-center flex flex-col">
         <span>copyright Cisco Answer &copy; 2023</span>
         <span>by @noyazz @Matteo0099</span>
