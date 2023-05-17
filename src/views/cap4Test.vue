@@ -5,7 +5,7 @@
       <h1 class="text-xl sm:text-2xl font-bold mt-8 mb-4">Test cap {{ numCap }} - complete </h1>
       <ul v-for="(question, index) in questions" :key="index" class="flex flex-col list-disc my-4">
         <h1 class="home text-xl sm:text-2xl mb-2"> {{ index + 1 }} - {{ question.question }} </h1>
-        <template v-if="question.options.length > 2">
+        <template v-if="typeof question.answer === 'object'">
           <label v-for="(option, oIndex) in question.options" :key="oIndex" class="pl-4 text-base sm:text-lg">
             <input type="checkbox" :value="option" v-model="selectedAnswers[index]" /> {{ option }}
           </label>
