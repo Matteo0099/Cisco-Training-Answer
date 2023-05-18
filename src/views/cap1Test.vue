@@ -7,8 +7,8 @@
         <h1 class="home text-xl sm:text-2xl mb-2"> {{ index + 1 }} - {{ question.question }} </h1>
         <template v-if="typeof question.answer === 'object'">
           <label v-for="(option, oIndex) in question.options" :key="oIndex" class="pl-4 text-base sm:text-lg">
-            <input type="checkbox" :value="option" v-model="selectedAnswers[index]" :disabled="formSubmitted" /> {{ option
-            }}
+            <input type="checkbox" :value="option" v-model="selectedAnswers[index]" :disabled="formSubmitted" /> 
+            {{ option }}
           </label>
         </template>
         <template v-else>
@@ -18,6 +18,9 @@
             {{ option }}
           </label>
         </template>
+        <p v-if="submitted" class="Wrong list-disc text-xl sm:text-2xl text-red-500 font-semibold pl-4 pt-2">
+          {{ question.answer }}
+        </p>
       </ul>
       <button type="submit" role="button" :disabled="formSubmitted"
         class="py-2 px-4 border rounded-lg w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto">
@@ -98,3 +101,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.Wrong::first-letter {
+  text-transform: uppercase !important;
+}
+</style>  
