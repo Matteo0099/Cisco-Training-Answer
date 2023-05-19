@@ -13,7 +13,7 @@ shittyElements.forEach(shit => shit.remove())
 const questions = document.querySelectorAll('ol > li h3')
 const options = document.querySelectorAll('ol > li ul')
 
-const chapter = 1;
+const chapter = prompt('CHAP NUMBER', '1');
 
 const obj = {
     "examData": {
@@ -30,10 +30,7 @@ const obj = {
             2022,
             2023
         ]
-    },
-    "questions": [
-
-    ]
+    }
 }
 
 const questionArr = []
@@ -43,20 +40,21 @@ const regex = /<span style="color: #ff0000;">/;
 questions.forEach((question, index) => {
     const optionsArr = [], answerArr = []
 
-        Array.from(options[index].querySelectorAll('li')).forEach(option => {
+    Array.from(options[index].querySelectorAll('li')).forEach(option => {
         optionsArr.push(option.textContent)
         if (regex.test(option.innerHTML))
             answerArr.push(option.textContent)
     })
 
     const toPush = {
-            "question": question.textContent,
-      "options": optionsArr,
-      "answer": (answerArr.length === 1) ? answerArr[0] : answerArr
-        }
-    if (question.parentElement.querySelector('img')) {
-            toPush.photo = question.parentElement.querySelector('img').src
-        }
+        "question": question.textContent,
+        "options": optionsArr,
+        "answer": (answerArr.length === 1) ? answerArr[0] : answerArr
+    }
+
+    if (question.parentElement.querySelector('img')) 
+        toPush.photo = question.parentElement.querySelector('img').src
+        
     questionArr.push(toPush)
 })
 

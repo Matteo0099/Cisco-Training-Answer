@@ -8,6 +8,7 @@
       <ul class="min-h-screen flex flex-col list-none relative mt-4 pl-4">
         <li v-for="(question, index) in data.questions" class="py-4 m-2 sm:mx-auto px-2">
           <h1 class="home text-2xl"> {{ index + 1 }} - {{ question.question }} </h1>
+          <img v-if="question.photo" :src="question.photo" class="w-max" />
           <ul class="list-disc w-full pl-8">
             <li v-for="option in question.options">
               {{ option }}
