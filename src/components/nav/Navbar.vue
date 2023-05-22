@@ -4,7 +4,8 @@
     <h1 class="font-bold text-xl sm:text-2xl mt-8 mb-4 mx-auto">
       Cisco <span class="m-0 p-0 underline">Answers</span> cap 1-14
     </h1>
-    <select v-model="selectedOption" @change="navigate" class="block cursor-pointer text-neutral-900 w-full mt-2 py-2 mx-auto rounded-md shadow-sm bg-gray-100 
+    <select v-model="selectedOption" @change="navigate" 
+    class="flex items-center justify-center cursor-pointer text-neutral-900 w-full mt-2 py-4 mx-auto rounded-md shadow-sm bg-gray-100 
           border-transparent focus:border-gray-400 focus:bg-white focus:ring-0">
       <option disabled value="">Select an option</option>
       <option value="/cap1">cap1</option>
@@ -22,8 +23,9 @@
       <option value="/cap13">cap13</option>
       <option value="/cap14">cap14</option>
     </select>
-    <h1 class="font-bold text-xl sm:text-2xl mt-8 mb-4 mx-auto">Cisco <span class="m-0 p-0 underline">Test</span> cap 1-14</h1>
-    <select v-model="selectedOption" @change="navigate" class="block text-neutral-900 cursor-pointer w-full mt-2 py-2 mx-auto rounded-md shadow-sm bg-gray-100 
+    <h1 class="font-bold text-xl sm:text-2xl mt-8 mb-4 mx-auto" id="top">Cisco <span class="m-0 p-0 underline">Test</span> cap 1-14</h1>
+    <select v-model="selectedOption" @change="navigate" 
+    class="flex items-center justify-center cursor-pointer text-neutral-900 w-full mt-2 py-4 mx-auto rounded-md shadow-sm bg-gray-100 
           border-transparent focus:border-gray-400 focus:bg-white focus:ring-0">
       <option disabled value="">Select an option</option>
       <option value="/cap1Test">Test cap1</option>
@@ -42,7 +44,8 @@
       <option value="/cap14Test">Test cap14</option>
     </select>
     <h1 class="font-bold text-xl sm:text-2xl mt-8 mb-4 mx-auto">Cisco <span class="m-0 p-0 underline">CCNA</span> 11 MODULES &#40; cooming soon &#41;</h1>
-    <select v-model="selectedOption" @change="navigate" class="block text-neutral-900 cursor-pointer w-full mt-2 py-2 mx-auto rounded-md shadow-sm bg-gray-100 
+    <select v-model="selectedOption" @change="navigate" 
+    class="flex items-center justify-center cursor-pointer text-neutral-900 w-full mt-2 py-4 mx-auto rounded-md shadow-sm bg-gray-100 
           border-transparent focus:border-gray-400 focus:bg-white focus:ring-0">
       <option disabled value="">Select an option</option>
       <option value="/module1-3">module 1-3</option>

@@ -7,7 +7,7 @@
         <h1 class="home text-xl sm:text-2xl mb-2"> {{ index + 1 }} - {{ question.question }} </h1>
         <template v-if="typeof question.answer === 'object'">
           <label v-for="(option, oIndex) in question.options" :key="oIndex" class="pl-4 text-base sm:text-lg">
-            <input type="checkbox" :value="option" v-model="selectedAnswers[index]" :disabled="formSubmitted" /> 
+            <input type="checkbox" :value="option" v-model="selectedAnswers[index]" :disabled="formSubmitted" />
             {{ option }}
           </label>
         </template>
@@ -32,6 +32,13 @@
         @click="refreshForm">
         <span><i class="bi bi-arrow-clockwise"></i></span>
       </button>
+      <a href="#top" class="w-full text-center">
+        <button type="button" role="button"
+          class="flex flex-row items-center justify-center py-2 px-4 border rounded-lg w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto">
+          turn top
+          <i class="bi bi-arrow-up text-lg pl-1"></i>
+        </button>
+      </a>
     </form>
     <p v-if="submitted" class="font-semibold text-xl sm:text-2xl mt-8 mb-12 mx-auto w-fit">
       You got {{ correctAnswers }} out of {{ totalQuestions }} correct!
