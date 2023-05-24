@@ -2,7 +2,7 @@
   <div>
     <!-- template for all caps -->
     <form ref="examForm" @submit.prevent="submitForm" class="flex flex-col gap-2 mt-10">
-      <h1 class="text-xl sm:text-2xl font-bold mt-8 mb-4">Test (CCNA) module 1-3 </h1>
+      <h1 class="text-xl sm:text-2xl font-bold mt-8 mb-4">Test (CCNA) module 8-10 </h1>
       <ul v-for="(question, index) in questions" :key="index" class="flex flex-col list-disc my-4">
         <h1 class="home text-xl sm:text-2xl mb-2"> {{ index + 1 }} - {{ question.question }} </h1>
         <template v-if="typeof question.answer === 'object'">
@@ -44,12 +44,12 @@
 </template>
 
 <script>
-// import data from "../../src/data/";
+import data from "../../src/data/CCNA/module8-10.json";
 export default {
   data() {
     // data.questions.sort(() => Math.random() - 0.5);
     // data.questions.forEach((question) => question.options.sort(() => Math.random() - 0.5));
-    return
+    return data
   }
 };
 </script>

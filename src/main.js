@@ -206,28 +206,28 @@ const router = createRouter({
       component: module_1_3
     },
     {
-      path: '/module_4_7',
-      name: 'module_4_7',
+      path: '/module4-7',
+      name: 'module4-7',
       component: module_4_7
     },
     {
-      path: '/module_8_10', 
-      name: 'module_8_10',
+      path: '/module8-10',
+      name: 'module8-10',
       component: module_8_10
     },
     {
-      path: '/module_11_13',
-      name: 'module_11_13',
+      path: '/module11-13',
+      name: 'module11-13',
       component: module_11_13
     },
     {
-      path: '/module_14_15', 
-      name: 'module_14_15',
+      path: '/module14-15',
+      name: 'module14-15',
       component: module_14_15
     },
     {
-      path: '/module_16_17',
-      name: 'module_16_17',
+      path: '/module16-17',
+      name: 'module16-17',
       component: module_16_17
     },
     {
