@@ -5,8 +5,7 @@
         <span>copyright Cisco Answer &copy; 2023</span>
         <span>by @noyazz @Matteo0099</span>
         <!-- info -->
-        <button 
-          @click="openModal" 
+        <button @click="openModal"
           class="py-3 px-6 border my-2 mx-auto rounded-lg hover:opacity-75 active:border-2 border-neutral-300">
           More info
         </button>
@@ -16,11 +15,10 @@
               <p class="text-black text-left break-words">
                 This is a full-documentation for cisco answer.
                 You can <i class="m-0 p-0 font-bold">Training</i> your skills with it!
-                Is a project that was developed by two 4grade high school students.
+                Is a project that was developed by <i class="text-gray-300 hover:rotate-180">Skilla</i> in high school
+                students.
               </p>
-              <button 
-                @click="closeModal" 
-                class="border w-20 h-8 mx-0 px-2 mb-auto bg-red-400 text-neutral-50 hover:opacity-90 
+              <button @click="closeModal" class="border w-20 h-8 mx-0 px-2 mb-auto bg-red-400 text-neutral-50 hover:opacity-90 
                 active:border active:border-red-400 rounded-lg">
                 X
               </button>
@@ -61,7 +59,7 @@ export default {
           e.clientX > dialogDimensions.right ||
           e.clientY < dialogDimensions.top ||
           e.clientY > dialogDimensions.bottom
-        ) { dialog.close() } /*Closes the dialog (click outside)*/ 
+        ) { dialog.close() } /*Closes the dialog (click outside)*/
       })
     },
     closeModal() {
