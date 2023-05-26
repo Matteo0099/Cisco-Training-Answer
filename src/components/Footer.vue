@@ -31,7 +31,7 @@
                 </button>
               </a>
               <p class="font-mono font-bold">
-                <span class="m-0 p-0 font-light">By:</span> @noyaz86 / @Matteo0099
+                <span class="m-0 p-0 font-light">By:</span> @noyaz / @Matteo0099
               </p>
             </div>
           </div>
