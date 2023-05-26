@@ -82,21 +82,11 @@ export default {
         const selected = this.selectedAnswers[index];
         const correctAnswer = question.answer;
         if (Array.isArray(correctAnswer)) {
-          if (Array.isArray(selected)) {
-            selected.forEach((answer) => {
-              if (correctAnswer.includes(answer)) {
-                this.correctAnswers++;
-              }
-            });
-          } else {
-            if (correctAnswer.includes(selected)) {
-              this.correctAnswers++;
-            }
-          }
-        } else {
-          if (selected === correctAnswer) {
+          if (correctAnswer.every(answer => selected.includes(answer)) && correctAnswer.length === selected.length)
             this.correctAnswers++;
-          }
+        } else {
+          if (selected === correctAnswer)
+            this.correctAnswers++;
         }
       });
     },
