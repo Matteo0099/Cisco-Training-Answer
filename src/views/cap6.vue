@@ -8,6 +8,7 @@
       <ul class="min-h-screen list-none text-xs md:text-lg break-words relative mt-4 md:pl-4">
         <li v-for="(question, index) in data.questions" class="py-4 md:m-2 text-xs md:text-lg break-words sm:mx-auto md:px-2">
           <h1 class="home text-xs sm:text-base md:text-xl"> {{ index + 1 }} - {{ question.question }} </h1>
+          <img v-if="question.photo" :src="question.photo" class="w-max" />
           <ul class="list-disc w-full pl-2 md:pl-8 text-[10px] sm:text-sm md:text-lg break-words">
             <li v-for="option in question.options">
               {{ option }}
@@ -22,7 +23,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import data from "../../src/data/ITE/6.json"
 export default {
   data() {
