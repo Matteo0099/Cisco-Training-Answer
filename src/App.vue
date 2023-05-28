@@ -7,7 +7,7 @@ import btnDark from './components/btn-dark.vue';
 </script>
 
 <template>
-  <div class="w-full max-w-full h-[100vh] min-h-full top-0" data-aos="fade-down" data-aos-anchor-placement="bottom"
+  <div class="w-full max-w-full h-[100vh] min-h-full relative top-0" data-aos="fade-down" data-aos-anchor-placement="bottom"
     data-aos-duration="375" data-aos-dealy="0">
     <div class="btn-dark fixed right-4 top-2 md:top-8 md:right-16">
       <btnDark data-aos="zoom-in" data-aos-duration="375" data-aos-delay="125" type="button" role="button" />
