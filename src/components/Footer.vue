@@ -15,7 +15,7 @@
               <p class="text-black text-left break-words">
                 This is a full-documentation for cisco answer.
                 You can <i class="m-0 p-0 font-bold">Training</i> your skills with it!
-                Is a project that was developed by <i class="text-gray-300 hover:rotate-180">Skilla</i> in high school
+                Is a project that was developed by <i class="text-gray-300 hover:rotate-180">unknown people</i> in high school
                 students.
               </p>
               <button @click="closeModal" class="border w-20 h-8 mx-0 px-2 mb-auto bg-red-400 text-neutral-50 hover:opacity-90 
@@ -24,7 +24,7 @@
               </button>
             </div>
             <div class="container flex justify-between pt-0 pb-2 pl-2 pr-2">
-              <a href="https://github" target="_blank" class="flex flex-col items-center">
+              <a href="https://github.com/Matteo0099/Cisco-Training-Answer" target="_blank" class="flex flex-col items-center">
                 <button class="flex flex-col items-center border rounded-lg py-1 px-2 sm:py-2 sm:px-4">
                   <i class="bi bi-github text-2xl"></i>
                   <span class="font-normal text-base">Github</span>
