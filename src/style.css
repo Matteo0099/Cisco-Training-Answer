@@ -3,8 +3,48 @@
 @tailwind utilities;
 
 @layer {
-  input[type="checkbox"] {
+  :root {
+    --font-fam: ProximaNova-Regular, sans-serif;
+  }
+
+  @font-face {
+    font-family: var(--font-fam);
+    src: url(../public/proxima/ProximaNova-Regular.woff) format("opentype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: var(--font-fam);
+    src: url(../public/proxima/Proxima-Nova-Thin.woff) format("opentype");
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: var(--font-fam);
+    src: url(../public/proxima/Proxima-Nova-Bold.woff) format("opentype");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: var(--font-fam);
+    src: url(../public/proxima/Proxima-Nova-Extrabold.woff) format("opentype");
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  html, body {
+    font-family: var(--font-fam) !important;
+  }
+
+  input, button, select, option, label, textarea {
     cursor: pointer !important;
+  }
+
+  input {
+    margin-right: .375rem !important;
   }
 
   body::-webkit-scrollbar,
