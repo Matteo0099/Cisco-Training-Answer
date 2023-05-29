@@ -15,7 +15,7 @@ import btnDark from './components/btn-dark.vue';
       <!-- <translate /> -->
       <div id="google_translate_element"></div>
     </div>
-    <main class="container min-h-screen font-sans grid px-4 sm:p-0 sm:mx-auto max-w-2xl rounded-xl">
+    <main class="container relative min-h-screen font-sans grid px-4 sm:p-0 sm:mx-auto max-w-2xl rounded-xl">
       <!-- <Navbar></Navbar> -->
       <Navbar data-aos="zoom-out" data-aos-duration="400" data-aos-delay="150"></Navbar> <!-- pagine renderizzate ↓ -->
       <div class="pages container mx-auto max-w-3xl text-left min-h-fit">
@@ -37,6 +37,12 @@ import btnDark from './components/btn-dark.vue';
 <style lang="css">
 /* icons */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+#google_translate_element {
+  position: absolute;
+  top: 3.5rem;
+  right: .5rem;
+}
 
 .skiptranslate iframe {
   display: none !important;
