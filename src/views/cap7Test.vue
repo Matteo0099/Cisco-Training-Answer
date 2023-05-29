@@ -19,7 +19,7 @@
             {{ option }}
           </label>
         </template>
-        <p v-if="submitted" class="Wrong list-disc text-xl sm:text-2xl text-red-500 font-semibold pl-4 pt-2">
+        <p v-if="submitted && !rightAnswers[index]" class="Wrong list-disc text-xl sm:text-2xl text-red-500 font-semibold pl-4 pt-2">
           {{ question.answer }}
         </p>
       </ul>
@@ -61,6 +61,7 @@ export default {
       totalQuestions: 0,
       numCap: data.examData.cap,
       formSubmitted: false,
+      rightAnswers: []
     };
   },
   created() {
@@ -82,11 +83,15 @@ export default {
         const selected = this.selectedAnswers[index];
         const correctAnswer = question.answer;
         if (Array.isArray(correctAnswer)) {
-          if (correctAnswer.every(answer => selected.includes(answer)) && correctAnswer.length === selected.length)
+          if (correctAnswer.every(answer => selected.includes(answer)) && correctAnswer.length === selected.length) {
             this.correctAnswers++;
+            this.rightAnswers.push(true)
+          } else this.rightAnswers.push(false)
         } else {
-          if (selected === correctAnswer)
+          if (selected === correctAnswer) {
             this.correctAnswers++;
+            this.rightAnswers.push(true)
+          } else this.rightAnswers.push(false)
         }
       });
     },
@@ -95,6 +100,7 @@ export default {
       this.submitted = false;
       this.selectedAnswers = this.questions.map(() => []);
       this.correctAnswers = 0;
+      this.rightAnswers = []
     },
   },
 };
