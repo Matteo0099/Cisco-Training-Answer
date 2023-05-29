@@ -37,6 +37,8 @@
 
   html, body {
     font-family: var(--font-fam) !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   input, button, select, option, label, textarea {
