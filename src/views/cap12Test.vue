@@ -19,7 +19,8 @@
             {{ option }}
           </label>
         </template>
-        <p v-if="submitted && !rightAnswers[index]" class="Wrong list-disc text-xl sm:text-2xl text-red-500 font-semibold pl-4 pt-2">
+        <p v-if="submitted && !rightAnswers[index]"
+          class="Wrong list-disc text-xl sm:text-2xl text-red-500 font-semibold pl-4 pt-2">
           {{ question.answer }}
         </p>
       </ul>
@@ -42,7 +43,7 @@
       </a>
     </form>
     <p v-if="submitted" class="font-semibold text-xl sm:text-2xl mt-8 mb-12 mx-auto w-fit">
-      You got {{ correctAnswers }} out of {{ totalQuestions }} correct!
+      You got {{ correctAnswers }} out of {{ totalQuestions }} correct ({{ percentageCorrect }}%)!
     </p>
   </div>
 </template>
@@ -101,6 +102,11 @@ export default {
       this.selectedAnswers = this.questions.map(() => []);
       this.correctAnswers = 0;
       this.rightAnswers = []
+    },
+  },
+  computed: {
+    percentageCorrect() {
+      return Math.round((this.correctAnswers / this.totalQuestions) * 100);
     },
   },
 };
