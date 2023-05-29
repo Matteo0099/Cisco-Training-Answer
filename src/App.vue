@@ -7,8 +7,8 @@ import btnDark from './components/btn-dark.vue';
 </script>
 
 <template>
-  <div class="w-full max-w-full h-[100vh] min-h-full relative top-0" data-aos="fade-down" data-aos-anchor-placement="bottom"
-    data-aos-duration="375" data-aos-dealy="0">
+  <div class="w-full max-w-full h-[100vh] min-h-full relative top-0" data-aos="fade-down"
+    data-aos-anchor-placement="bottom" data-aos-duration="375" data-aos-dealy="0">
     <div class="btn-dark fixed right-4 top-2 md:top-8 md:right-16">
       <btnDark data-aos="zoom-in" data-aos-duration="375" data-aos-delay="125" type="button" role="button" />
       <!-- google translate (to implement => api google.translate.it)-->
@@ -39,9 +39,34 @@ import btnDark from './components/btn-dark.vue';
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 
 #google_translate_element {
-  position: absolute;
-  top: 3.5rem;
-  right: .5rem;
+  position: absolute !important;
+}
+
+@media screen and (max-width: 768px) {
+  #google_translate_element {
+    left: 0.75rem !important;
+    top: 1rem;
+  }
+
+  .goog-te-gadget span,
+  .goog-te-gadget span a {
+    display: none !important;
+  }
+}
+
+#google_translate_element {
+  top: 4.5rem !important;
+  right: 0.75rem !important;
+  margin-top: 1rem;
+}
+
+.goog-te-gadget {
+  font-size: 4px !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+  margin: 0 !important;
+  padding: 2px !important;
 }
 
 .skiptranslate iframe {
