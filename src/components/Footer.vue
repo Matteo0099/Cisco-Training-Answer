@@ -5,11 +5,11 @@
         <span>copyright Cisco Answer &copy; 2023</span>
         <span>by @noyazz @Matteo0099</span>
         <!-- info -->
-        <button @click="openModal"
+        <button @click="openModal2"
           class="py-3 px-6 border my-2 mx-auto rounded-lg hover:opacity-75 active:border-2 border-neutral-300">
           More info
         </button>
-        <dialog class="modal rounded-lg">
+        <dialog class="modal2 rounded-lg">
           <div class="max-w-xs w-full font-normal text-base">
             <div class="flex items-center min-h-[175px] justify-between gap-2 pt-2 pl-2 pr-2 pb-0">
               <p class="text-black text-left break-words">
@@ -18,7 +18,7 @@
                 Is a project that was developed by <i class="text-gray-300 hover:rotate-180">unknown people</i> in high school
                 students.
               </p>
-              <button @click="closeModal" class="border w-20 h-8 mx-0 px-2 mb-auto bg-red-400 text-neutral-50 hover:opacity-90 
+              <button @click="closeModal2" class="border w-20 h-8 mx-0 px-2 mb-auto bg-red-400 text-neutral-50 hover:opacity-90 
                 active:border active:border-red-400 rounded-lg">
                 X
               </button>
@@ -49,8 +49,8 @@ export default {
     }
   },
   methods: {
-    openModal() {
-      const dialog = document.querySelector(".modal")
+    openModal2() {
+      const dialog = document.querySelector(".modal2")
       dialog.showModal() // Opens the modal dialog
       dialog.addEventListener("click", e => {
         const dialogDimensions = dialog.getBoundingClientRect()
@@ -62,8 +62,8 @@ export default {
         ) { dialog.close() } /*Closes the dialog (click outside)*/
       })
     },
-    closeModal() {
-      const dialog = document.querySelector(".modal")
+    closeModal2() {
+      const dialog = document.querySelector(".modal2")
       dialog.close() // Closes the modal dialog
     }
   },
