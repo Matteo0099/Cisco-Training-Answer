@@ -41,6 +41,12 @@
     padding: 0 !important;
   }
 
+  .VIpgJd-ZVi9od-aZ2wEe-wOHMyf, .VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+
   input, button, select, option, label, textarea {
     cursor: pointer !important;
   }
