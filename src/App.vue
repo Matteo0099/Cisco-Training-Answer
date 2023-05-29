@@ -113,6 +113,16 @@ export default {
         "google_translate_element"
       );
     },
-  }
+  },
+  mounted() {
+    let siteTitle = '';
+    window.addEventListener('blur', () => {
+      siteTitle = document.title;
+      document.title = 'Come back! :c';
+    });
+    window.addEventListener('focus', () => {
+      document.title = siteTitle;
+    });
+  },
 }
 </script>
