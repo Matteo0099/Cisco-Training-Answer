@@ -39,7 +39,6 @@
     font-family: var(--font-fam) !important;
     margin: 0 !important;
     padding: 0 !important;
-    overflow-x: hidden !important;
     font-feature-settings: liga;
     -webkit-font-feature-settings: "liga";
     -webkit-font-smoothing: antialiased;
