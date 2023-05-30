@@ -39,6 +39,10 @@
     font-family: var(--font-fam) !important;
     margin: 0 !important;
     padding: 0 !important;
+    overflow-x: hidden !important;
+    font-feature-settings: liga;
+    -webkit-font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
   }
 
   .VIpgJd-ZVi9od-aZ2wEe-wOHMyf, .VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc {
@@ -53,6 +57,7 @@
 
   input {
     margin-right: .375rem !important;
+    appearance: none;
   }
 
   body::-webkit-scrollbar,
@@ -65,8 +70,8 @@
   }
 
   body::-webkit-scrollbar-thumb {
-    background: linear-gradient(145deg, lime, blue);
-    border-radius: 12px;
+    background: linear-gradient(145deg, rgba(0, 255, 0, 0.8), rgba(0, 0, 255, 0.8));
+    border-radius: 11px;
   }
 
   select::-webkit-scrollbar-thumb:hover {

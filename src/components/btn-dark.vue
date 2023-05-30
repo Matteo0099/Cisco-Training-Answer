@@ -1,8 +1,17 @@
 <template>
   <div>
-    <button class="switch-toggle active:scale-95 h-11 w-11 rounded-[50%]" :class="{ 'switch-toggle-checked': isDarkTheme }" @click="toggleTheme">
-      <i class="bi bi-moon text-2xl sm:text3xl"></i>
-    </button>
+    <div class="flex flex-col">
+      <button class="switch-toggle active:scale-95 h-11 w-11 rounded-[50%]"
+        :class="{ 'switch-toggle-checked': isDarkTheme }" @click="toggleTheme">
+        <i class="bi bi-moon text-2xl sm:text3xl"></i>
+      </button>
+      <span v-if="isDarkTheme" class="font-primary">
+        dark-mode on
+      </span>
+      <span v-else class="font-primary">
+        dark-mode off
+      </span>
+    </div>
   </div>
 </template>
 
