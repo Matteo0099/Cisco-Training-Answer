@@ -13,7 +13,7 @@ render: (h) => h(App)
 AOS.init()
 
 //Create router
-import { createRouter, createMemoryHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 // all pages
 const cap1 = () => import('./views/cap1.vue')
 const cap2 = () => import('./views/cap2.vue')
@@ -53,7 +53,7 @@ const module_16_17 = () => import('./views/module16-17.vue')
 const finalExam = () => import('./views/module-FinalExam.vue')
 
 const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(),
   routes: [
     {
       path: '/App',
