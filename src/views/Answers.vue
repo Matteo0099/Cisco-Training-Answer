@@ -2,11 +2,11 @@
   <div>
     <div class="mx-3 sm:mx-auto mt-8 min-h-screen">
       <h1 class="home text-2xl">
-        Answer of cap 8
+        Answer of cap {{ numCap }}
       </h1>
       <!-- container 1-->
       <ul class="min-h-screen list-none relative mt-4 pl-4">
-        <li v-for="(question, index) in data.questions" class="py-4 m-2 sm:mx-auto px-2">
+        <li v-for="(question, index) in questions" class="py-4 m-2 sm:mx-auto px-2">
           <h1 class="home text-2xl"> {{ index + 1 }} - {{ question.question }} </h1>
           <img v-if="question.photo" :src="question.photo" class="w-max" />
           <ul class="list-disc w-full pl-8">
@@ -24,14 +24,23 @@
 </template>
 
 <script>
-import data from "../../src/data/ITE/8.json"
+import { useRoute } from 'vue-router';
+
 export default {
   data() {
-    data.questions.sort(() => Math.random() - 0.5)
-    data.questions.forEach(question => question.options.sort(() => Math.random() - 0.5))
     return {
-      data
-    }
-  }
-}
+      questions: [],
+      numCap: null
+    };
+  },
+  async created() {
+    const route = useRoute();
+    const { type, number } = route.params
+    const data = await import(`../../src/data/${type}/${number}.json`);
+    data.questions.sort(() => Math.random() - 0.5);
+    data.questions.forEach((question) => question.options.sort(() => Math.random() - 0.5));
+    this.questions = data.questions;
+    this.numCap = data.examData.cap;
+  },
+};
 </script>

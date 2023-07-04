@@ -49,25 +49,31 @@
 </template>
 
 <script>
-import data from "../../src/data/ITE/10.json";
+import { useRoute } from 'vue-router';
+
 export default {
   data() {
-    data.questions.sort(() => Math.random() - 0.5);
-    data.questions.forEach((question) => question.options.sort(() => Math.random() - 0.5));
     return {
-      questions: data.questions,
+      questions: [],
       selectedAnswers: [],
       submitted: false,
       correctAnswers: 0,
       totalQuestions: 0,
-      numCap: data.examData.cap,
+      numCap: null,
       formSubmitted: false,
       rightAnswers: []
     };
   },
-  created() {
+  async created() {
+    const route = useRoute();
+    const { type, number } = route.params
+    const data = await import(`../../src/data/${type}/${number}.json`);
+    data.questions.sort(() => Math.random() - 0.5);
+    data.questions.forEach((question) => question.options.sort(() => Math.random() - 0.5));
+    this.questions = data.questions;
     this.selectedAnswers = this.questions.map(() => []);
     this.totalQuestions = this.questions.length;
+    this.numCap = data.examData.cap;
   },
   methods: {
     async submitForm() {
@@ -87,12 +93,16 @@ export default {
           if (correctAnswer.every(answer => selected.includes(answer)) && correctAnswer.length === selected.length) {
             this.correctAnswers++;
             this.rightAnswers.push(true)
-          } else this.rightAnswers.push(false)
+          } else {
+            this.rightAnswers.push(false);
+          }
         } else {
           if (selected === correctAnswer) {
             this.correctAnswers++;
-            this.rightAnswers.push(true)
-          } else this.rightAnswers.push(false)
+            this.rightAnswers.push(true);
+          } else {
+            this.rightAnswers.push(false);
+          }
         }
       });
     },
@@ -101,7 +111,7 @@ export default {
       this.submitted = false;
       this.selectedAnswers = this.questions.map(() => []);
       this.correctAnswers = 0;
-      this.rightAnswers = []
+      this.rightAnswers = [];
     },
   },
   computed: {
@@ -116,4 +126,4 @@ export default {
 .Wrong::first-letter {
   text-transform: uppercase !important;
 }
-</style>  
+</style>

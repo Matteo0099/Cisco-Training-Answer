@@ -19,7 +19,7 @@ import btnDark from './components/btn-dark.vue';
       <Navbar data-aos="zoom-out" data-aos-duration="400" data-aos-delay="150"></Navbar> <!-- pagine renderizzate ↓ -->
       <div class="pages container mx-auto max-w-3xl text-left min-h-fit">
         <!-- for content of the page -->
-        <router-view v-slot="{ Component, route }">
+        <router-view :key="$route.fullPath" v-slot="{ Component, route }">
           <div :key="route.name" data-aos="fade-in" data-aos-duration="600" data-aos-easing="ease" data-aos-dealy="100"
             class="container mx-auto max-w-full min-h-full overflow-x-hidden">
             <keep-alive>
