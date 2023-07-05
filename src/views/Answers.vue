@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="mx-3 sm:mx-auto mt-8 min-h-screen">
-      <h1 class="home text-2xl">
+      <h1 v-if="dataIsReady" class="home text-2xl">
         Answer of cap {{ numCap }}
       </h1>
       <!-- container 1-->
@@ -30,7 +30,8 @@ export default {
   data() {
     return {
       questions: [],
-      numCap: null
+      numCap: null,
+      dataIsReady: false
     };
   },
   async created() {
@@ -41,6 +42,7 @@ export default {
     data.questions.forEach((question) => question.options.sort(() => Math.random() - 0.5));
     this.questions = data.questions;
     this.numCap = data.examData.cap;
+    this.dataIsReady = true
   },
 };
 </script>

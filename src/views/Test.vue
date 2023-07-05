@@ -2,7 +2,7 @@
   <div>
     <!-- template for all caps -->
     <form ref="examForm" @submit.prevent="submitForm" class="flex flex-col gap-2 mt-10">
-      <h1 class="text-xl sm:text-2xl font-bold mt-8 mb-4">Test cap {{ numCap }} - complete </h1>
+      <h1 v-if="dataIsReady" class="text-xl sm:text-2xl font-bold mt-8 mb-4">Test cap {{ numCap }} - complete </h1>
       <ul v-for="(question, index) in questions" :key="index" class="flex flex-col list-disc my-4">
         <h1 class="home text-xl sm:text-2xl mb-2"> {{ index + 1 }} - {{ question.question }} </h1>
         <img v-if="question.photo" :src="question.photo" class="w-max" />
@@ -61,7 +61,8 @@ export default {
       totalQuestions: 0,
       numCap: null,
       formSubmitted: false,
-      rightAnswers: []
+      rightAnswers: [],
+      dataIsReady: false
     };
   },
   async created() {
@@ -74,6 +75,7 @@ export default {
     this.selectedAnswers = this.questions.map(() => []);
     this.totalQuestions = this.questions.length;
     this.numCap = data.examData.cap;
+    this.dataIsReady = true
   },
   methods: {
     async submitForm() {
