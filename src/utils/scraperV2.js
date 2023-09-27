@@ -84,3 +84,5 @@ obj.questions = questionArr
 
 const data = JSON.stringify(obj).replace(/\\n/g, '').replace(/ "|" /g, '"')
 console.log(data)
+
+// MODIFY IN WHAT ELEMENTS ARE IN THE PAGE

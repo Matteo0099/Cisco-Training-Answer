@@ -48,13 +48,13 @@
     <select v-model="selectedOption" @change="navigate" class="dropdown flex items-center justify-center cursor-pointer text-neutral-900 w-full mt-2 py-4 mx-auto rounded-md shadow-sm bg-gray-100 
           border-transparent focus:border-gray-400 focus:bg-white focus:ring-0">
       <option disabled value="" class="bg-neutral-50 mr-auto font-sans text-lg">Select an option</option>
-      <option value="/module1-3" class="bg-neutral-100 mr-auto font-sans text-lg">module 1-3</option>
-      <option value="/module4-7" class="bg-neutral-100 mr-auto font-sans text-lg">module 4-7</option>
-      <option value="/module8-10" class="bg-neutral-100 mr-auto font-sans text-lg">module 8-10</option>
-      <option value="/module11-13" class="bg-neutral-100 mr-auto font-sans text-lg">module 11-13</option>
-      <option value="/module14-15" class="bg-neutral-100 mr-auto font-sans text-lg">module 14-15</option>
-      <option value="/module16-17" class="bg-neutral-100 mr-auto font-sans text-lg">module 16-17</option>
-      <option value="/module-FinalExam" class="bg-neutral-100 mr-auto font-sans text-lg">Final exam Answers</option>
+      <option value="/test/CCNA/1" class="bg-neutral-100 mr-auto font-sans text-lg">module 1-3</option>
+      <option value="/test/CCNA/2" class="bg-neutral-100 mr-auto font-sans text-lg">module 4-7</option>
+      <option value="/test/CCNA/3" class="bg-neutral-100 mr-auto font-sans text-lg">module 8-10</option>
+      <option value="/test/CCNA/4" class="bg-neutral-100 mr-auto font-sans text-lg">module 11-13</option>
+      <option value="/test/CCNA/5" class="bg-neutral-100 mr-auto font-sans text-lg">module 14-15</option>
+      <option value="/test/CCNA/6" class="bg-neutral-100 mr-auto font-sans text-lg">module 16-17</option>
+      <option value="/test/CCNA/7" class="bg-neutral-100 mr-auto font-sans text-lg">Final exam Answers</option>
     </select>
   </div>
 </template>

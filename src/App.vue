@@ -33,6 +33,33 @@ import btnDark from './components/btn-dark.vue';
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return
+  },
+  methods: {
+    googleTranslateElementInit() {
+      window.google.translate.TranslateElement(
+        { pageLanguage: "en" },
+        "google_translate_element"
+      );
+    },
+  },
+  mounted() {
+    let siteTitle = '';
+    window.addEventListener('blur', () => {
+      siteTitle = document.title;
+      document.title = 'Come back! :c';
+    });
+    window.addEventListener('focus', () => {
+      document.title = siteTitle;
+    });
+  }
+}
+</script>
+
+
 <style lang="css">
 /* icons */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
@@ -88,30 +115,3 @@ html {
   color: #fefefe !important;
 }
 </style>
-
-
-<script>
-export default {
-  data() {
-    return
-  },
-  methods: {
-    googleTranslateElementInit() {
-      window.google.translate.TranslateElement(
-        { pageLanguage: "en" },
-        "google_translate_element"
-      );
-    },
-  },
-  mounted() {
-    let siteTitle = '';
-    window.addEventListener('blur', () => {
-      siteTitle = document.title;
-      document.title = 'Come back! :c';
-    });
-    window.addEventListener('focus', () => {
-      document.title = siteTitle;
-    });
-  },
-}
-</script>

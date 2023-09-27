@@ -68,6 +68,9 @@ export default {
   async created() {
     const route = useRoute();
     const { type, number } = route.params
+    // type = [
+    //   "CCNA",
+    //   "ITE"  ]
     const data = await import(`../../src/data/${type}/${number}.json`);
     data.questions.sort(() => Math.random() - 0.5);
     data.questions.forEach((question) => question.options.sort(() => Math.random() - 0.5));
@@ -125,7 +128,5 @@ export default {
 </script>
 
 <style scoped>
-.Wrong::first-letter {
-  text-transform: uppercase !important;
-}
+.Wrong::first-letter { text-transform: uppercase !important }
 </style>
