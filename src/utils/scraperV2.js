@@ -1,3 +1,5 @@
+// wp-caption
+
 // avoid useless and dangerous queries
 if(document.querySelectorAll('ol > li > ul > li > table')) {
   const shittyElements = document.querySelectorAll('ol > li > ul > li > table')
@@ -70,13 +72,14 @@ questions.forEach((question, index) => {
     "img": images
   }
 
-  let containImage = question.parentElement.querySelector('figure img');
+  // in infraexam // let containImage = question.parentElement.querySelector('figure img');
 
-  if (containImage) {
+  // in premiumexam.net
+  let containImage = question.parentElement.querySelectorAll('ol > li > .wp-caption img');
+
+  if (question.parentElement.querySelector('img'))
     toPush.photo = containImage.src
-    console.log(containImage);
-  }
-
+  
   questionArr.push(toPush)
 })
 
