@@ -1,32 +1,25 @@
-// wp-caption
+// Remove specific elements
+const shittyElements = document.querySelectorAll('.entry-content ol > li > ul > li > table');
+shittyElements.forEach(shit => shit.remove());
 
-// avoid useless and dangerous queries
-if(document.querySelectorAll('ol > li > ul > li > table')) {
-  const shittyElements = document.querySelectorAll('ol > li > ul > li > table')
-  shittyElements.forEach(shit => shit.remove())
-}
-if(document.querySelectorAll('h2')) {
-  // useless h2
-  const shittyH2 = document.querySelectorAll('h2')
-  shittyH2.forEach(shit => shit.remove())
-}
-if(document.querySelectorAll('figure > figcaption')) {
-  // new figcaption under the image (remove all into figure)
-  const figures = document.querySelectorAll('figure > figcaption')
-  figures.forEach(fig => fig.remove())
-}
-// table into ol > li 
-if(document.querySelectorAll('ol > li > table')) {
-  const table = document.querySelectorAll('ol > li > table')
-  table.forEach(table => table.remove())
-}
-if(document.querySelectorAll('ol > li > p')) {
-  // some paragraphs 
-  const paragraphs = document.querySelectorAll('ol > li > p')
-  paragraphs.forEach(paragraph => paragraph.remove())
+const shittyH2 = document.querySelectorAll('.entry-content h2');
+shittyH2.forEach(shit => shit.remove());
+
+const figures = document.querySelectorAll('figure > figcaption');
+figures.forEach(fig => fig.remove());
+
+const table = document.querySelectorAll('.entry-content ol > li > table');
+table.forEach(table => table.remove());
+
+const paragraphs = document.querySelectorAll('.entry-content ol > li > p');
+paragraphs.forEach(paragraph => paragraph.remove());
+
+const contentPrincipale = document.querySelector('.entry-content .post-modified-info');
+if (contentPrincipale) {
+  contentPrincipale.remove();
 }
 
-// oggetto sample
+// Parse questions and options into an object
 const obj = {
   "examData": {
     "holder": "Cisco Netacad",
@@ -43,26 +36,41 @@ const obj = {
       2024
     ]
   }
-}
+};
 
 const questionArr = [];
 const regex = /<span style="color: #ff0000;">/;
 
-const questions = document.querySelectorAll('ol > li > h3')
-const options = document.querySelectorAll('ol > li > ul')
-
-questions.forEach((question, index) => {
-  const optionsArr = []; 
+const questions = document.querySelectorAll('ol > li > h3');
+questions.forEach((question) => {
+  const optionsArr = [];
   const answerArr = [];
   const images = [];
 
-  // if there is a corresponding option for this question, then process it
-  if(options[index]) {
-    Array.from(options[index].querySelectorAll('li')).forEach(option => {
-      optionsArr.push(option.textContent)
-      if (regex.test(option.innerHTML))
-        answerArr.push(option.textContent)
-    })
+  const options = question.parentElement.querySelector('ul');
+  if (options) {
+    Array.from(options.querySelectorAll('li')).forEach(option => {
+      optionsArr.push(option.textContent);
+      if (regex.test(option.innerHTML)) {
+        answerArr.push(option.textContent);
+      }
+    });
+  }
+
+  // Check if the question contains an SVG image and remove it
+  const svgImage = question.parentElement.querySelector('img[src^="data:image/svg+xml"]');
+  if (svgImage) {
+    // Remove the entire question if it contains an SVG image
+    return;
+  }
+
+  // Get image
+  const image = question.parentElement.querySelector('div.wp-caption img');
+  if (image) {
+    // Check if the image src is valid (ends with .jpg or .png)
+    if (image.src.endsWith('.jpg') || image.src.endsWith('.png')) {
+      images.push(image.src);
+    }
   }
 
   const toPush = {
@@ -70,22 +78,13 @@ questions.forEach((question, index) => {
     "options": optionsArr,
     "answer": (answerArr.length === 1) ? answerArr[0] : answerArr,
     "img": images
-  }
+  };
 
-  // in infraexam // let containImage = question.parentElement.querySelector('figure img');
+  questionArr.push(toPush);
+});
 
-  // in premiumexam.net
-  let containImage = question.parentElement.querySelectorAll('ol > li > .wp-caption img');
+obj.questions = questionArr;
 
-  if (question.parentElement.querySelector('img'))
-    toPush.photo = containImage.src
-  
-  questionArr.push(toPush)
-})
-
-obj.questions = questionArr
-
-const data = JSON.stringify(obj).replace(/\\n/g, '').replace(/ "|" /g, '"')
-console.log(data)
-
-// MODIFY IN WHAT ELEMENTS ARE IN THE PAGE
+// Convert to JSON
+const data = JSON.stringify(obj);
+console.log(data);

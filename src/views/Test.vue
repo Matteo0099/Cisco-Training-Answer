@@ -5,13 +5,17 @@
       <h1 v-if="dataIsReady" class="text-xl sm:text-2xl font-bold mt-8 mb-4">Test cap {{ numCap }} - complete </h1>
       <ul v-for="(question, index) in questions" :key="index" class="flex flex-col list-disc my-4">
         <h1 class="home text-xl sm:text-2xl mb-2"> {{ index + 1 }} - {{ question.question }} </h1>
-        <img v-if="question.photo" :src="question.photo" class="w-max" />
+        <!-- or photo or img -->
+        <img v-if="question.photo" :src="question.photo" class="w-max" ref="questionImage" />
+        <img v-if="question.img" :src="question.img" class="w-max q-without" ref="questionImage" />
+        
         <template v-if="Array.isArray(question.answer)">
           <label v-for="(option, oIndex) in question.options" :key="oIndex" class="pl-4 text-base sm:text-lg">
             <input type="checkbox" :value="option" v-model="selectedAnswers[index]" :disabled="formSubmitted" />
             {{ option }}
           </label>
         </template>
+        
         <template v-else>
           <label v-for="(option, oIndex) in question.options" :key="oIndex" class="pl-4 text-lg sm:text-xl">
             <input type="radio" :name="`radio-${index}`" :value="option" v-model="selectedAnswers[index]"
@@ -19,21 +23,26 @@
             {{ option }}
           </label>
         </template>
+        
         <p v-if="submitted && !rightAnswers[index]"
-          class="Wrong list-disc text-xl sm:text-2xl text-red-500 font-semibold pl-4 pt-2">
+          class="Wrong list-disc text-xl md:text-2xl text-red-500 font-semibold pl-3 pt-1.5">
           {{ question.answer }}
         </p>
       </ul>
+
+      <!-- on submit -->
       <button type="submit" role="button" :disabled="formSubmitted"
         class="py-2 px-4 border rounded-lg w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto">
         <span v-if="!formSubmitted">Submit</span>
         <span v-else>Submitting...</span>
       </button>
+      <!-- refresh -->
       <button type="button" role="button"
         class="py-2 px-4 border rounded-lg w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto"
         @click="refreshForm">
         <span><i class="bi bi-arrow-clockwise"></i></span>
       </button>
+      <!-- torna su -->
       <a href="#top" class="w-full text-center">
         <button type="button" role="button"
           class="flex flex-row items-center justify-center py-2 px-4 border rounded-lg w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto">
@@ -42,6 +51,7 @@
         </button>
       </a>
     </form>
+    <!-- risultato -->
     <p v-if="submitted" class="font-semibold text-xl sm:text-2xl mt-8 mb-12 mx-auto w-fit">
       You got {{ correctAnswers }} out of {{ totalQuestions }} correct ({{ percentageCorrect }}%)!
     </p>
@@ -68,9 +78,6 @@ export default {
   async created() {
     const route = useRoute();
     const { type, number } = route.params
-    // type = [
-    //   "CCNA",
-    //   "ITE"  ]
     const data = await import(`../../src/data/${type}/${number}.json`);
     data.questions.sort(() => Math.random() - 0.5);
     data.questions.forEach((question) => question.options.sort(() => Math.random() - 0.5));
@@ -90,14 +97,18 @@ export default {
       }, 2000);
     },
     checkAnswers() {
+      // correzione logica, sbagliata in precedenza
       this.correctAnswers = 0;
       this.questions.forEach((question, index) => {
         const selected = this.selectedAnswers[index];
-        const correctAnswer = question.answer;
+        const correctAnswer = this.correctAnswers[index];
+
+        // Verifica se la risposta selezionata è corretta per la domanda corrente
         if (Array.isArray(correctAnswer)) {
-          if (correctAnswer.every(answer => selected.includes(answer)) && correctAnswer.length === selected.length) {
+          const isCorrect = correctAnswer.every(answer => selected.includes(answer));
+          if (isCorrect && selected.length === correctAnswer.length) {
             this.correctAnswers++;
-            this.rightAnswers.push(true)
+            this.rightAnswers.push(true);
           } else {
             this.rightAnswers.push(false);
           }
@@ -111,6 +122,7 @@ export default {
         }
       });
     },
+
     refreshForm() {
       this.formSubmitted = false;
       this.submitted = false;
