@@ -13,6 +13,8 @@
     "@vercel/analytics": "^1.0.0",
     "aos": "^2.3.4",
     "vue": "^3.2.47",
+    "vue-confetti": "^2.3.0",
+    "vue-confetti-explosion": "^1.0.2",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {

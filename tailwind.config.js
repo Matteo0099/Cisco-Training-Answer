@@ -16,6 +16,7 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
-    "prettier-plugin"
+    "prettier-plugin",
+    { src: '~/plugins/vue-confetti.js', mode: 'client' },
   ],
 }

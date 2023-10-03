@@ -36,11 +36,14 @@
       </ul>
 
       <!-- on submit -->
-      <button type="submit" role="button" :disabled="formSubmitted"
+      <button type="submit" @click="start" role="button" :disabled="formSubmitted"
               class="py-2 px-4 border rounded-lg w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto">
         <span v-if="!formSubmitted">Submit</span>
         <span v-else>Submitting...</span>
       </button>
+      <!-- <button @click="stop">Stop</button>
+        without click, after 3sec stop it  
+      -->
       <!-- refresh -->
       <button type="button" role="button"
               class="py-2 px-4 border rounded-lg w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto"
@@ -95,12 +98,33 @@ export default {
   },
   methods: {
     async submitForm() {
+      const canvas = document.getElementById('confetti-canvas');
       this.formSubmitted = true;
       await this.checkAnswers();
       this.submitted = true;
       setTimeout(() => {
         this.formSubmitted = false;
-      }, 2000);
+        this.hideCanvas();
+      }, 2250);
+      if(this.submitted) {
+        if(canvas) {
+          canvas.style.display = 'block';
+          canvas.style.opacity = '1';
+        }
+      }
+    },
+    hideCanvas() {
+      // Hide the canvas element by setting display to 'none' and visibility to 'hidden'
+      const canvas = document.getElementById('confetti-canvas');
+      if (canvas) {
+        canvas.style.opacity = '0.5';
+      }
+      setTimeout(() => {
+        if (canvas) {
+          canvas.style.display = 'none';
+          canvas.style.opacity = '0';
+        }
+      }, 500);
     },
     checkAnswers() {
       this.correctAnswers = 0;
@@ -130,6 +154,31 @@ export default {
           // No selection made for this question, so it's marked as incorrect
           this.rightAnswers.push(false);
         }
+      });
+    },
+    start() {
+      this.$confetti.start();
+    },
+
+    stop() {
+      this.$confetti.stop();
+    },
+
+    love() {
+      this.$confetti.update({
+        particles: [
+          {
+            type: 'heart',
+          },
+          {
+            type: 'circle',
+          },
+        ],
+        defaultColors: [
+          'red',
+          'pink',
+          '#ba0000'
+        ],
       });
     },
     refreshForm() {

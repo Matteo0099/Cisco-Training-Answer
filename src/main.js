@@ -6,6 +6,9 @@ import './style.css'
 import { inject } from '@vercel/analytics';
 inject();
 
+//confetti animation
+import VueConfetti from 'vue-confetti'
+
 //aos
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -37,4 +40,4 @@ const router = createRouter({
 })
 
 //Create the app
-createApp(App).use(router).mount('#app')
+createApp(App).use(router).use(VueConfetti).mount('#app')
