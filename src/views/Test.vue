@@ -5,29 +5,35 @@
       <h1 v-if="dataIsReady" class="text-xl sm:text-2xl font-bold mt-8 mb-4">Test cap {{ numCap }} - complete </h1>
       <ul v-for="(question, index) in questions" :key="index" class="flex flex-col list-disc my-4">
         <h1 class="home text-xl sm:text-2xl mb-2"> {{ index + 1 }} - {{ question.question }} </h1>
-        <!-- or photo or img -->
-        <img v-if="question.photo" :src="question.photo" class="w-max" ref="questionImage" />
-        <img v-if="question.img" :src="question.img" class="w-max q-without" ref="questionImage" />
-        
-        <template v-if="Array.isArray(question.answer)">
-          <label v-for="(option, oIndex) in question.options" :key="oIndex" class="pl-4 text-base sm:text-lg">
-            <input type="checkbox" :value="option" v-model="selectedAnswers[index]" :disabled="formSubmitted" />
-            {{ option }}
-          </label>
+
+        <!-- Add a conditional check to ignore UL elements with only images -->
+        <template v-if="question.options || question.answer">
+          <!-- or photo or img -->
+          <img v-if="question.photo" :src="question.photo" :class="imageClass" class="w-max image-q ite"
+            ref="questionImage" />
+          <img v-else-if="question.img" :src="question.img" :class="imageClass" class="w-max image-q ccna q-without"
+            ref="questionImage" />
+
+          <template v-if="Array.isArray(question.answer)">
+            <label v-for="(option, oIndex) in question.options" :key="oIndex" class="pl-4 text-base sm:text-lg">
+              <input type="checkbox" :value="option" v-model="selectedAnswers[index]" :disabled="formSubmitted" />
+              {{ option }}
+            </label>
+          </template>
+
+          <template v-else>
+            <label v-for="(option, oIndex) in question.options" :key="oIndex" class="pl-4 text-lg sm:text-xl">
+              <input type="radio" :name="`radio-${index}`" :value="option" v-model="selectedAnswers[index]"
+                :disabled="formSubmitted" />
+              {{ option }}
+            </label>
+          </template>
+
+          <p v-if="submitted && !rightAnswers[index]"
+            class="Wrong list-disc text-xl md:text-2xl text-red-500 font-semibold pl-3 pt-1.5">
+            {{ question.answer }}
+          </p>
         </template>
-        
-        <template v-else>
-          <label v-for="(option, oIndex) in question.options" :key="oIndex" class="pl-4 text-lg sm:text-xl">
-            <input type="radio" :name="`radio-${index}`" :value="option" v-model="selectedAnswers[index]"
-              :disabled="formSubmitted" />
-            {{ option }}
-          </label>
-        </template>
-        
-        <p v-if="submitted && !rightAnswers[index]"
-          class="Wrong list-disc text-xl md:text-2xl text-red-500 font-semibold pl-3 pt-1.5">
-          {{ question.answer }}
-        </p>
       </ul>
 
       <!-- on submit -->
@@ -53,7 +59,7 @@
     </form>
     <!-- risultato -->
     <p v-if="submitted" class="font-semibold text-xl sm:text-2xl mt-8 mb-12 mx-auto w-fit">
-      You got {{ correctAnswers }} out of {{ totalQuestions }} correct ({{ percentageCorrect }}%)!
+      You got {{ correctAnswers }} out of {{ questions.length }} correct ({{ percentageCorrect }}%)!
     </p>
   </div>
 </template>
@@ -68,24 +74,48 @@ export default {
       selectedAnswers: [],
       submitted: false,
       correctAnswers: 0,
-      totalQuestions: 0,
       numCap: null,
       formSubmitted: false,
       rightAnswers: [],
-      dataIsReady: false
+      dataIsReady: false,
+      importType: null,
+      questionImg: [],
     };
   },
   async created() {
     const route = useRoute();
-    const { type, number } = route.params
+    const { type, number } = route.params;
     const data = await import(`../../src/data/${type}/${number}.json`);
+    this.importType = type;
+    // based on type of cap
+    if (this.importType === 'CCNA') {
+      this.questions = data.questions.filter(q => q.img);
+    } else {
+      this.questions = data.questions.filter(q => q.photo);
+    }
+
+    // sort questions
     data.questions.sort(() => Math.random() - 0.5);
     data.questions.forEach((question) => question.options.sort(() => Math.random() - 0.5));
-    this.questions = data.questions;
+
+    // Filter out questions with only images
+    this.questions = this.questions.filter(q => q.options || q.answer);
+    // Filter pt2
     this.selectedAnswers = this.questions.map(() => []);
-    this.totalQuestions = this.questions.length;
+    // some things
     this.numCap = data.examData.cap;
-    this.dataIsReady = true
+    this.dataIsReady = true;
+  },
+
+  computed: {
+    imageClass() {
+      if (this.importType === 'CCNA') {
+        return 'ccna';
+      } else if (this.importType === 'ITE') {
+        return 'ite';
+      }
+      return '';
+    }
   },
   methods: {
     async submitForm() {
@@ -97,28 +127,29 @@ export default {
       }, 2000);
     },
     checkAnswers() {
-      // correzione logica, sbagliata in precedenza
       this.correctAnswers = 0;
       this.questions.forEach((question, index) => {
         const selected = this.selectedAnswers[index];
-        const correctAnswer = this.correctAnswers[index];
-
-        // Verifica se la risposta selezionata è corretta per la domanda corrente
-        if (Array.isArray(correctAnswer)) {
-          const isCorrect = correctAnswer.every(answer => selected.includes(answer));
-          if (isCorrect && selected.length === correctAnswer.length) {
-            this.correctAnswers++;
-            this.rightAnswers.push(true);
+        const correctAnswer = question.answer;
+        if (selected && selected.length > 0) {
+          if (Array.isArray(correctAnswer)) {
+            if (correctAnswer.every(answer => selected.includes(answer)) && correctAnswer.length === selected.length) {
+              this.correctAnswers++;
+              this.rightAnswers.push(true)
+            } else {
+              this.rightAnswers.push(false);
+            }
           } else {
-            this.rightAnswers.push(false);
+            if (selected === correctAnswer) {
+              this.correctAnswers++;
+              this.rightAnswers.push(true);
+            } else {
+              this.rightAnswers.push(false);
+            }
           }
         } else {
-          if (selected === correctAnswer) {
-            this.correctAnswers++;
-            this.rightAnswers.push(true);
-          } else {
-            this.rightAnswers.push(false);
-          }
+          //No selection made for this question, so it's marked as incorrect
+          this.rightAnswers.push(false);
         }
       });
     },
@@ -133,12 +164,10 @@ export default {
   },
   computed: {
     percentageCorrect() {
-      return Math.round((this.correctAnswers / this.totalQuestions) * 100);
+      return this.correctAnswers ? Math.round((this.correctAnswers / this.questions.length) * 100) : 0;
     },
   },
 };
 </script>
 
-<style scoped>
-.Wrong::first-letter { text-transform: uppercase !important }
-</style>
+<style scoped>.Wrong::first-letter { text-transform: uppercase !important }</style>
