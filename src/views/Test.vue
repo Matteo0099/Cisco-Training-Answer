@@ -2,25 +2,25 @@
   <div>
     <!-- template for all caps -->
     <form ref="examForm" @submit.prevent="submitForm" class="flex flex-col gap-2 mt-10">
-      <h1 v-if="dataIsReady" class="text-xl sm:text-2xl font-bold mt-8 mb-4">Test cap {{ numCap }} - complete </h1>
+      <h1 v-if="dataIsReady" class="text-xl sm:text-2xl font-bold mt-8 mb-4">Test cap {{ numCap }} - complete</h1>
       <ul v-for="(question, index) in questions" :key="index" class="flex flex-col list-disc my-4">
-        <h1 class="home text-xl sm:text-2xl mb-2"> {{ index + 1 }} - {{ question.question }} </h1>
+        <h1 class="home text-xl sm:text-2xl mb-2">{{ index + 1 }} - {{ question.question }}</h1>
 
-        <!-- Add a conditional check to ignore UL elements with only images -->
+        <!-- Display the image if it exists -->
+        <img 
+          v-if="question.photo || question.img" 
+          :src="question.photo || question.img" 
+          class="w-max image-q"
+          ref="questionImage" 
+        />
+
         <template v-if="question.options || question.answer">
-          <!-- or photo or img -->
-          <img v-if="question.photo" :src="question.photo" :class="imageClass" class="w-max image-q ite"
-            ref="questionImage" />
-          <img v-else-if="question.img" :src="question.img" :class="imageClass" class="w-max image-q ccna q-without"
-            ref="questionImage" />
-
           <template v-if="Array.isArray(question.answer)">
             <label v-for="(option, oIndex) in question.options" :key="oIndex" class="pl-4 text-base sm:text-lg">
               <input type="checkbox" :value="option" v-model="selectedAnswers[index]" :disabled="formSubmitted" />
               {{ option }}
             </label>
           </template>
-
           <template v-else>
             <label v-for="(option, oIndex) in question.options" :key="oIndex" class="pl-4 text-lg sm:text-xl">
               <input type="radio" :name="`radio-${index}`" :value="option" v-model="selectedAnswers[index]"
@@ -28,7 +28,6 @@
               {{ option }}
             </label>
           </template>
-
           <p v-if="submitted && !rightAnswers[index]"
             class="Wrong list-disc text-xl md:text-2xl text-red-500 font-semibold pl-3 pt-1.5">
             {{ question.answer }}
@@ -38,20 +37,20 @@
 
       <!-- on submit -->
       <button type="submit" role="button" :disabled="formSubmitted"
-        class="py-2 px-4 border rounded-lg w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto">
+              class="py-2 px-4 border rounded-lg w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto">
         <span v-if="!formSubmitted">Submit</span>
         <span v-else>Submitting...</span>
       </button>
       <!-- refresh -->
       <button type="button" role="button"
-        class="py-2 px-4 border rounded-lg w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto"
-        @click="refreshForm">
+              class="py-2 px-4 border rounded-lg w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto"
+              @click="refreshForm">
         <span><i class="bi bi-arrow-clockwise"></i></span>
       </button>
       <!-- torna su -->
       <a href="#top" class="w-full text-center">
         <button type="button" role="button"
-          class="flex flex-row items-center justify-center py-2 px-4 border rounded-lg w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto">
+                class="flex flex-row items-center justify-center py-2 px-4 border rounded-lg w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto">
           turn top
           <i class="bi bi-arrow-up text-lg pl-1"></i>
         </button>
@@ -79,43 +78,20 @@ export default {
       rightAnswers: [],
       dataIsReady: false,
       importType: null,
-      questionImg: [],
     };
   },
   async created() {
     const route = useRoute();
     const { type, number } = route.params;
     const data = await import(`../../src/data/${type}/${number}.json`);
-    this.importType = type;
-    // based on type of cap
-    if (this.importType === 'CCNA') {
-      this.questions = data.questions.filter(q => q.img);
-    } else {
-      this.questions = data.questions.filter(q => q.photo);
-    }
 
-    // sort questions
     data.questions.sort(() => Math.random() - 0.5);
     data.questions.forEach((question) => question.options.sort(() => Math.random() - 0.5));
-
-    // Filter out questions with only images
-    this.questions = this.questions.filter(q => q.options || q.answer);
-    // Filter pt2
+    this.questions = data.questions;
     this.selectedAnswers = this.questions.map(() => []);
-    // some things
+    this.totalQuestions = this.questions.length;
     this.numCap = data.examData.cap;
     this.dataIsReady = true;
-  },
-
-  computed: {
-    imageClass() {
-      if (this.importType === 'CCNA') {
-        return 'ccna';
-      } else if (this.importType === 'ITE') {
-        return 'ite';
-      }
-      return '';
-    }
   },
   methods: {
     async submitForm() {
@@ -133,9 +109,12 @@ export default {
         const correctAnswer = question.answer;
         if (selected && selected.length > 0) {
           if (Array.isArray(correctAnswer)) {
-            if (correctAnswer.every(answer => selected.includes(answer)) && correctAnswer.length === selected.length) {
+            if (
+              correctAnswer.every((answer) => selected.includes(answer)) &&
+              correctAnswer.length === selected.length
+            ) {
               this.correctAnswers++;
-              this.rightAnswers.push(true)
+              this.rightAnswers.push(true);
             } else {
               this.rightAnswers.push(false);
             }
@@ -148,12 +127,11 @@ export default {
             }
           }
         } else {
-          //No selection made for this question, so it's marked as incorrect
+          // No selection made for this question, so it's marked as incorrect
           this.rightAnswers.push(false);
         }
       });
     },
-
     refreshForm() {
       this.formSubmitted = false;
       this.submitted = false;
