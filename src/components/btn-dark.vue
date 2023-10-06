@@ -5,12 +5,7 @@
         :class="{ 'switch-toggle-checked': isDarkTheme }" @click="toggleTheme">
         <i class="bi bi-moon text-2xl sm:text3xl"></i>
       </button>
-      <span v-if="isDarkTheme" class="font-primary">
-        dark-mode on
-      </span>
-      <span v-else class="font-primary">
-        dark-mode off
-      </span>
+      <span class="font-primary"> Dark mode:{{ state }} </span>
     </div>
   </div>
 </template>
@@ -20,12 +15,13 @@ export default {
   data() {
     return {
       userTheme: "light-theme",
+      state: "off",
     };
   },
   computed: {
     isDarkTheme() {
       return this.userTheme === "dark-theme";
-    },
+    }
   },
   mounted() {
     this.initializeTheme();
@@ -34,6 +30,9 @@ export default {
     toggleTheme() {
       this.userTheme = this.isDarkTheme ? "light-theme" : "dark-theme";
       this.setTheme(this.userTheme);
+      // update dark mode state for accessibilty
+      if(this.userTheme === "light-theme") this.state = "off";
+      else this.state = "on";
     },
     initializeTheme() {
       const storedTheme = this.getStoredTheme();
@@ -51,7 +50,7 @@ export default {
     getMediaPreference() {
       const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
       return mediaQuery.matches ? "dark-theme" : "light-theme";
-    },
-  },
+    }
+  }
 };
 </script>

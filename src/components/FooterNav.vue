@@ -13,14 +13,16 @@
             e nei moduli di cisco, perché sono presenti anche le domande <i class="italic underline">Drag and drop</i>
             che non sono state ancora implementate. 
           </p>
-          <button @click="closeModal" class="border w-20 h-8 mx-0 px-2 mb-auto bg-red-400 text-neutral-50 hover:opacity-90 
-            active:border active:border-red-500 text-lg sm:text-xl rounded-lg">
+          <button @click="closeModal" 
+            class="border w-20 h-8 mx-0 px-2 mb-auto bg-red-400 text-neutral-50 
+            hover:opacity-90 active:border active:border-red-500 text-lg sm:text-xl rounded-lg">
             X
           </button>
         </div>
         <div class="container flex justify-between pt-0 pb-2 pl-2 pr-2">
           <p class="font-mono font-bold">
-            <span class="m-0 p-0 font-light">By:</span> @noyaz / @Matteo0099
+            <span class="m-0 p-0 font-light">By:</span> 
+            @noyaz / @Matteo0099
           </p>
         </div>
       </div>
@@ -31,13 +33,10 @@
 
 <script>
 export default {
-  data() {
-    return
-  },
   methods: {
     openModal() {
       const dialog = document.querySelector(".modal")
-      dialog.showModal() // Opens the modal dialog
+      dialog.showModal() //Opens the modal 
       dialog.addEventListener("click", e => {
         const dialogDimensions = dialog.getBoundingClientRect()
         if (
@@ -45,7 +44,7 @@ export default {
           e.clientX > dialogDimensions.right ||
           e.clientY < dialogDimensions.top ||
           e.clientY > dialogDimensions.bottom
-        ) { dialog.close() } /*Closes the dialog (click outside)*/
+        ) dialog.close() /*(click outside)*/
       })
     },
     closeModal() {

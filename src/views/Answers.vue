@@ -34,6 +34,7 @@ export default {
       dataIsReady: false
     };
   },
+  // dynamic imports from JSON files.
   async created() {
     const route = useRoute();
     const { type, number } = route.params

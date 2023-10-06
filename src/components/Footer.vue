@@ -19,8 +19,7 @@
                 students.
               </p>
               <button @click="closeModal2" class="border w-20 h-8 mx-0 px-2 mb-auto bg-red-400 text-neutral-50 hover:opacity-90 
-                active:border active:border-red-400 rounded-lg">
-                X
+                active:border active:border-red-400 rounded-lg"> X
               </button>
             </div>
             <div class="container flex justify-between pt-0 pb-2 pl-2 pr-2">
@@ -43,15 +42,10 @@
 
 <script>
 export default {
-  data() {
-    return {
-      // Add data properties here if needed in the future
-    }
-  },
   methods: {
     openModal2() {
       const dialog = document.querySelector(".modal2")
-      dialog.showModal() // Opens the modal dialog
+      dialog.showModal() // Opens the modal 
       dialog.addEventListener("click", e => {
         const dialogDimensions = dialog.getBoundingClientRect()
         if (
@@ -59,12 +53,12 @@ export default {
           e.clientX > dialogDimensions.right ||
           e.clientY < dialogDimensions.top ||
           e.clientY > dialogDimensions.bottom
-        ) { dialog.close() } /*Closes the dialog (click outside)*/
+        ) dialog.close()  /*(click outside)*/
       })
     },
     closeModal2() {
       const dialog = document.querySelector(".modal2")
-      dialog.close() // Closes the modal dialog
+      dialog.close() // Closes the modal 
     }
   },
 }
