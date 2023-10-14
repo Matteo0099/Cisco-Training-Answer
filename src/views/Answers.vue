@@ -14,7 +14,7 @@
               {{ option }}
             </li>
           </ul>
-          <p class="my-2 pl-1">
+          <p class="my-2 pl-1">  <!--sometimes empty answers [], maybe image or invisible carachters-->
             Answer: <span class="font-bold text-lg sm:text-xl text-red-500">{{ question.answer }}</span>
           </p>
         </li>

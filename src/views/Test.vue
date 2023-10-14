@@ -41,9 +41,7 @@
         <span v-if="!formSubmitted">Submit</span>
         <span v-else>Submitting...</span>
       </button>
-      <!-- <button @click="stop">Stop</button>
-        without click, after 3sec stop it  
-      -->
+      <!-- <button @click="stop">Stop</button> without click, after 3sec stop it -->
       <!-- refresh -->
       <button type="button" role="button"
               class="py-2 px-4 border rounded-lg w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto"

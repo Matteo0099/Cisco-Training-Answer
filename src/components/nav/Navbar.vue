@@ -8,7 +8,8 @@ import navFoot from '../FooterNav.vue'
     <!-- custom components -->
     <navFoot />
     <backToHome class="cursor-pointer"></backToHome>
-    <!-- answers -->
+
+    <!-- answers ITE -->
     <h1 class="font-bold text-xl sm:text-2xl mt-8 mb-4 mx-auto">
       Cisco <span class="m-0 p-0 underline">Answers</span> chapter 1-14
     </h1>
@@ -21,6 +22,22 @@ import navFoot from '../FooterNav.vue'
         v-bind:value="list.text"
         class="bg-neutral-100 mr-auto font-sans text-lg">
         (answers) chapter of {{ number + 1 }} 
+      </option>
+    </select>
+
+    <!-- answers CCNA -->
+    <h1 class="font-bold text-xl sm:text-2xl mt-8 mb-4 mx-auto">
+      Cisco <span class="m-0 p-0 underline">Answers</span> CCNA v.7.0
+    </h1>
+    <select v-model="selected" @change="changeRoute($event)" class="dropdown flex items-center justify-center cursor-pointer text-neutral-900 w-full mt-2 py-4 mx-auto rounded-md shadow-sm bg-gray-100 
+          border-transparent focus:border-gray-400 focus:bg-white focus:ring-0">
+      <option disabled value="" class="bg-neutral-50 mr-auto font-sans text-lg">Select an option</option>
+      <option 
+        v-for="(list, number) in answersCCNA" 
+        :value="list.text"
+        v-bind:value="list.text"
+        class="bg-neutral-100 mr-auto font-sans text-lg">
+        (answersCCNA) chapter of {{ number + 1 }} 
       </option>
     </select>
     
@@ -71,6 +88,12 @@ import navFoot from '../FooterNav.vue'
           {text: '/Answers/ITE/9', number: 9}, {text: '/Answers/ITE/10', number: 11},
           {text: '/Answers/ITE/11', number: 11}, {text: '/Answers/ITE/12', number: 12},
           {text: '/Answers/ITE/13', number: 13}, {text: '/Answers/ITE/14', number: 14}, 
+        ],
+        answersCCNA: [
+          {text: '/Answers/CCNA/1', number: 1}, {text: '/Answers/CCNA/2', number: 2},
+          {text: '/Answers/CCNA/3', number: 3}, {text: '/Answers/CCNA/4', number: 4},
+          {text: '/Answers/CCNA/5', number: 5}, {text: '/Answers/CCNA/6', number: 6},
+          {text: '/Answers/CCNA/7', number: 7} 
         ],
         ite: [
           {text: '/test/ITE/1', number: 1}, {text: '/test/ITE/2', number: 2},
