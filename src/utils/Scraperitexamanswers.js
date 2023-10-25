@@ -26,7 +26,7 @@ const regex = /<span style="color: #ff0000;">/;
 const questions = document.querySelectorAll('.thecontent.clearfix p strong');
 questions.forEach((question, index) => {
   // Check if we've reached question 29 and beyond
-  if (index >= 28) {
+  if (index >= 28 || document.querySelector('.thecontent.clearfix h3') == true) {
     return;
   }
 
@@ -88,6 +88,21 @@ paragraphs.forEach(pTag => {
 // Remove <br> tags within .thecontent.clearfix
 const brTags = document.querySelectorAll('.thecontent.clearfix br');
 brTags.forEach(brTag => brTag.remove());
+
+const shit2 = document.querySelectorAll('.thecontent.clearfix strong .message_box.note');
+if(shit2) {
+  shit2.forEach(tag => tag.remove()); 
+}
+
+const infoBox = document.querySelectorAll('.thecontent.clearfix .message_box.announce');
+if(infoBox) {
+  infoBox.forEach(infotag => infotag.remove());
+}
+
+const avoidTitles = document.querySelectorAll('.thecontent.clearfix h2');
+if(avoidTitles) {
+  avoidTitles.forEach(title => title.remove());
+}
 
 // Remove specific elements with class 'message_box.success'
 const successMessages = document.querySelectorAll('.thecontent.clearfix .message_box.success');
