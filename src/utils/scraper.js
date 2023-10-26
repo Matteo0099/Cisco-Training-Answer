@@ -13,8 +13,6 @@ shittyElements.forEach(shit => shit.remove())
 const questions = document.querySelectorAll('ol > li h3')
 const options = document.querySelectorAll('ol > li ul')
 
-const chapter = prompt('CHAP NUMBER', '1');
-
 const obj = {
     "examData": {
         "holder": "Cisco Netacad",

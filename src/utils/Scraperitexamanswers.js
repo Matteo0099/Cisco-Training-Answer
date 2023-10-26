@@ -58,9 +58,9 @@ const obj = {
   "examData": {
     "holder": "Cisco Netacad",
     "examName": "IT Essentials",
-    "abbreviation": "ITE",
+    "abbreviation": "CCNA",
     "modules": "",
-    "versionName": "ccna1-v7",
+    "versionName": "ccna1-v6.0",
     "versions": 6.0,
     "years": 2020
   },
