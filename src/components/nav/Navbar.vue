@@ -4,7 +4,7 @@ import navFoot from '../FooterNav.vue'
 </script>
 
 <template>
-  <div class="w-full mt-[17.5%] 2xl:mt-[25%] h-fit">
+  <div class="w-full mt-[17.5%] 2xl:mt-[25%] h-fit" id="top">
     <!-- custom components -->
     <navFoot />
     <backToHome class="cursor-pointer"></backToHome>
@@ -42,7 +42,7 @@ import navFoot from '../FooterNav.vue'
     </select>
     
     <!-- test ITE -->
-    <h1 class="font-bold text-xl sm:text-2xl mt-8 mb-4 mx-auto" id="top">Cisco <span class="m-0 p-0 underline">Test</span>
+    <h1 class="font-bold text-xl sm:text-2xl mt-8 mb-4 mx-auto">Cisco <span class="m-0 p-0 underline">Test</span>
       chapter 1-14</h1>
     <select v-model="selected" v-on:change="changeRoute($event)" class="dropdown flex items-center justify-center cursor-pointer text-neutral-900 w-full mt-2 py-4 mx-auto rounded-md shadow-sm bg-gray-100 
           border-transparent focus:border-gray-400 focus:bg-white focus:ring-0 disabled:bg-blue-gray-50">

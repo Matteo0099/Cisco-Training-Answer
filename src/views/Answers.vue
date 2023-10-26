@@ -1,3 +1,7 @@
+<script setup>
+  import turnTop from '../components/turnTop.vue';
+</script>
+
 <template>
   <div>
     <div class="mx-3 sm:mx-auto mt-8 min-h-screen">
@@ -19,6 +23,7 @@
           </p>
         </li>
       </ul>
+      <turnTop />
     </div>
   </div>
 </template>
