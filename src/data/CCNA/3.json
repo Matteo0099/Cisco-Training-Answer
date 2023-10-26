@@ -1,1 +1,309 @@
-{"examData":{"holder":"Cisco Netacad","examName":"IT Essentials","abbreviation":"ITE","modules":"1-3","versionName":"ccna1-v7","versions":[7,7.02],"years":[2023,2024]},"questions":[{"question":"A computer can access devices on the same network but cannot access devices on other networks. What is the probable cause of this problem?","options":["The cable is not connected properly to the NIC.","The computer has an invalid IP address.","The computer has an incorrect subnet mask.","The computer has an invalid default gateway address."],"answer":"The computer has an invalid default gateway address.","img":[]},{"question":"Which statement describes a feature of the IP protocol?","options":["IP encapsulation is modified based on network media.","IP relies on Layer 2 protocols for transmission error control.","MAC addresses are used during the IP packet encapsulation.","IP relies on upper layer services to handle situations of missing or out-of-order packets."],"answer":"IP relies on upper layer services to handle situations of missing or out-of-order packets.","img":[]},{"question":"Why is NAT not needed in IPv6?​","options":["Because IPv6 has integrated security, there is no need to hide the IPv6 addresses of internal networks.​","Any host or user can get a public IPv6 network address because the number of available IPv6 addresses is extremely large.​","The problems that are induced by NAT applications are solved because the IPv6 header improves packet handling by intermediate routers.​","The end-to-end connectivity problems that are caused by NAT are solved because the number of routes increases with the number of nodes that are connected to the Internet."],"answer":"Any host or user can get a public IPv6 network address because the number of available IPv6 addresses is extremely large.​","img":[]},{"question":"Which parameter does the router use to choose the path to the destination when there are multiple routes available?","options":["the lower metric value that is associated with the destination network","the lower gateway IP address to get to the destination network","the higher metric value that is associated with the destination network","the higher gateway IP address to get to the destination network"],"answer":"the lower metric value that is associated with the destination network","img":[]},{"question":"What are two services provided by the OSI network layer? (Choose two.)","options":["performing error detection","routing packets toward the destination","encapsulating PDUs from the transport layer","placement of frames on the media","collision detection"],"answer":["routing packets toward the destination","encapsulating PDUs from the transport layer"],"img":[]},{"question":"Within a production network, what is the purpose of configuring a switch with a default gateway address?","options":["Hosts that are connected to the switch can use the switch default gateway address to forward packets to a remote destination.","A switch must have a default gateway to be accessible by Telnet and SSH.","The default gateway address is used to forward packets originating from the switch to remote networks.","It provides a next-hop address for all traffic that flows through the switch."],"answer":"The default gateway address is used to forward packets originating from the switch to remote networks.","img":[]},{"question":"What is a basic characteristic of the IP protocol?","options":["connectionless","media dependent","user data segmentation","reliable end-to-end delivery"],"answer":"connectionless","img":[]},{"question":"Which field in the IPv4 header is used to prevent a packet from traversing a network endlessly?","options":["Time-to-Live","Sequence Number","Acknowledgment Number","Differentiated Services"],"answer":"Time-to-Live","img":[]},{"question":"What is one advantage that the IPv6 simplified header offers over IPv4?","options":["smaller-sized header","little requirement for processing checksums","smaller-sized source and destination IP addresses","efficient packet handling"],"answer":"efficient packet handling","img":[]},{"question":"What IPv4 header field identifies the upper layer protocol carried in the packet?","options":["Protocol","Identification","Version","Differentiated Services"],"answer":"Protocol","img":[]},{"question":"What information does the loopback test provide?","options":["The TCP/IP stack on the device is working correctly.","The device has end-to-end connectivity.","DHCP is working correctly.","The Ethernet cable is working correctly.","The device has the correct IP address on the network."],"answer":"The TCP/IP stack on the device is working correctly.","img":[]},{"question":"What routing table entry has a next hop address associated with a destination network?","options":["directly-connected routes","local routes","remote routes","C and L source routes"],"answer":"remote routes","img":[]},{"question":"How do hosts ensure that their packets are directed to the correct network destination?","options":["They have to keep their own local routing table that contains a route to the loopback interface, a local network route, and a remote default route.​","They always direct their packets to the default gateway, which will be responsible for the packet delivery.","They search in their own local routing table for a route to the network destination address and pass this information to the default gateway.","They send a query packet to the default gateway asking for the best route."],"answer":"They have to keep their own local routing table that contains a route to the loopback interface, a local network route, and a remote default route.​","img":[]},{"question":"When transporting data from real-time applications, such as streaming audio and video, which field in the IPv6 header can be used to inform the routers and switches to maintain the same path for the packets in the same conversation?","options":["Next Header","Flow Label","Traffic Class","Differentiated Services"],"answer":"Flow Label","img":[]},{"question":"What statement describes the function of the Address Resolution Protocol?","options":["ARP is used to discover the IP address of any host on a different network.","ARP is used to discover the IP address of any host on the local network.","ARP is used to discover the MAC address of any host on a different network.","ARP is used to discover the MAC address of any host on the local network."],"answer":"ARP is used to discover the MAC address of any host on the local network.","img":[]},{"question":"Under which two circumstances will a switch flood a frame out of every port except the port that the frame was received on? (Choose two.)","options":["The frame has the broadcast address as the destination address.","The destination address is unknown to the switch.","The source address in the frame header is the broadcast address.","The source address in the frame is a multicast address.","The destination address in the frame is a known unicast address."],"answer":["The frame has the broadcast address as the destination address.","The destination address is unknown to the switch."],"img":[]},{"question":"Which statement describes the treatment of ARP requests on the local link?","options":["They must be forwarded by all routers on the local network.","They are received and processed by every device on the local network.","They are dropped by all switches on the local network.","They are received and processed only by the target device."],"answer":"They are received and processed by every device on the local network.","img":[]},{"question":"Which destination address is used in an ARP request frame?","options":["0.0.0.0","255.255.255.255","FFFF.FFFF.FFFF","AAAA.AAAA.AAAA","the physical address of the destination host"],"answer":"FFFF.FFFF.FFFF","img":[]},{"question":"A network technician issues the arp -d * command on a PC after the router that is connected to the LAN is reconfigured. What is the result after this command is issued?","options":["The ARP cache is cleared.","The current content of the ARP cache is displayed.","The detailed information of the ARP cache is displayed.","The ARP cache is synchronized with the router interface."],"answer":"The ARP cache is cleared.","img":[]},{"question":"Which two types of IPv6 messages are used in place of ARP for address resolution?","options":["anycast","broadcast","echo reply","echo request","neighbor solicitation ","neighbor advertisement"],"answer":["neighbor solicitation ","neighbor advertisement"],"img":[]},{"question":"What is the aim of an ARP spoofing attack?","options":["to flood the network with ARP reply broadcasts","to fill switch MAC address tables with bogus addresses","to associate IP addresses to the wrong MAC address","to overwhelm network hosts with ARP requests"],"answer":"to associate IP addresses to the wrong MAC address","img":[]},{"question":"Where are IPv4 address to Layer 2 Ethernet address mappings maintained on a host computer?","options":["neighbor table","ARP cache","routing table","MAC address table"],"answer":"ARP cache","img":[]},{"question":"What important information is examined in the Ethernet frame header by a Layer 2 device in order to forward the data onward?","options":["source MAC address","source IP address","destination MAC address","Ethernet type","destination IP address"],"answer":"destination MAC address","img":[]},{"question":"A new network administrator has been asked to enter a banner message on a Cisco device. What is the fastest way a network administrator could test whether the banner is properly configured?","options":["Reboot the device.","Enter CTRL-Z at the privileged mode prompt.","Exit global configuration mode.","Power cycle the device.","Exit privileged EXEC mode and press Enter."],"answer":"Exit privileged EXEC mode and press Enter.","img":[]},{"question":"What are two functions of NVRAM? (Choose two.)","options":["to store the routing table","to retain contents when power is removed ","to store the startup configuration file","to contain the running configuration file","to store the ARP table"],"answer":["to retain contents when power is removed ","to store the startup configuration file"],"img":[]},{"question":"A router boots and enters setup mode. What is the reason for this?","options":["The IOS image is corrupt.","Cisco IOS is missing from flash memory.","The configuration file is missing from NVRAM.","The POST process has detected hardware failure."],"answer":"The configuration file is missing from NVRAM.","img":[]},{"question":"The global configuration command ip default-gateway 172.16.100.1 is applied to a switch. What is the effect of this command?","options":["The switch will have a management interface with the address 172.16.100.1.","The switch can be remotely managed from a host on another network.","The switch can communicate with other hosts on the 172.16.100.0 network.","The switch is limited to sending and receiving frames to and from the gateway 172.16.100.1."],"answer":"The switch can be remotely managed from a host on another network.","img":[]},{"question":"What happens when the transport input ssh command is entered on the switch vty lines?","options":["The SSH client on the switch is enabled.","Communication between the switch and remote users is encrypted.","The switch requires a username/password combination for remote access.","The switch requires remote connections via a proprietary client software."],"answer":"Communication between the switch and remote users is encrypted.","img":[]},{"question":"Which three commands are used to set up secure access to a router through a connection to the console interface? (Choose three.)","options":["interface fastethernet 0/0","line vty 0 4","line console 0","enable secret cisco","login","password cisco"],"answer":["line console 0","login","password cisco"],"img":[]},{"question":"Which two functions are primary functions of a router? (Choose two.)","options":["packet forwarding","microsegmentation","domain name resolution","path selection","flow control"],"answer":["packet forwarding","path selection"],"img":[]},{"question":"What is the effect of using the Router# copy running-config startup-config command on a router?","options":["The contents of ROM will change.","The contents of RAM will change.","The contents of NVRAM will change.","The contents of flash will change."],"answer":"The contents of NVRAM will change.","img":[]},{"question":"What will happen if the default gateway address is incorrectly configured on a host?","options":["The host cannot communicate with other hosts in the local network.","The switch will not forward packets initiated by the host.","The host will have to use ARP to determine the correct address of the default gateway.","The host cannot communicate with hosts in other networks.","A ping from the host to 127.0.0.1 would not be successful."],"answer":"The host cannot communicate with hosts in other networks.","img":[]},{"question":"What are two potential network problems that can result from ARP operation? (Choose two.)","options":["Manually configuring static ARP associations could facilitate ARP poisoning or MAC address spoofing.","On large networks with low bandwidth, multiple ARP broadcasts could cause data communication delays. ","Network attackers could manipulate MAC address and IP address mappings in ARP messages with the intent of intercepting network traffic.","Large numbers of ARP request broadcasts could cause the host MAC address table to overflow and prevent the host from communicating on the network.","Multiple ARP replies result in the switch MAC address table containing entries that match the MAC addresses of hosts that are connected to the relevant switch port."],"answer":["On large networks with low bandwidth, multiple ARP broadcasts could cause data communication delays. ","Network attackers could manipulate MAC address and IP address mappings in ARP messages with the intent of intercepting network traffic."],"img":[]},{"question":"Open the PT activity. Perform the tasks in the activity instructions and then answer the question.","options":["R1:  G0/0 and S0/0/0\nR2:  G0/0 and S0/0/0","R1:  G0/1 and S0/0/1\nR2:  G0/0 and S0/0/1","R1: G0/0 and S0/0/0\nR2: G0/1 and S0/0/0","R1: G0/0 and S0/0/1\nR2: G0/1 and S0/0/1"],"answer":"R1: G0/0 and S0/0/0\nR2: G0/1 and S0/0/0","img":[]},{"question":"Which interfaces in each router are active and operational?","options":["R1:  G0/0 and S0/0/0\nR2:  G0/0 and S0/0/0","R1:  G0/1 and S0/0/1\nR2:  G0/0 and S0/0/1","R1: G0/0 and S0/0/0\nR2: G0/1 and S0/0/0","R1: G0/0 and S0/0/1\nR2: G0/1 and S0/0/1"],"answer":"R1: G0/0 and S0/0/0\nR2: G0/1 and S0/0/0","img":[]},{"question":"Which term describes a field in the IPv4 packet header used to identify the next level protocol?","options":["protocol","destination IPv4 address","source IPv4 address","TTL"],"answer":"protocol","img":[]},{"question":"Which term describes a field in the IPv4 packet header that contains an 8-bit binary value used to determine the priority of each packet?","options":["differentiated services","destination IPv4 address","source IPv4 address","protocol"],"answer":"differentiated services","img":[]},{"question":"Which term describes a field in the IPv4 packet header that contains a 32-bit binary value associated with an interface on the sending device?","options":["source IPv4 address","destination IPv4 address","protocol","TTL"],"answer":"source IPv4 address","img":[]},{"question":"Which term describes a field in the IPv4 packet header used to detect corruption in the IPv4 header?","options":["header checksum","source IPv4 address","protocol","TTL"],"answer":"header checksum","img":[]},{"question":"Which term describes a field in the IPv4 packet header that contains a 32-bit binary value associated with an interface on the sending device?","options":["source IPv4 address","protocol","TTL","header checksum"],"answer":"source IPv4 address","img":[]},{"question":"Which term describes a field in the IPv4 packet header that contains a unicast, multicast, or broadcast address?","options":["destination IPv4 address","protocol","TTL","header checksum"],"answer":"destination IPv4 address","img":[]},{"question":"Which term describes a field in the IPv4 packet header used to limit the lifetime of a packet?","options":["TTL","source IPv4 address","protocol","header checksum"],"answer":"TTL","img":[]},{"question":"Which term describes a field in the IPv4 packet header that contains a 4-bit binary value set to 0100?","options":["version","source IPv4 address","protocol","TTL"],"answer":"version","img":[]},{"question":"Which term describes a field in the IPv4 packet header used to identify the next level protocol?","options":["protocol","version","differentiated services","header checksum"],"answer":"protocol","img":[]},{"question":"Which term describes a field in the IPv4 packet header that contains a 4-bit binary value set to 0100?","options":["version","differentiated services","header checksum","TTL"],"answer":"version","img":[]},{"question":"What property of ARP causes cached IP-to-MAC mappings to remain in memory longer?","options":["Entries in an ARP table are time-stamped and are purged after the timeout expires.","A static IP-to-MAC address entry can be entered manually into an ARP table.","The type field 0x806 appears in the header of the Ethernet frame.","The port-to-MAC address table on a switch has the same entries as the ARP table on the switch."],"answer":"Entries in an ARP table are time-stamped and are purged after the timeout expires.","img":[]},{"question":"What property of ARP allows MAC addresses of frequently used servers to be fixed in the ARP table?","options":["A static IP-to-MAC address entry can be entered manually into an ARP table.","Entries in an ARP table are time-stamped and are purged after the timeout expires.","The type field 0x806 appears in the header of the Ethernet frame.","The port-to-MAC address table on a switch has the same entries as the ARP table on the switch."],"answer":"A static IP-to-MAC address entry can be entered manually into an ARP table.","img":[]},{"question":"What property of ARP allows MAC addresses of frequently used servers to be fixed in the ARP table?","options":["A static IP-to-MAC address entry can be entered manually into an ARP table.","The destination MAC address FF-FF-FF-FF-FF-FF appears in the header of the Ethernet frame.","The source MAC address appears in the header of the Ethernet frame.","The port-to-MAC address table on a switch has the same entries as the ARP table on the switch."],"answer":"A static IP-to-MAC address entry can be entered manually into an ARP table.","img":[]},{"question":"What property of ARP allows hosts on a LAN to send traffic to remote networks?","options":["Local hosts learn the MAC address of the default gateway.","The destination MAC address FF-FF-FF-FF-FF-FF appears in the header of the Ethernet frame.","The source MAC address appears in the header of the Ethernet frame.","The port-to-MAC address table on a switch has the same entries as the ARP table on the switch."],"answer":"Local hosts learn the MAC address of the default gateway.","img":[]},{"question":"What property of ARP allows hosts on a LAN to send traffic to remote networks?","options":["Local hosts learn the MAC address of the default gateway.","The destination MAC address FF-FF-FF-FF-FF-FF appears in the header of the Ethernet frame.","The source MAC address appears in the header of the Ethernet frame.","ARP replies are broadcast on the network when a host receives an ARP request."],"answer":"Local hosts learn the MAC address of the default gateway.","img":[]},{"question":"What property of ARP forces all Ethernet NICs to process an ARP request?","options":["The destination MAC address FF-FF-FF-FF-FF-FF appears in the header of the Ethernet frame.","The source MAC address appears in the header of the Ethernet frame.","The type field 0x806 appears in the header of the Ethernet frame.","ARP replies are broadcast on the network when a host receives an ARP request."],"answer":"The destination MAC address FF-FF-FF-FF-FF-FF appears in the header of the Ethernet frame.","img":[]},{"question":"What property of ARP causes a reply only to the source sending an ARP request?","options":["The source MAC address appears in the header of the Ethernet frame.","The destination MAC address FF-FF-FF-FF-FF-FF appears in the header of the Ethernet frame.","The type field 0x806 appears in the header of the Ethernet frame.","ARP replies are broadcast on the network when a host receives an ARP request."],"answer":"The source MAC address appears in the header of the Ethernet frame.","img":[]},{"question":"What property of ARP causes the request to be flooded out all ports of a switch except for the port receiving the ARP request?","options":["The destination MAC address FF-FF-FF-FF-FF-FF appears in the header of the Ethernet frame.","The type field 0x806 appears in the header of the Ethernet frame.","Entries in an ARP table are time-stamped and are purged after the timeout expires.","ARP replies are broadcast on the network when a host receives an ARP request."],"answer":"The destination MAC address FF-FF-FF-FF-FF-FF appears in the header of the Ethernet frame.","img":[]},{"question":"What property of ARP causes the NICs receiving an ARP request to pass the data portion of the Ethernet frame to the ARP process?","options":["The type field 0x806 appears in the header of the Ethernet frame.","The destination MAC address FF-FF-FF-FF-FF-FF appears in the header of the Ethernet frame.","Entries in an ARP table are time-stamped and are purged after the timeout expires.","ARP replies are broadcast on the network when a host receives an ARP request."],"answer":"The type field 0x806 appears in the header of the Ethernet frame.","img":[]},{"question":"What property of ARP causes the NICs receiving an ARP request to pass the data portion of the Ethernet frame to the ARP process?","options":["The type field 0x806 appears in the header of the Ethernet frame.","The destination MAC address FF-FF-FF-FF-FF-FF appears in the header of the Ethernet frame.","Entries in an ARP table are time-stamped and are purged after the timeout expires.","The port-to-MAC address table on a switch has the same entries as the ARP table on the switch."],"answer":"The type field 0x806 appears in the header of the Ethernet frame.","img":[]},{"question":"Main(config)# interface gi0/1 \nMain(config-if)# description Connects to the Service LAN \nMain(config-if)# ip address 172.29.157.156 255.255.255.0 \nMain(config-if)# no shutdown \nMain(config-if)# interface gi0/0 \nMain(config-if)# description Connects to the Engineering LAN \nMain(config-if)# ip address 172.29.156.36 255.255.255.0 \nMain(config-if)# no shutdown \nMain(config-if)# interface s0/0/0 \nMain(config-if)# description Connects to the ISP \nMain(config-if)# ip address 10.156.157.254 255.255.255.0 \nMain(config-if)# no shutdown \nMain(config-if)# interface s0/0/1 \nMain(config-if)# description Connects to the Head Office WAN \nMain(config-if)# ip address 198.51.100.177 255.255.255.0 \nMain(config-if)# no shutdown \nMain(config-if)# end","options":["172.29.157.156","172.29.157.1","10.156.157.254","198.51.100.177","172.29.156.36"],"answer":"172.29.157.156","img":[]},{"question":"Refer to the exhibit. A network administrator is connecting a new host to the Service LAN. The host needs to communicate with remote networks. What IP address would be configured as the default gateway on the new host?","options":["172.29.157.156","172.29.157.1","10.156.157.254","198.51.100.177","172.29.156.36"],"answer":"172.29.157.156","img":[]},{"question":"BldgA(config)# interface gi0/1 \nBldgA(config-if)# description Connects to the Medical LAN \nBldgA(config-if)# ip address 192.168.191.189 255.255.255.0 \nBldgA(config-if)# no shutdown \nBldgA(config-if)# interface gi0/0 \nBldgA(config-if)# description Connects to the Client LAN \nBldgA(config-if)# ip address 192.168.190.70 255.255.255.0 \nBldgA(config-if)# no shutdown \nBldgA(config-if)# interface s0/0/0 \nBldgA(config-if)# description Connects to the ISP \nBldgA(config-if)# ip address 10.190.191.254 255.255.255.0 \nBldgA(config-if)# no shutdown \nBldgA(config-if)# interface s0/0/1 \nBldgA(config-if)# description Connects to the Head Office WAN \nBldgA(config-if)# ip address 198.51.100.213 255.255.255.0 \nBldgA(config-if)# no shutdown \nBldgA(config-if)# end","options":["192.168.191.189","192.168.191.1","10.190.191.254","198.51.100.213","192.168.190.70"],"answer":"192.168.191.189","img":[]},{"question":"Refer to the exhibit. A network administrator is connecting a new host to the Medical LAN. The host needs to communicate with remote networks. What IP address would be configured as the default gateway on the new host?","options":["192.168.191.189","192.168.191.1","10.190.191.254","198.51.100.213","192.168.190.70"],"answer":"192.168.191.189","img":[]},{"question":"Floor(config)# interface gi0/1 \nFloor(config-if)# description Connects to the Registrar LAN \nFloor(config-if)# ip address 192.168.225.223 255.255.255.0 \nFloor(config-if)# no shutdown \nFloor(config-if)# interface gi0/0 \nFloor(config-if)# description Connects to the Manager LAN \nFloor(config-if)# ip address 192.168.224.103 255.255.255.0 \nFloor(config-if)# no shutdown \nFloor(config-if)# interface s0/0/0 \nFloor(config-if)# description Connects to the ISP \nFloor(config-if)# ip address 10.224.225.254 255.255.255.0 \nFloor(config-if)# no shutdown \nFloor(config-if)# interface s0/0/1 \nFloor(config-if)# description Connects to the Head Office WAN \nFloor(config-if)# ip address 203.0.113.246 255.255.255.0 \nFloor(config-if)# no shutdown \nFloor(config-if)# end","options":["192.168.225.223","192.168.225.1","10.224.225.254","203.0.113.246","192.168.224.103"],"answer":"192.168.225.223","img":[]},{"question":"Refer to the exhibit. A network administrator is connecting a new host to the Registrar LAN. The host needs to communicate with remote networks. What IP address would be configured as the default gateway on the new host?","options":["192.168.225.223","192.168.225.1","10.224.225.254","203.0.113.246","192.168.224.103"],"answer":"192.168.225.223","img":[]},{"question":"Floor(config)# interface gi0/1 \nFloor(config-if)# description Connects to the Registrar LAN \nFloor(config-if)# ip address 10.118.63.65 255.255.255.0 \nFloor(config-if)# no shutdown \nFloor(config-if)# interface gi0/0 \nFloor(config-if)# description Connects to the Manager LAN \nFloor(config-if)# ip address 10.118.62.196 255.255.255.0 \nFloor(config-if)# no shutdown \nFloor(config-if)# interface s0/0/0 \nFloor(config-if)# description Connects to the ISP \nFloor(config-if)# ip address 10.62.63.254 255.255.255.0 \nFloor(config-if)# no shutdown \nFloor(config-if)# interface s0/0/1 \nFloor(config-if)# description Connects to the Head Office WAN \nFloor(config-if)# ip address 209.165.200.87 255.255.255.0 \nFloor(config-if)# no shutdown \nFloor(config-if)# end","options":["10.118.62.196 ","10.118.62.1","10.62.63.254","209.165.200.87","10.118.63.65"],"answer":"10.118.62.196 ","img":[]},{"question":"Refer to the exhibit. A network administrator is connecting a new host to the Manager LAN. The host needs to communicate with remote networks. What IP address would be configured as the default gateway on the new host?","options":["10.118.62.196 ","10.118.62.1","10.62.63.254","209.165.200.87","10.118.63.65"],"answer":"10.118.62.196 ","img":[]},{"question":"HQ(config)# interface gi0/1 \nHQ(config-if)# description Connects to the Branch LAN \nHQ(config-if)# ip address 172.19.99.99 255.255.255.0 \nHQ(config-if)# no shutdown \nHQ(config-if)# interface gi0/0 \nHQ(config-if)# description Connects to the Store LAN \nHQ(config-if)# ip address 172.19.98.230 255.255.255.0 \nHQ(config-if)# no shutdown \nHQ(config-if)# interface s0/0/0 \nHQ(config-if)# description Connects to the ISP \nHQ(config-if)# ip address 10.98.99.254 255.255.255.0 \nHQ(config-if)# no shutdown \nHQ(config-if)# interface s0/0/1 \nHQ(config-if)# description Connects to the Head Office WAN \nHQ(config-if)# ip address 209.165.200.120 255.255.255.0 \nHQ(config-if)# no shutdown \nHQ(config-if)# end","options":["172.19.98.230","172.19.98.1","10.98.99.254","209.165.200.120","172.19.99.99"],"answer":[],"img":[]},{"question":"Refer to the exhibit. A network administrator is connecting a new host to the Store LAN. The host needs to communicate with remote networks. What IP address would be configured as the default gateway on the new host?","options":["172.19.98.230","172.19.98.1","10.98.99.254","209.165.200.120","172.19.99.99"],"answer":[],"img":[]},{"question":"HQ(config)# interface gi0/1 \nHQ(config-if)# description Connects to the Branch LAN \nHQ(config-if)# ip address 172.20.133.132 255.255.255.0 \nHQ(config-if)# no shutdown \nHQ(config-if)# interface gi0/0 \nHQ(config-if)# description Connects to the Store LAN \nHQ(config-if)# ip address 172.20.132.13 255.255.255.0 \nHQ(config-if)# no shutdown \nHQ(config-if)# interface s0/0/0 \nHQ(config-if)# description Connects to the ISP \nHQ(config-if)# ip address 10.132.133.254 255.255.255.0 \nHQ(config-if)# no shutdown \nHQ(config-if)# interface s0/0/1 \nHQ(config-if)# description Connects to the Head Office WAN \nHQ(config-if)# ip address 198.51.100.156 255.255.255.0 \nHQ(config-if)# no shutdown \nHQ(config-if)# end","options":["172.20.132.13","172.20.132.1","10.132.133.254","198.51.100.156","172.20.133.132"],"answer":"172.20.132.13","img":[]},{"question":"Refer to the exhibit. A network administrator is connecting a new host to the Store LAN. The host needs to communicate with remote networks. What IP address would be configured as the default gateway on the new host?","options":["172.20.132.13","172.20.132.1","10.132.133.254","198.51.100.156","172.20.133.132"],"answer":"172.20.132.13","img":[]},{"question":"Main(config)# interface gi0/1 \nMain(config-if)# description Connects to the Service LAN \nMain(config-if)# ip address 192.168.167.166 255.255.255.0 \nMain(config-if)# no shutdown \nMain(config-if)# interface gi0/0 \nMain(config-if)# description Connects to the Engineering LAN \nMain(config-if)# ip address 192.168.166.46 255.255.255.0 \nMain(config-if)# no shutdown \nMain(config-if)# interface s0/0/0 \nMain(config-if)# description Connects to the ISP \nMain(config-if)# ip address 10.166.167.254 255.255.255.0 \nMain(config-if)# no shutdown \nMain(config-if)# interface s0/0/1 \nMain(config-if)# description Connects to the Head Office WAN \nMain(config-if)# ip address 198.51.100.189 255.255.255.0 \nMain(config-if)# no shutdown \nMain(config-if)# end","options":["192.168.167.166","192.168.167.1","10.166.167.254","198.51.100.189","192.168.166.46"],"answer":"192.168.167.166","img":[]},{"question":"Refer to the exhibit. A network administrator is connecting a new host to the Service LAN. The host needs to communicate with remote networks. What IP address would be configured as the default gateway on the new host?","options":["192.168.167.166","192.168.167.1","10.166.167.254","198.51.100.189","192.168.166.46"],"answer":"192.168.167.166","img":[]},{"question":"BldgA(config)# interface gi0/1 \nBldgA(config-if)# description Connects to the Medical LAN \nBldgA(config-if)# ip address 192.168.201.200 255.255.255.0 \nBldgA(config-if)# no shutdown \nBldgA(config-if)# interface gi0/0 \nBldgA(config-if)# description Connects to the Client LAN \nBldgA(config-if)# ip address 192.168.200.80 255.255.255.0 \nBldgA(config-if)# no shutdown \nBldgA(config-if)# interface s0/0/0 \nBldgA(config-if)# description Connects to the ISP \nBldgA(config-if)# ip address 10.200.201.254 255.255.255.0 \nBldgA(config-if)# no shutdown \nBldgA(config-if)# interface s0/0/1 \nBldgA(config-if)# description Connects to the Head Office WAN \nBldgA(config-if)# ip address 203.0.113.222 255.255.255.0 \nBldgA(config-if)# no shutdown \nBldgA(config-if)# end","options":["192.168.201.200","192.168.201.1","10.200.201.254","203.0.113.222","192.168.200.80"],"answer":"192.168.201.200","img":[]},{"question":"Refer to the exhibit. A network administrator is connecting a new host to the Medical LAN. The host needs to communicate with remote networks. What IP address would be configured as the default gateway on the new host?","options":["192.168.201.200","192.168.201.1","10.200.201.254","203.0.113.222","192.168.200.80"],"answer":"192.168.201.200","img":[]},{"question":"Floor(config)# interface gi0/1 \nFloor(config-if)# description Connects to the Registrar LAN \nFloor(config-if)# ip address 192.168.235.234 255.255.255.0 \nFloor(config-if)# no shutdown \nFloor(config-if)# interface gi0/0 \nFloor(config-if)# description Connects to the Manager LAN \nFloor(config-if)# ip address 192.168.234.114 255.255.255.0 \nFloor(config-if)# no shutdown \nFloor(config-if)# interface s0/0/0 \nFloor(config-if)# description Connects to the ISP \nFloor(config-if)# ip address 10.234.235.254 255.255.255.0 \nFloor(config-if)# no shutdown \nFloor(config-if)# interface s0/0/1 \nFloor(config-if)# description Connects to the Head Office WAN \nFloor(config-if)# ip address 203.0.113.3 255.255.255.0 \nFloor(config-if)# no shutdown \nFloor(config-if)# end","options":["192.168.235.234","192.168.235.1","10.234.235.254","203.0.113.3","192.168.234.114"],"answer":"192.168.235.234","img":[]},{"question":"Refer to the exhibit. A network administrator is connecting a new host to the Registrar LAN. The host needs to communicate with remote networks. What IP address would be configured as the default gateway on the new host?","options":["192.168.235.234","192.168.235.1","10.234.235.254","203.0.113.3","192.168.234.114"],"answer":"192.168.235.234","img":[]},{"question":"RTR1(config)# interface gi0/1 \nRTR1(config-if)# description Connects to the Marketing LAN \nRTR1(config-if)# ip address 10.27.15.17 255.255.255.0 \nRTR1(config-if)# no shutdown \nRTR1(config-if)# interface gi0/0 \nRTR1(config-if)# description Connects to the Payroll LAN \nRTR1(config-if)# ip address 10.27.14.148 255.255.255.0 \nRTR1(config-if)# no shutdown \nRTR1(config-if)# interface s0/0/0 \nRTR1(config-if)# description Connects to the ISP \nRTR1(config-if)# ip address 10.14.15.254 255.255.255.0 \nRTR1(config-if)# no shutdown \nRTR1(config-if)# interface s0/0/1 \nRTR1(config-if)# description Connects to the Head Office WAN \nRTR1(config-if)# ip address 203.0.113.39 255.255.255.0 \nRTR1(config-if)# no shutdown \nRTR1(config-if)# end","options":["10.27.14.148","10.27.14.1","10.14.15.254","203.0.113.39","10.27.15.17"],"answer":"10.27.14.148","img":[]},{"question":"Refer to the exhibit. A network administrator is connecting a new host to the Payroll LAN. The host needs to communicate with remote networks. What IP address would be configured as the default gateway on the new host?","options":["10.27.14.148","10.27.14.1","10.14.15.254","203.0.113.39","10.27.15.17"],"answer":"10.27.14.148","img":[]}]}
+{
+  "examData": {
+    "holder": "Cisco Netacad",
+    "examName": "IT Essentials",
+    "abbreviation": "CCNA",
+    "modules": "",
+    "versionName": "ccna1-v6.0",
+    "versions": 6,
+    "years": 2020
+  },
+  "questions": [
+    {
+      "question": "What method can be used by two computers to ensure that packets are not dropped because too much data is being sent too quickly?",
+      "options": [
+        "encapsulation",
+        "flow control",
+        "access method",
+        "response timeout"
+      ],
+      "answer": [
+        "flow control"
+      ]
+    },
+    {
+      "question": "What type of communication will send a message to all devices on a local area network?",
+      "options": [
+        "broadcast",
+        "multicast",
+        "unicast",
+        "allcast"
+      ],
+      "answer": [
+        "broadcast"
+      ]
+    },
+    {
+      "question": "What process is used to place one message inside another message for transfer from the source to the destination?",
+      "options": [
+        "access control",
+        "decoding",
+        "encapsulation",
+        "flow control"
+      ],
+      "answer": [
+        "encapsulation"
+      ]
+    },
+    {
+      "question": "A web client is sending a request for a webpage to a web server. From the perspective of the client, what is the correct order of the protocol stack that is used to prepare the request for transmission?",
+      "options": [
+        "HTTP, IP, TCP, Ethernet",
+        "HTTP, TCP, IP, Ethernet",
+        "Ethernet, TCP, IP, HTTP",
+        "Ethernet, IP, TCP, HTTP"
+      ],
+      "answer": [
+        "HTTP, TCP, IP, Ethernet"
+      ]
+    },
+    {
+      "question": "Which statement is correct about network protocols?",
+      "options": [
+        "Network protocols define the type of hardware that is used and how it is mounted in racks.",
+        "They define how messages are exchanged between the source and the destination.",
+        "They all function in the network access layer of TCP/IP.",
+        "They are only required for exchange of messages between devices on remote networks."
+      ],
+      "answer": [
+        "They define how messages are exchanged between the source and the destination."
+      ]
+    },
+    {
+      "question": "Which statement is true about the TCP/IP and OSI models?",
+      "options": [
+        "The TCP/IP transport layer and OSI Layer 4 provide similar services and functions.",
+        "The TCP/IP network access layer has similar functions to the OSI network layer.",
+        "The OSI Layer 7 and the TCP/IP application layer provide identical functions.",
+        "The first three OSI layers describe general services that are also provided by the TCP/IP internet layer."
+      ],
+      "answer": [
+        "The TCP/IP transport layer and OSI Layer 4 provide similar services and functions."
+      ]
+    },
+    {
+      "question": "What is an advantage of using standards to develop and implement protocols?",
+      "options": [
+        "A particular protocol can only be implemented by one manufacturer.",
+        "Products from different manufacturers can interoperate successfully.",
+        "Different manufacturers are free to apply different requirements when implementing a protocol.",
+        "Standards provide flexibility for manufacturers to create devices that comply with unique requirements."
+      ],
+      "answer": [
+        "Products from different manufacturers can interoperate successfully."
+      ]
+    },
+    {
+      "question": "What three application layer protocols are part of the TCP/IP protocol suite? (Choose three.)",
+      "options": [
+        "ARP",
+        "DHCP",
+        "DNS",
+        "FTP",
+        "NAT",
+        "PPP"
+      ],
+      "answer": [
+        "DHCP",
+        "DNS",
+        "FTP"
+      ]
+    },
+    {
+      "question": "What are proprietary protocols?",
+      "options": [
+        "protocols developed by private organizations to operate on any vendor hardware",
+        "protocols that can be freely used by any organization or vendor",
+        "protocols developed by organizations who have control over their definition and operation",
+        "a collection of protocols known as the TCP/IP protocol suite"
+      ],
+      "answer": [
+        "protocols developed by organizations who have control over their definition and operation"
+      ]
+    },
+    {
+      "question": "What is an advantage of network devices using open standard protocols?",
+      "options": [
+        "Network communications is confined to data transfers between devices from the same vendor.",
+        "A client host and a server running different operating systems can successfully exchange data.",
+        "Internet access can be controlled by a single ISP in each market.",
+        "Competition and innovation are limited to specific types of products."
+      ],
+      "answer": [
+        "A client host and a server running different operating systems can successfully exchange data."
+      ]
+    },
+    {
+      "question": "Refer to the exhibit. If Host1 were to transfer a file to the server, what layers of the TCP/IP model would be used?",
+      "options": [
+        "only application and Internet layers",
+        "only Internet and network access layers",
+        "only application, Internet, and network access layers",
+        "application, transport, Internet, and network access layers",
+        "only application, transport, network, data link, and physical layers",
+        "application, session, transport, network, data link, and physical layers"
+      ],
+      "answer": [
+        "application, transport, Internet, and network access layers"
+      ],
+      "img": [
+        "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/i275370v1n1_275370-2.png"
+      ]
+    },
+    {
+      "question": "Which three layers of the OSI model are comparable in function to the application layer of the TCP/IP model? (Choose three.)",
+      "options": [
+        "application",
+        "presentation",
+        "session",
+        "transport",
+        "data link",
+        "physical",
+        "network"
+      ],
+      "answer": [
+        "application",
+        "presentation",
+        "session"
+      ]
+    },
+    {
+      "question": "At which layer of the OSI model would a logical address be encapsulated?",
+      "options": [
+        "physical layer",
+        "data link layer",
+        "network layer",
+        "transport layer"
+      ],
+      "answer": [
+        "network layer"
+      ]
+    },
+    {
+      "question": "At which layer of the OSI model would a logical address be added during encapsulation?",
+      "options": [
+        "physical layer",
+        "data link layer",
+        "network layer",
+        "transport layer"
+      ],
+      "answer": [
+        "network layer"
+      ]
+    },
+    {
+      "question": "Which PDU format is used when bits are received from the network medium by the NIC of a host?",
+      "options": [
+        "file",
+        "frame",
+        "packet",
+        "segment"
+      ],
+      "answer": [
+        "frame"
+      ]
+    },
+    {
+      "question": "Which PDU is processed when a host computer is de-encapsulating a message at the transport layer of the TCP/IP model?",
+      "options": [
+        "bits",
+        "frame",
+        "packet",
+        "segment"
+      ],
+      "answer": [
+        "segment"
+      ]
+    },
+    {
+      "question": "Refer to the exhibit. HostA is attempting to contact ServerB. Which two statements correctly describe the addressing that HostA will generate in the process? (Choose two.)",
+      "options": [
+        "A packet with the destination IP address of RouterB.",
+        "A frame with the destination MAC address of SwitchA.",
+        "A packet with the destination IP address of RouterA.",
+        "A frame with the destination MAC address of RouterA.",
+        "A packet with the destination IP address of ServerB.",
+        "A frame with the destination MAC address of ServerB."
+      ],
+      "answer": [
+        "A frame with the destination MAC address of RouterA.",
+        "A packet with the destination IP address of ServerB."
+      ],
+      "img": [
+        "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/i214638v1n1_214638.png"
+      ]
+    },
+    {
+      "question": "Which address does a NIC use when deciding whether to accept a frame?",
+      "options": [
+        "source IP address",
+        "source MAC address",
+        "destination IP address",
+        "destination MAC address",
+        "source Ethernet address"
+      ],
+      "answer": [
+        "destination MAC address"
+      ]
+    },
+    {
+      "question": "What will happen if the default gateway address is incorrectly configured on a host?",
+      "options": [
+        "The host cannot communicate with other hosts in the local network.",
+        "The switch will not forward packets initiated by the host.",
+        "The host will have to use ARP to determine the correct address of the default gateway.",
+        "The host cannot communicate with hosts in other networks.",
+        "A ping from the host to 127.0.0.1 would not be successful."
+      ],
+      "answer": [
+        "The host cannot communicate with hosts in other networks."
+      ]
+    },
+    {
+      "question": "Which characteristic describes the default gateway of a host computer?",
+      "options": [
+        "the logical address of the router interface on the same network as the host computer",
+        "the physical address of the switch interface connected to the host computer",
+        "the physical address of the router interface on the same network as the host computer",
+        "the logical address assigned to the switch interface connected to the router"
+      ],
+      "answer": [
+        "the logical address of the router interface on the same network as the host computer"
+      ]
+    },
+    {
+      "question": "Match the description to the organization. (Not all options are used.)",
+      "options": [],
+      "answer": []
+    },
+    {
+      "question": "Match the protocol function to the description while taking into consideration that a network client is visiting a web site. (Not all options are used.)",
+      "options": [],
+      "answer": [],
+      "img": [
+        "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/2017-05-26_104312-1.png"
+      ]
+    },
+    {
+      "question": "Match each description to its corresponding term. (Not all options are used.)",
+      "options": [],
+      "answer": [],
+      "img": [
+        "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/2017-05-26_103631-1.png"
+      ]
+    },
+    {
+      "question": "A computer in a given network is communicating with a specific group of computers. What type of communication is this?",
+      "options": [
+        "broadcast",
+        "multicast",
+        "unicast",
+        "ARP",
+        "HTTP"
+      ],
+      "answer": [
+        "multicast"
+      ]
+    }
+  ]
+}

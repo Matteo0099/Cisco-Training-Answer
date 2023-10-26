@@ -1,0 +1,297 @@
+{
+  "examData": {
+    "holder": "Cisco Netacad",
+    "examName": "IT Essentials",
+    "abbreviation": "CCNA",
+    "modules": "",
+    "versionName": "ccna1-v6.0",
+    "versions": 6,
+    "years": 2020
+  },
+  "questions": [
+    {
+      "question": "A newly hired network technician is given the task of ordering new hardware for a small business with a large growth forecast. Which primary factor should the technician be concerned with when choosing the new devices?",
+      "options": [
+        "devices with a fixed number and type of interfaces",
+        "devices that have support for network monitoring",
+        "redundant devices",
+        "devices with support for modularity"
+      ],
+      "answer": [
+        "devices with support for modularity"
+      ]
+    },
+    {
+      "question": "Which network design consideration would be more important to a large corporation than to a small business?",
+      "options": [
+        "Internet router",
+        "firewall",
+        "low port density switch",
+        "redundancy"
+      ],
+      "answer": [
+        "redundancy"
+      ]
+    },
+    {
+      "question": "Which two traffic types require delay sensitive delivery? (Choose two.)",
+      "options": [
+        "email",
+        "web",
+        "FTP",
+        "voice",
+        "video"
+      ],
+      "answer": [
+        "voice",
+        "video"
+      ]
+    },
+    {
+      "question": "A network administrator for a small company is contemplating how to scale the network over the next three years to accommodate projected growth. Which three types of information should be used to plan for network growth? (Choose three.)",
+      "options": [
+        "human resource policies and procedures for all employees in the company",
+        "documentation of the current physical and logical topologies",
+        "analysis of the network traffic based on protocols, applications, and services used on the network",
+        "history and mission statement of the company",
+        "inventory of the devices that are currently used on the network",
+        "listing of the current employees and their role in the company"
+      ],
+      "answer": [
+        "documentation of the current physical and logical topologies",
+        "analysis of the network traffic based on protocols, applications, and services used on the network",
+        "inventory of the devices that are currently used on the network"
+      ]
+    },
+    {
+      "question": "Which two statements describe how to assess traffic flow patterns and network traffic types using a protocol analyzer? (Choose two.)",
+      "options": [
+        "Capture traffic on the weekends when most employees are off work.",
+        "Only capture traffic in the areas of the network that receive most of the traffic such as the data center.",
+        "Capture traffic during peak utilization times to get a good representation of the different traffic types.",
+        "Perform the capture on different network segments.",
+        "Only capture WAN traffic because traffic to the web is responsible for the largest amount of traffic on a network."
+      ],
+      "answer": [
+        "Capture traffic during peak utilization times to get a good representation of the different traffic types.",
+        "Perform the capture on different network segments."
+      ]
+    },
+    {
+      "question": "Some routers and switches in a wiring closet malfunctioned after an air conditioning unit failed. What type of threat does this situation describe?",
+      "options": [
+        "configuration",
+        "environmental",
+        "electrical",
+        "maintenance"
+      ],
+      "answer": [
+        "environmental"
+      ]
+    },
+    {
+      "question": "Which type of network threat is intended to prevent authorized users from accessing resources?",
+      "options": [
+        "DoS attacks",
+        "access attacks",
+        "reconnaissance attacks",
+        "trust exploitation"
+      ],
+      "answer": [
+        "DoS attacks"
+      ]
+    },
+    {
+      "question": "Which two actions can be taken to prevent a successful network attack on an email server account? (Choose two.)",
+      "options": [
+        "Never send the password through the network in a clear text.",
+        "Never use passwords that need the Shift key.",
+        "Use servers from different vendors.",
+        "Distribute servers throughout the building, placing them close to the stakeholders.",
+        "Limit the number of unsuccessful attempts to log in to the server."
+      ],
+      "answer": [
+        "Never send the password through the network in a clear text.",
+        "Limit the number of unsuccessful attempts to log in to the server."
+      ]
+    },
+    {
+      "question": "Which firewall feature is used to ensure that packets coming into a network are legitimate responses initiated from internal hosts?",
+      "options": [
+        "application filtering",
+        "stateful packet inspection",
+        "URL filtering",
+        "packet filtering"
+      ],
+      "answer": [
+        "stateful packet inspection"
+      ]
+    },
+    {
+      "question": "What is the purpose of the network security authentication function?",
+      "options": [
+        "to require users to prove who they are",
+        "to determine which resources a user can access",
+        "to keep track of the actions of a user",
+        "to provide challenge and response questions"
+      ],
+      "answer": [
+        "to require users to prove who they are"
+      ]
+    },
+    {
+      "question": "A network administrator is issuing the login block-for 180 attempts 2 within 30 command on a router. Which threat is the network administrator trying to prevent?",
+      "options": [
+        "a user who is trying to guess a password to access the router",
+        "a worm that is attempting to access another part of the network",
+        "an unidentified individual who is trying to access the network equipment room",
+        "a device that is trying to inspect the traffic on a link"
+      ],
+      "answer": [
+        "a user who is trying to guess a password to access the router"
+      ]
+    },
+    {
+      "question": "Which two steps are required before SSH can be enabled on a Cisco router? (Choose two.)",
+      "options": [
+        "Give the router a host name and domain name.",
+        "Create a banner that will be displayed to users when they connect.",
+        "Generate a set of secret keys to be used for encryption and decryption.",
+        "Set up an authentication server to handle incoming connection requests.",
+        "Enable SSH on the physical interfaces where the incoming connection requests will be received."
+      ],
+      "answer": [
+        "Give the router a host name and domain name.",
+        "Generate a set of secret keys to be used for encryption and decryption."
+      ]
+    },
+    {
+      "question": "Refer to the exhibit. Baseline documentation for a small company had ping round trip time statistics of 36/97/132 between hosts H1 and H3. Today the network administrator checked connectivity by pinging between hosts H1 and H3 that resulted in a round trip time of 1458/2390/6066. What does this indicate to the network administrator?",
+      "options": [
+        "Connectivity between H1 and H3 is fine.",
+        "H3 is not connected properly to the network.",
+        "Something is causing interference between H1 and R1.",
+        "Performance between the networks is within expected parameters.",
+        "Something is causing a time delay between the networks."
+      ],
+      "answer": [
+        "Something is causing a time delay between the networks."
+      ],
+      "img": [
+        "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/i208090v1n1_208088.png"
+      ]
+    },
+    {
+      "question": "When should an administrator establish a network baseline?",
+      "options": [
+        "when the traffic is at peak in the network",
+        "when there is a sudden drop in traffic",
+        "at the lowest point of traffic in the network",
+        "at regular intervals over a period of time"
+      ],
+      "answer": [
+        "at regular intervals over a period of time"
+      ]
+    },
+    {
+      "question": "Refer to the exhibit. An administrator is trying to troubleshoot connectivity between PC1 and PC2 and uses the tracert command from PC1 to do it. Based on the displayed output, where should the administrator begin troubleshooting?",
+      "options": [
+        "PC2",
+        "R1",
+        "SW2",
+        "R2",
+        "SW1"
+      ],
+      "answer": [
+        "R1"
+      ],
+      "img": [
+        "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/i210352v1n3_210352-1.png"
+      ]
+    },
+    {
+      "question": "Which statement is true about CDP on a Cisco device?",
+      "options": [
+        "The show cdp neighbor detail command will reveal the IP address of a neighbor only if there is Layer 3 connectivity.",
+        "To disable CDP globally, the no cdp enable command in interface configuration mode must be used.",
+        "CDP can be disabled globally or on a specific interface.",
+        "Because it runs at the data link layer, the CDP protocol can only be implemented in switches."
+      ],
+      "answer": [
+        "CDP can be disabled globally or on a specific interface."
+      ]
+    },
+    {
+      "question": "A network administrator for a small campus network has issued the show ip interface brief command on a switch. What is the administrator verifying with this command?",
+      "options": [
+        "the status of the switch interfaces and the address configured on interface vlan 1",
+        "that a specific host on another network can be reached",
+        "the path that is used to reach a specific host on another network",
+        "the default gateway that is used by the switch"
+      ],
+      "answer": [
+        "the status of the switch interfaces and the address configured on interface vlan 1"
+      ]
+    },
+    {
+      "question": "A network technician issues the arp -d * command on a PC after the router that is connected to the LAN is reconfigured. What is the result after this command is issued?",
+      "options": [
+        "The ARP cache is cleared.",
+        "The current content of the ARP cache is displayed.",
+        "The detailed information of the ARP cache is displayed.",
+        "The ARP cache is synchronized with the router interface."
+      ],
+      "answer": [
+        "The ARP cache is cleared."
+      ]
+    },
+    {
+      "question": "What service defines the protocols and technologies that implement the transmission of voice packets over an IP network?",
+      "options": [
+        "VoIP",
+        "NAT",
+        "DHCP",
+        "QoS"
+      ],
+      "answer": [
+        "VoIP"
+      ]
+    },
+    {
+      "question": "What is the purpose of using SSH to connect to a router?",
+      "options": [
+        "It allows a secure remote connection to the router command line interface.",
+        "It allows a router to be configured using a graphical interface.",
+        "It allows the router to be monitored through a network management application.",
+        "It allows secure transfer of the IOS software image from an unsecure workstation or server."
+      ],
+      "answer": [
+        "It allows a secure remote connection to the router command line interface."
+      ]
+    },
+    {
+      "question": "What information about a Cisco router can be verified using the show version command?",
+      "options": [
+        "the value of the configuration register",
+        "the administrative distance used to reach networks",
+        "the operational status of serial interfaces",
+        "the routing protocol version that is enabled"
+      ],
+      "answer": [
+        "the value of the configuration register"
+      ]
+    },
+    {
+      "question": "A network technician issues the C:\\> tracert -6 www.cisco.com command on a Windows PC. What is the purpose of the -6 command option?",
+      "options": [
+        "It forces the trace to use IPv6.",
+        "It limits the trace to only 6 hops.",
+        "It sets a 6 milliseconds timeout for each replay.",
+        "It sends 6 probes within each TTL time period."
+      ],
+      "answer": [
+        "It forces the trace to use IPv6."
+      ]
+    }
+  ]
+}

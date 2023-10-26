@@ -1,1 +1,387 @@
-{"examData":{"holder":"Cisco Netacad","examName":"IT Essentials","abbreviation":"ITE","modules":"1-3","versionName":"ccna1-v7","versions":[7,7.02],"years":[2023,2024]},"questions":[{"question":"A network administrator is measuring the transfer of bits across the company backbone for a mission critical financial application. The administrator notices that the network throughput appears lower than the bandwidth expected. Which three factors could influence the differences in throughput? (Choose three.)","options":["the amount of traffic that is currently crossing the network","the sophistication of the encapsulation method applied to the data","the type of traffic that is crossing the network ","the latency that is created by the number of network devices that the data is crossing","the bandwidth of the WAN connection to the Internet","the reliability of the gigabit Ethernet infrastructure of the backbone"],"answer":["the amount of traffic that is currently crossing the network","the type of traffic that is crossing the network ","the latency that is created by the number of network devices that the data is crossing"],"img":[]},{"question":"What are two characteristics of fiber-optic cable? (Choose two.)","options":["It is not affected by EMI or RFI.","Each pair of cables is wrapped in metallic foil.","It combines the technique of cancellation, shielding, and twisting to protect data.","It typically contains 4 pairs of fiber-optic wires.","It is more expensive than UTP cabling is."],"answer":["It is not affected by EMI or RFI.","It is more expensive than UTP cabling is."],"img":[]},{"question":"What is a primary role of the Physical layer in transmitting data on the network?","options":["create the signals that represent the bits in each frame on to the media","provide physical addressing to the devices","determine the path packets take through the network","control data access to the media"],"answer":"create the signals that represent the bits in each frame on to the media","img":[]},{"question":"With the use of unshielded twisted-pair copper wire in a network, what causes crosstalk within the cable pairs?","options":["the magnetic field around the adjacent pairs of wire","the use of braided wire to shield the adjacent wire pairs","the reflection of the electrical wave back from the far end of the cable","the collision caused by two nodes trying to use the media simultaneously"],"answer":"the magnetic field around the adjacent pairs of wire","img":[]},{"question":"Match the situation with the appropriate use of network media.","options":[],"answer":[],"img":["https://www.premiumexam.net/wp-content/uploads/2019/12/CCNA1-v7-ITN-Ethernet-Concepts-Exam-Answers-001.png"]},{"question":"In addition to the cable length, what two factors could interfere with the communication carried over UTP cables? (Choose two.)","options":["crosstalk","bandwidth","size of the network","signal modulation technique","electromagnetic interference"],"answer":["crosstalk","electromagnetic interference"],"img":[]},{"question":"Which two devices commonly affect wireless networks? (Choose two.)","options":["Blu-ray players","home theaters","cordless phones ","microwaves","incandescent light bulbs","external hard drives"],"answer":["cordless phones ","microwaves"],"img":[]},{"question":"Which two statements describe the services provided by the data link layer? (Choose two.)","options":["It defines the end-to-end delivery addressing scheme.","It maintains the path between the source and destination devices during the data transmission.","It manages the access of frames to the network media.","It provides reliable delivery through link establishment and flow control.","It ensures that application data will be transmitted according to the prioritization.","It packages various Layer 3 PDUs into a frame format that is compatible with the network interface."],"answer":["It manages the access of frames to the network media.","It packages various Layer 3 PDUs into a frame format that is compatible with the network interface."],"img":[]},{"question":"What is the function of the CRC value that is found in the FCS field of a frame?","options":["to verify the integrity of the received frame","to verify the physical address in the frame","to verify the logical address in the frame","to compute the checksum header for the data field in the frame"],"answer":"to verify the integrity of the received frame","img":[]},{"question":"What is contained in the trailer of a data-link frame?","options":["logical address","physical address","data","error detection"],"answer":"error detection","img":[]},{"question":"Which statement describes a characteristic of the frame header fields of the data link layer?","options":["They all include the flow control and logical connection fields.","Ethernet frame header fields contain Layer 3 source and destination addresses.","They vary depending on protocols.","They include information on user applications."],"answer":"They vary depending on protocols.","img":[]},{"question":"A network team is comparing physical WAN topologies for connecting remote sites to a headquarters building. Which topology provides high availability and connects some, but not all, remote sites?","options":["mesh","partial mesh","hub and spoke","point-to-point"],"answer":"partial mesh","img":[]},{"question":"Which two fields or features does Ethernet examine to determine if a received frame is passed to the data link layer or discarded by the NIC? (Choose two.)","options":["auto-MDIX","CEF","Frame Check Sequence ","minimum frame size","source MAC address"],"answer":["Frame Check Sequence ","minimum frame size"],"img":[]},{"question":"Which media communication type does not require media arbitration in the data link layer?","options":["deterministic","half-duplex","full-duplex","controlled access"],"answer":"full-duplex","img":[]},{"question":"Which statement describes an extended star topology?","options":["End devices connect to a central intermediate device, which in turn connects to other central intermediate devices.","End devices are connected together by a bus and each bus connects to a central intermediate device.","Each end system is connected to its respective neighbor via an intermediate device.","All end and intermediate devices are connected in a chain to each other."],"answer":"End devices connect to a central intermediate device, which in turn connects to other central intermediate devices.","img":[]},{"question":"What is a characteristic of the LLC sublayer?","options":["It provides the logical addressing required that identifies the device.","It provides delimitation of data according to the physical signaling requirements of the medium.","It places information in the frame allowing multiple Layer 3 protocols to use the same network interface and media.","It defines software processes that provide services to the physical layer."],"answer":"It places information in the frame allowing multiple Layer 3 protocols to use the same network interface and media.","img":[]},{"question":"What are three ways that media access control is used in networking? (Choose three.)","options":["Ethernet utilizes CSMA/CD.","Media access control provides placement of data frames onto the media.","Contention-based access is also known as deterministic.","802.11 utilizes CSMA/CD.","Data link layer protocols define the rules for access to different media.","Networks with controlled access have reduced performance due to data collisions."],"answer":["Ethernet utilizes CSMA/CD.","Media access control provides placement of data frames onto the media.","Data link layer protocols define the rules for access to different media."],"img":[]},{"question":"During the encapsulation process, what occurs at the data link layer for a PC connected to an Ethernet network?","options":["An IP address is added.","The logical address is added.","The physical address is added.","The process port number is added."],"answer":"The physical address is added.","img":[]},{"question":"What three items are contained in an Ethernet header and trailer? (Choose three.)","options":["source IP address","source MAC address","destination IP address","destination MAC address ","error-checking information"],"answer":["source MAC address","destination MAC address ","error-checking information"],"img":[]},{"question":"What type of communication rule would best describe CSMA/CD?","options":["access method","flow control","message encapsulation","message encoding"],"answer":"access method","img":[]},{"question":"Which three basic parts are common to all frame types supported by the data link layer? (Choose three.)","options":["header","type field","MTU size","data ","trailer","CRC value"],"answer":["header","data ","trailer"],"img":[]},{"question":"Which statement is true about the CSMA/CD access method that is used in Ethernet?","options":["When a device hears a carrier signal and transmits, a collision cannot occur.","A jamming signal causes only devices that caused the collision to execute a backoff algorithm.","All network devices must listen before transmitting.","Devices involved in a collision get priority to transmit after the backoff period."],"answer":"All network devices must listen before transmitting.","img":[]},{"question":"What is the auto-MDIX feature on a switch?","options":["the automatic configuration of an interface for 10/100/1000 Mb/s operation","the automatic configuration of an interface for a straight-through or a crossover Ethernet cable connection","the automatic configuration of full-duplex operation over a single Ethernet copper or optical cable","the ability to turn a switch interface on or off accordingly if an active connection is detected"],"answer":"the automatic configuration of an interface for a straight-through or a crossover Ethernet cable connection","img":[]},{"question":"A Layer 2 switch is used to switch incoming frames from a 1000BASE-T port to a port connected to a 100Base-T network. Which method of memory buffering would work best for this task?","options":["port-based buffering","level 1 cache buffering","shared memory buffering","fixed configuration buffering"],"answer":"shared memory buffering","img":[]},{"question":"What are two examples of the cut-through switching method? (Choose two.)","options":["store-and-forward switching","fast-forward switching","CRC switching","fragment-free switching","QOS switching"],"answer":["fast-forward switching","fragment-free switching"],"img":[]},{"question":"Which frame forwarding method receives the entire frame and performs a CRC check to detect errors before forwarding the frame?","options":["cut-through switching","store-and-forward switching","fragment-free switching","fast-forward switching"],"answer":"store-and-forward switching","img":[]},{"question":"What is the purpose of the FCS field in a frame?","options":["to obtain the MAC address of the sending node","to verify the logical address of the sending node","to compute the CRC header for the data field","to determine if errors occurred in the transmission and reception"],"answer":"to determine if errors occurred in the transmission and reception","img":[]},{"question":"Which switching method has the lowest level of latency?","options":["cut-through","store-and-forward","fragment-free","fast-forward"],"answer":"fast-forward","img":[]},{"question":"A network administrator is connecting two modern switches using a straight-through cable. The switches are new and have never been configured. Which three statements are correct about the final result of the connection? (Choose three.)","options":["The link between the switches will work at the fastest speed that is supported by both switches.","The link between switches will work as full-duplex.","If both switches support different speeds, they will each work at their own fastest speed.","The auto-MDIX feature will configure the interfaces eliminating the need for a crossover cable.","The connection will not be possible unless the administrator changes the cable to a crossover cable.","The duplex capability has to be manually configured because it cannot be negotiated."],"answer":["The link between the switches will work at the fastest speed that is supported by both switches.","The link between switches will work as full-duplex.","The auto-MDIX feature will configure the interfaces eliminating the need for a crossover cable."],"img":[]},{"question":"Which advantage does the store-and-forward switching method have compared with the cut-through switching method?","options":["collision detecting","frame error checking","faster frame forwarding","frame forwarding using IPv4 Layer 3 and 4 information"],"answer":"frame error checking","img":[]},{"question":"When the store-and-forward method of switching is in use, what part of the Ethernet frame is used to perform an error check?","options":["CRC in the trailer","source MAC address in the header","destination MAC address in the header","protocol type in the header"],"answer":"CRC in the trailer","img":[]},{"question":"Which switching method uses the CRC value in a frame?","options":["cut-through","fast-forward","fragment-free","store-and-forward"],"answer":"store-and-forward","img":[]},{"question":"What are two actions performed by a Cisco switch? (Choose two.)","options":["building a routing table that is based on the first IP address in the frame header","using the source MAC addresses of frames to build and maintain a MAC address table","forwarding frames with unknown destination IP addresses to the default gateway","utilizing the MAC address table to forward frames via the destination MAC address","examining the destination MAC address to add new entries to the MAC address table"],"answer":["using the source MAC addresses of frames to build and maintain a MAC address table","utilizing the MAC address table to forward frames via the destination MAC address"],"img":[]},{"question":"Which two statements describe features or functions of the logical link control sublayer in Ethernet standards? (Choose two.)","options":["Logical link control is implemented in software.","Logical link control is specified in the IEEE 802.3 standard.","The LLC sublayer adds a header and a trailer to the data.","The data link layer uses LLC to communicate with the upper layers of the protocol suite.","The LLC sublayer is responsible for the placement and retrieval of frames on and off the media."],"answer":["Logical link control is implemented in software.","The data link layer uses LLC to communicate with the upper layers of the protocol suite."],"img":[]},{"question":"What is the auto-MDIX feature?","options":["It enables a device to automatically configure an interface to use a straight-through or a crossover cable.","It enables a device to automatically configure the duplex settings of a segment.","It enables a device to automatically configure the speed of its interface.","It enables a switch to dynamically select the forwarding method."],"answer":"It enables a device to automatically configure an interface to use a straight-through or a crossover cable.","img":[]},{"question":"What is one advantage of using the cut-through switching method instead of the store-and-forward switching method?","options":["has a positive impact on bandwidth by dropping most of the invalid frames","makes a fast forwarding decision based on the source MAC address of the frame","has a lower latency appropriate for high-performance computing applications​","provides the flexibility to support any mix of Ethernet speeds"],"answer":"has a lower latency appropriate for high-performance computing applications​","img":[]},{"question":"Which is a multicast MAC address?","options":["FF-FF-FF-FF-FF-FF","5C-26-0A-4B-19-3E","01-00-5E-00-00-03","00-26-0F-4B-00-3E"],"answer":"01-00-5E-00-00-03","img":[]},{"question":"Open the PT Activity. Perform the tasks in the activity instructions and then answer the question.","options":["Fa0/1","Fa0/5","Fa0/9","Fa0/11"],"answer":"Fa0/11","img":[]},{"question":"Which port does Switch0 use to send frames to the host with the IPv4 address 10.1.1.5?","options":["Fa0/1","Fa0/5","Fa0/9","Fa0/11"],"answer":"Fa0/11","img":[]},{"question":"What does the term “attenuation” mean in data communication?","options":["loss of signal strength as distance increases","time for a signal to reach its destination","leakage of signals from one cable pair to another","strengthening of a signal by a networking device"],"answer":"loss of signal strength as distance increases","img":[]},{"question":"What makes fiber preferable to copper cabling for interconnecting buildings? (Choose three.)","options":["greater distances per cable run","lower installation cost","limited susceptibility to EMI/RFI","durable connections","greater bandwidth potential","easily terminated"],"answer":["greater distances per cable run","limited susceptibility to EMI/RFI","greater bandwidth potential"],"img":[]},{"question":"What OSI physical layer term describes the process by which one wave modifies another wave?","options":["modulation","IEEE","EIA/TIA","air"],"answer":"modulation","img":[]},{"question":"What OSI physical layer term describes the capacity at which a medium can carry data?","options":["bandwidth","IEEE","EIA/TIA","air"],"answer":"bandwidth","img":[]},{"question":"What OSI physical layer term describes the capacity at which a medium can carry data?","options":["bandwidth","throughput","latency","goodput"],"answer":"bandwidth","img":[]},{"question":"What OSI physical layer term describes the measure of the transfer of bits across a medium over a given period of time?","options":["throughput","bandwidth","latency","goodput"],"answer":"throughput","img":[]},{"question":"What OSI physical layer term describes the amount of time, including delays, for data to travel from one point to another?","options":["latency","bandwidth","throughput","goodput"],"answer":"latency","img":[]},{"question":"What OSI physical layer term describes the amount of time, including delays, for data to travel from one point to another?","options":["latency","fiber-optic cable","air","copper cable"],"answer":"latency","img":[]},{"question":"What OSI physical layer term describes the measure of usable data transferred over a given period of time?","options":["goodput","fiber-optic cable","air","copper cable"],"answer":"goodput","img":[]},{"question":"What OSI physical layer term describes the physical medium which uses electrical pulses?","options":["copper cable","fiber-optic cable","air","goodput"],"answer":"copper cable","img":[]},{"question":"What OSI physical layer term describes the physical medium that uses the propagation of light?","options":["fiber-optic cable","goodput","latency","throughput"],"answer":"fiber-optic cable","img":[]},{"question":"What OSI physical layer term describes the physical medium for microwave transmissions?","options":["air","goodput","latency","throughput"],"answer":"air","img":[]},{"question":"Which two functions are performed at the MAC sublayer of the OSI data link layer? (Choose two.)","options":["Implements a trailer to detect transmission errors. ","Controls the NIC responsible for sending and receiving data on the physical medium.","Places information in the frame that identifies which network layer protocol is being used for the frame.","Adds Layer 2 control information to network protocol data.","Enables IPv4 and IPv6 to utilize the same network interface and media."],"answer":["Implements a trailer to detect transmission errors. ","Controls the NIC responsible for sending and receiving data on the physical medium."],"img":[]},{"question":"Which two functions are performed at the LLC sublayer of the OSI data link layer? (Choose two.)","options":["Enables IPv4 and IPv6 to utilize the same network interface and media. ","Places information in the frame that identifies which network layer protocol is being used for the frame.","Integrates various physical technologies.","Implements a process to delimit fields within a Layer 2 frame.","Controls the NIC responsible for sending and receiving data on the physical medium."],"answer":["Enables IPv4 and IPv6 to utilize the same network interface and media. ","Places information in the frame that identifies which network layer protocol is being used for the frame."],"img":[]},{"question":"Which two functions are performed at the MAC sublayer of the OSI data link layer? (Choose two.)","options":["Provides a mechanism to allow multiple devices to communicate over a shared medium.","Controls the NIC responsible for sending and receiving data on the physical medium.","Places information in the frame that identifies which network layer protocol is being used for the frame.","Adds Layer 2 control information to network protocol data.","Communicates between the networking software at the upper layers and the device hardware at the lower layers."],"answer":["Provides a mechanism to allow multiple devices to communicate over a shared medium.","Controls the NIC responsible for sending and receiving data on the physical medium."],"img":[]},{"question":"Which two functions are performed at the MAC sublayer of the OSI data link layer? (Choose two.)","options":["Controls the NIC responsible for sending and receiving data on the physical medium. ","Integrates various physical technologies.","Communicates between the networking software at the upper layers and the device hardware at the lower layers.","Adds Layer 2 control information to network protocol data.","Places information in the frame that identifies which network layer protocol is being used for the frame."],"answer":["Controls the NIC responsible for sending and receiving data on the physical medium. ","Integrates various physical technologies."],"img":[]},{"question":"Which two functions are performed at the LLC sublayer of the OSI data link layer? (Choose two.)","options":["Adds Layer 2 control information to network protocol data. ","Places information in the frame that identifies which network layer protocol is being used for the frame.","Performs data encapsulation.","Controls the NIC responsible for sending and receiving data on the physical medium.","Integrates various physical technologies."],"answer":["Adds Layer 2 control information to network protocol data. ","Places information in the frame that identifies which network layer protocol is being used for the frame."],"img":[]},{"question":"Which two functions are performed at the MAC sublayer of the OSI data link layer? (Choose two.)","options":["Provides synchronization between source and target nodes. ","Integrates various physical technologies.","Communicates between the networking software at the upper layers and the device hardware at the lower layers.","Adds Layer 2 control information to network protocol data.","Enables IPv4 and IPv6 to utilize the same network interface and media."],"answer":["Provides synchronization between source and target nodes. ","Integrates various physical technologies."],"img":[]},{"question":"Which two functions are performed at the LLC sublayer of the OSI data link layer? (Choose two.)","options":["Adds Layer 2 control information to network protocol data. ","Enables IPv4 and IPv6 to utilize the same network interface and media.","Provides data link layer addressing.","Implements a trailer to detect transmission errors.","Provides synchronization between source and target nodes."],"answer":["Adds Layer 2 control information to network protocol data. ","Enables IPv4 and IPv6 to utilize the same network interface and media."],"img":[]},{"question":"Which two functions are performed at the MAC sublayer of the OSI data link layer? (Choose two.)","options":["Implements a trailer to detect transmission errors. ","Provides synchronization between source and target nodes.","Places information in the frame that identifies which network layer protocol is being used for the frame.","Enables IPv4 and IPv6 to utilize the same network interface and media.","Adds Layer 2 control information to network protocol data."],"answer":["Implements a trailer to detect transmission errors. ","Provides synchronization between source and target nodes."],"img":[]},{"question":"Which two functions are performed at the LLC sublayer of the OSI data link layer? (Choose two.)","options":["Enables IPv4 and IPv6 to utilize the same network interface and media. ","Adds Layer 2 control information to network protocol data.","Integrates various physical technologies.","Implements a trailer to detect transmission errors.","Provides synchronization between source and target nodes."],"answer":["Enables IPv4 and IPv6 to utilize the same network interface and media. ","Adds Layer 2 control information to network protocol data."],"img":[]},{"question":"Which two functions are performed at the MAC sublayer of the OSI data link layer? (Choose two.)","options":["Provides a mechanism to allow multiple devices to communicate over a shared medium. ","Controls the NIC responsible for sending and receiving data on the physical medium.","Places information in the frame that identifies which network layer protocol is being used for the frame.","Adds Layer 2 control information to network protocol data.","Enables IPv4 and IPv6 to utilize the same network interface and media."],"answer":["Provides a mechanism to allow multiple devices to communicate over a shared medium. ","Controls the NIC responsible for sending and receiving data on the physical medium."],"img":[]},{"question":"What action will occur if a switch receives a frame and does have the source MAC address in the MAC table?","options":["The switch refreshes the timer on that entry.","The switch shares the MAC address table entry with any connected switches.","The switch does not forward the frame.","The switch sends the frame to a connected router because the destination MAC address is not local."],"answer":"The switch refreshes the timer on that entry.","img":[]},{"question":"What action will occur if a switch receives a frame with the destination MAC address FF:FF:FF:FF:FF:FF?","options":["The switch forwards it out all ports except the ingress port.","The switch shares the MAC address table entry with any connected switches.","The switch does not forward the frame.","The switch sends the frame to a connected router because the destination MAC address is not local."],"answer":"The switch forwards it out all ports except the ingress port.","img":[]},{"question":"What action will occur if a host receives a frame with a destination MAC address it does not recognize?","options":["The host will discard the frame.","The host sends the frame to the switch to update the MAC address table.","The host forwards the frame to the router.","The host forwards the frame to all other hosts."],"answer":"The host will discard the frame.","img":[]},{"question":"What action will occur if a switch receives a frame with the destination MAC address 01:00:5E:00:00:D9?","options":["The switch forwards it out all ports except the ingress port.","The switch does not forward the frame.","The switch sends the frame to a connected router because the destination MAC address is not local.","The switch shares the MAC address table entry with any connected switches."],"answer":"The switch forwards it out all ports except the ingress port.","img":[]},{"question":"What action will occur if a host receives a frame with a destination MAC address of FF:FF:FF:FF:FF:FF?","options":["The host will process the frame.","The host forwards the frame to the router.","The host sends the frame to the switch to update the MAC address table.","The host forwards the frame to all other hosts."],"answer":"The host will process the frame.","img":[]},{"question":"What action will occur if a switch receives a frame and does have the source MAC address in the MAC table?","options":["The switch refreshes the timer on that entry.","The switch adds it to its MAC address table associated with the port number.","The switch forwards the frame to the associated port.","The switch sends the frame to a connected router because the destination MAC address is not local."],"answer":"The switch refreshes the timer on that entry.","img":[]},{"question":"What action will occur if a host receives a frame with a destination MAC address of FF:FF:FF:FF:FF:FF?","options":["The host will process the frame.","The host returns the frame to the switch.","The host replies to the switch with its own IP address.","The host forwards the frame to all other hosts."],"answer":"The host will process the frame.","img":[]},{"question":"What action will occur if a switch receives a frame and does have the source MAC address in the MAC table?","options":["The switch refreshes the timer on that entry.","The switch shares the MAC address table entry with any connected switches.","The switch does not forward the frame.","The switch adds it to its MAC address table associated with the port number."],"answer":"The switch refreshes the timer on that entry.","img":[]},{"question":"What action will occur if a host receives a frame with a destination MAC address it does not recognize?","options":["The host will discard the frame.","The host replies to the switch with its own IP address.","The host forwards the frame to all other hosts.","The host returns the frame to the switch."],"answer":"The host will discard the frame.","img":[]},{"question":"What action will occur if a switch receives a frame with the destination MAC address FF:FF:FF:FF:FF:FF?","options":["The switch forwards it out all ports except the ingress port.","The switch refreshes the timer on that entry.","The switch does not forward the frame.","The switch sends the frame to a connected router because the destination MAC address is not local."],"answer":"The switch forwards it out all ports except the ingress port.","img":[]}]}
+{
+  "examData": {
+    "holder": "Cisco Netacad",
+    "examName": "IT Essentials",
+    "abbreviation": "CCNA",
+    "modules": "",
+    "versionName": "ccna1-v6.0",
+    "versions": 6,
+    "years": 2020
+  },
+  "questions": [
+    {
+      "question": "What is the function of the kernel of an operating software?",
+      "options": [
+        "It provides a user interface that allows users to request a specific task.",
+        "The kernel links the hardware drivers with the underlying electronics of a computer.",
+        "It is an application that allows the initial configuration of a Cisco device.",
+        "The kernel provisions hardware resources to meet software requirements."
+      ],
+      "answer": [
+        "The kernel provisions hardware resources to meet software requirements."
+      ]
+    },
+    {
+      "question": "A network administrator needs to keep the user ID, password, and session contents private when establishing remote CLI connectivity with a switch to manage it. Which access method should be chosen?",
+      "options": [
+        "Telnet",
+        "Console",
+        "AUX",
+        "SSH"
+      ],
+      "answer": [
+        "SSH"
+      ]
+    },
+    {
+      "question": "Which procedure is used to access a Cisco 2960 switch when performing an initial configuration in a secure environment?",
+      "options": [
+        "Use Telnet to remotely access the switch through the network.",
+        "Use the console port to locally access the switch from a serial or USB interface of the PC.",
+        "Use Secure Shell to remotely access the switch through the network.",
+        "Use the AUX port to locally access the switch from a serial or USB interface of the PC."
+      ],
+      "answer": [
+        "Use the console port to locally access the switch from a serial or USB interface of the PC."
+      ]
+    },
+    {
+      "question": "Which command or key combination allows a user to return to the previous level in the command hierarchy?",
+      "options": [
+        "end",
+        "exit",
+        "Ctrl-Z",
+        "Ctrl-C"
+      ],
+      "answer": [
+        "exit"
+      ]
+    },
+    {
+      "question": "A router has a valid operating system and a configuration file stored in NVRAM. The configuration file contains an enable secret password but no console password. When the router boots up, which mode will display?",
+      "options": [
+        "global configuration mode",
+        "setup mode",
+        "privileged EXEC mode",
+        "user EXEC mode"
+      ],
+      "answer": [
+        "user EXEC mode"
+      ]
+    },
+    {
+      "question": "Which two functions are provided to users by the context-sensitive help feature of the Cisco IOS CLI? (Choose two.)",
+      "options": [
+        "providing an error message when a wrong command is submitted",
+        "displaying a list of all available commands within the current mode",
+        "allowing the user to complete the remainder of an abbreviated command with the TAB key",
+        "determining which option, keyword, or argument is available for the entered command",
+        "selecting the best command to accomplish a task"
+      ],
+      "answer": [
+        "displaying a list of all available commands within the current mode",
+        "determining which option, keyword, or argument is available for the entered command"
+      ]
+    },
+    {
+      "question": "Which information does the show startup-config command display?",
+      "options": [
+        "the IOS image copied into RAM",
+        "the bootstrap program in the ROM",
+        "the contents of the current running configuration file in the RAM",
+        "the contents of the saved configuration file in the NVRAM"
+      ],
+      "answer": [
+        "the contents of the saved configuration file in the NVRAM"
+      ]
+    },
+    {
+      "question": "Why is it important to configure a hostname on a device?",
+      "options": [
+        "a Cisco router or switch only begins to operate when its hostname is set",
+        "a hostname must be configured before any other parameters",
+        "to identify the device during remote access (SSH or telnet)",
+        "to allow local access to the device through the console port"
+      ],
+      "answer": [
+        "to identify the device during remote access (SSH or telnet)"
+      ]
+    },
+    {
+      "question": "Which two host names follow the guidelines for naming conventions on Cisco IOS devices? (Choose two.)",
+      "options": [
+        "Branch2!",
+        "RM-3-Switch-2A4",
+        "Floor(15)",
+        "HO Floor 17",
+        "SwBranch799"
+      ],
+      "answer": [
+        "RM-3-Switch-2A4",
+        "SwBranch799"
+      ]
+    },
+    {
+      "question": "How does the service password-encryption command enhance password security on Cisco routers and switches?",
+      "options": [
+        "It encrypts passwords as they are sent across the network.",
+        "It encrypts passwords that are stored in router or switch configuration files.",
+        "It requires that a user type encrypted passwords to gain console access to a router or switch.",
+        "It requires encrypted passwords to be used when connecting remotely to a router or switch with Telnet."
+      ],
+      "answer": [
+        "It encrypts passwords that are stored in router or switch configuration files."
+      ]
+    },
+    {
+      "question": "In your opinion (this has no bearing on your grade), please indicate how enthusiastic you are about the content of this course and the things you’re learning (or have learned):",
+      "options": [
+        "Not At All Enthusiastic",
+        "Slightly Enthusiastic",
+        "Enthusiastic",
+        "Very Enthusiastic",
+        "Completely Enthusiastic"
+      ],
+      "answer": [
+        "Enthusiastic"
+      ]
+    },
+    {
+      "question": "In your opinion (this has no bearing on your grade), please indicate your interest in this course:",
+      "options": [
+        "Not At All Interested",
+        "Slightly Interested",
+        "Interested",
+        "Very Interested",
+        "Completely Interested"
+      ],
+      "answer": [
+        "Interested"
+      ]
+    },
+    {
+      "question": "Refer to the exhibit. A network administrator is configuring the MOTD on switch SW1. What is the purpose of this command?",
+      "options": [
+        "to display a message when a user accesses the switch",
+        "to configure switch SW1 so that only the users in the Admin group can telnet into SW1",
+        "to force users of the Admin group to enter a password for authentication",
+        "to configure switch SW1 so that the message will display when a user enters the enable command"
+      ],
+      "answer": [
+        "to display a message when a user accesses the switch"
+      ],
+      "img": [
+        "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/i208238v1n2_208238.jpg"
+      ]
+    },
+    {
+      "question": "While trying to solve a network issue, a technician made multiple changes to the current router configuration file. The changes did not solve the problem and were not saved. What action can the technician take to discard the changes and work with the file in NVRAM?",
+      "options": [
+        "Issue the reload command without saving the running configuration.",
+        "Delete the vlan.dat file and reboot the device.",
+        "Close and reopen the terminal emulation software.",
+        "Issue the copy startup-config running-config command."
+      ],
+      "answer": [
+        "Issue the reload command without saving the running configuration."
+      ]
+    },
+    {
+      "question": "What is the function of the kernel of an operating system?",
+      "options": [
+        "It provides a user interface that allows users to request a specific task.",
+        "The kernel links the hardware drivers with the underlying electronics of a computer.",
+        "It is an application that allows the initial configuration of a Cisco device.",
+        "The kernel provisions hardware resources to meet software requirements."
+      ],
+      "answer": [
+        "The kernel provisions hardware resources to meet software requirements."
+      ]
+    },
+    {
+      "question": "A router with a valid operating system contains a configuration file stored in NVRAM. The configuration file has an enable secret password but no console password. When the router boots up, which mode will display?",
+      "options": [
+        "privileged EXEC mode",
+        "setup mode",
+        "user EXEC mode",
+        "global configuration mode"
+      ],
+      "answer": [
+        "user EXEC mode"
+      ]
+    },
+    {
+      "question": "In your opinion (this has no bearing on your grade), please rate your motivation to do well in this course:",
+      "options": [
+        "Not At All Motivated",
+        "Slightly Motivated",
+        "Motivated",
+        "Very Motivated",
+        "Completely Motivated"
+      ],
+      "answer": [
+        "Very Motivated"
+      ]
+    },
+    {
+      "question": "Which statement is true about the running configuration file in a Cisco IOS device?",
+      "options": [
+        "It affects the operation of the device immediately when modified.",
+        "It is stored in NVRAM.",
+        "It should be deleted using the erase running-config command.",
+        "It is automatically saved when the router reboots."
+      ],
+      "answer": [
+        "It affects the operation of the device immediately when modified."
+      ]
+    },
+    {
+      "question": "What are two characteristics of RAM on a Cisco device? (Choose two.)",
+      "options": [
+        "RAM provides nonvolatile storage.",
+        "The configuration that is actively running on the device is stored in RAM.",
+        "The contents of RAM are lost during a power cycle.",
+        "RAM is a component in Cisco switches but not in Cisco routers.",
+        "RAM is able to store multiple versions of IOS and configuration files."
+      ],
+      "answer": [
+        "The configuration that is actively running on the device is stored in RAM.",
+        "The contents of RAM are lost during a power cycle."
+      ]
+    },
+    {
+      "question": "Which interface allows remote management of a Layer 2 switch?",
+      "options": [
+        "the AUX interface",
+        "the console port interface",
+        "the switch virtual interface",
+        "the first Ethernet port interface"
+      ],
+      "answer": [
+        "the switch virtual interface"
+      ]
+    },
+    {
+      "question": "Which interface is the default SVI on a Cisco switch?",
+      "options": [
+        "FastEthernet 0/1",
+        "GigabitEthernet 0/1",
+        "VLAN 1",
+        "VLAN 99"
+      ],
+      "answer": [
+        "VLAN 1"
+      ]
+    },
+    {
+      "question": "Why would a Layer 2 switch need an IP address?",
+      "options": [
+        "to enable the switch to send broadcast frames to attached PCs",
+        "to enable the switch to function as a default gateway",
+        "to enable the switch to be managed remotely",
+        "to enable the switch to receive frames from attached PCs"
+      ],
+      "answer": [
+        "to enable the switch to be managed remotely"
+      ]
+    },
+    {
+      "question": "What command can be used on a Windows PC to see the IP configuration of that computer?",
+      "options": [
+        "ping",
+        "ipconfig",
+        "show interfaces",
+        "show ip interface brief"
+      ],
+      "answer": [
+        "ipconfig"
+      ]
+    },
+    {
+      "question": "A technician is adding a new PC to a LAN. After unpacking the components and making all the connections, the technician starts the PC. After the OS loads, the technician opens a browser, and verifies that the PC can reach the Internet. Why was the PC able to connect to the network with no additional configuration?",
+      "options": [
+        "The PC does not require any additional information to function on the network.",
+        "The PC came preconfigured with IP addressing information from the factory.",
+        "The PC was preconfigured to use DHCP.",
+        "The PC used DNS to automatically receive IP addressing information from a server.",
+        "The PC virtual interface is compatible with any network."
+      ],
+      "answer": [
+        "The PC was preconfigured to use DHCP."
+      ]
+    },
+    {
+      "question": "What is a user trying to determine when issuing a ping 10.1.1.1 command on a PC?",
+      "options": [
+        "if the TCP/IP stack is functioning on the PC without putting traffic on the wire",
+        "if there is connectivity with the destination device",
+        "the path that traffic will take to reach the destination",
+        "what type of device is at the destination"
+      ],
+      "answer": [
+        "if there is connectivity with the destination device"
+      ]
+    },
+    {
+      "question": "Refer to the exhibit. A network technician is testing connectivity in a new network. Based on the test results shown in the exhibit, which device does the technician have connectivity with and which device does the technician not have connectivity with? (Choose two.)",
+      "options": [
+        "connectivity: switch 2",
+        "connectivity: PC-D",
+        "connectivity: PC-B",
+        "no connectivity: switch 1",
+        "no connectivity: switch 2",
+        "no connectivity: PC-C"
+      ],
+      "answer": [
+        "connectivity: switch 2",
+        "no connectivity: PC-C"
+      ],
+      "img": [
+        "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/i274052v1n3_274052.jpg"
+      ]
+    },
+    {
+      "question": "Refer to the exhibit.",
+      "options": [
+        "Two physical interfaces have been configured.",
+        "The switch can be remotely managed.",
+        "One device is attached to a physical interface.",
+        "Passwords have been configured on the switch.",
+        "Two devices are attached to the switch.",
+        "The default SVI has been configured."
+      ],
+      "answer": [
+        "The switch can be remotely managed.",
+        "One device is attached to a physical interface.",
+        "The default SVI has been configured."
+      ],
+      "img": [
+        "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/i274067v1n1_274067.jpg"
+      ]
+    },
+    {
+      "question": "An administrator is configuring a switch console port with a password. In what order will the administrator travel through the IOS modes of operation in order to reach the mode in which the configuration commands will be entered? (Not all options are used.)",
+      "options": [],
+      "answer": [],
+      "img": [
+        "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/2017-05-26_100439-1.jpg"
+      ]
+    },
+    {
+      "question": "Match the definitions to their respective CLI hot keys and shortcuts. (Not all options are used.)",
+      "options": [],
+      "answer": [],
+      "img": [
+        "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/2017-05-26_101146.jpg"
+      ]
+    },
+    {
+      "question": "Question",
+      "options": [],
+      "answer": [],
+      "img": [
+        "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/2017-05-26_101146.jpg"
+      ]
+    }
+  ]
+}

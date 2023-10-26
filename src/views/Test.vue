@@ -4,7 +4,8 @@
     <form ref="examForm" @submit.prevent="submitForm" class="flex flex-col gap-2 mt-10">
       <h1 v-if="dataIsReady" class="text-xl sm:text-2xl font-bold mt-8 mb-4">Test cap {{ numCap }} - complete</h1>
       <ul v-for="(question, index) in questions" :key="index" class="flex flex-col list-disc my-4">
-        <h1 class="home text-xl sm:text-2xl mb-2">{{ index + 1 }} - {{ question.question }}</h1>
+        <h1 class="home text-xl sm:text-2xl mb-2">
+          <span v-if="type != 'CCNA'">{{ index + 1 }}</span> - {{ question.question }}</h1>
 
         <!-- Display the image if it exists -->
         <img 

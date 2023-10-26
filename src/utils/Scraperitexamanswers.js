@@ -1,3 +1,9 @@
+/**
+ * scraper by Matteo0099
+ * works well
+ * delete the sentence under image before use (not question)
+**/
+
 // Remove specific div elements
 const divElementsToRemove = document.querySelectorAll('div[data-aaad="true"][data-aa-adunit="/339474670/ITExamAnswers/InContent"]');
 divElementsToRemove.forEach(divElement => divElement.remove());
@@ -8,7 +14,7 @@ shittyElements.forEach(shit => shit.remove());
 
 // remove the first announcement box
 const elRemoveInf = document.querySelectorAll('.thecontent.clearfix strong .message_box.note');
-if(elRemoveInf) {
+if (elRemoveInf) {
   elRemoveInf.forEach(elTag => elTag.remove());
 }
 
@@ -26,7 +32,7 @@ brTags.forEach(brTag => brTag.remove());
 
 const shit2 = document.querySelector('.thecontent.clearfix strong + .message_box.note');
 if (shit2) {
-  shit2.forEach(shit => shit.remove());
+  shit2.remove();
 }
 
 const infoBox = document.querySelector('.thecontent.clearfix .message_box.announce');
@@ -36,24 +42,13 @@ if (infoBox) {
 
 const avoidTitles = document.querySelector('.thecontent.clearfix h2');
 if (avoidTitles) {
-  avoidTitles.forEach(shit => shit.remove());
+  avoidTitles.remove();
 }
 
 // Remove specific elements with class 'message_box.success'
 const successMessages = document.querySelectorAll('.thecontent.clearfix .message_box.success');
 successMessages.forEach(successMessage => successMessage.remove());
 
-// Remove specific paragraphs within .thecontent.clearfix with a <strong> and a <span>
-const messageParagraphs = document.querySelectorAll('.thecontent.clearfix p strong + span');
-messageParagraphs.forEach(messageParagraph => messageParagraph.parentElement.remove());
-
-// Remove the first image if empty
-const emptyImage = document.querySelector('.thecontent.clearfix p img.size-full:nth-child(1)');
-if (emptyImage) {
-  emptyImage.forEach(shit => shit.remove());
-}
-
-// Parse questions and options into an object
 const obj = {
   "examData": {
     "holder": "Cisco Netacad",
@@ -68,55 +63,59 @@ const obj = {
 };
 
 const questionArr = [];
-const regex = /<span style="color: #ff0000;">/;  // right question.
-
-// Update the code to capture questions and answers correctly, only up to question 28
 const questions = document.querySelectorAll('.thecontent.clearfix p strong');
 
-let index = 0;
-while (index < 28) {
-  const question = questions[index];
-  const options = question.parentElement.querySelectorAll('li');
-  const optionsArr = [];
-  const answerArr = [];
-  const images = [];
+questions.forEach((question, index) => {
+  if (index < 28) { // Process only the first 28 questions
 
-  if (options) {
-    Array.from(options).forEach(option => {
-      optionsArr.push(option.textContent);
-      if (regex.test(option.innerHTML)) {
-        answerArr.push(option.textContent);
+    // Exclude specific unwanted content
+    const pText = question.parentElement.textContent;
+    if (pText.includes('Place the options in the following order') && pText.includes('–> podcast') && pText.includes('–> social media') && pText.includes('–> wiki') && pText.includes('–> instant messaging')) {
+      return; // Skip unwanted content
+    }
+
+    const optionsContainer = question.parentElement.nextElementSibling;
+
+    if (optionsContainer) {
+      const options = optionsContainer.querySelectorAll('li');
+      const optionsArr = [];
+      const answerArr = [];
+      let images = [];
+
+      options.forEach((option, optionIndex) => {
+        const optionText = option.textContent.trim();
+        optionsArr.push(optionText);
+        if (option.querySelector('span[style="color: #ff0000;"]') || option.querySelector('strong[style="color: #ff0000;"]')) {
+          answerArr.push(optionText);
+        }
+      });
+
+      // Check if the question contains images in <p> elements
+      const imagesInQuestion = question.parentElement.querySelectorAll('img.size-full');
+
+      if (imagesInQuestion.length > 0) {
+        // Select the second image if it exists, or the first image if there is no second image
+        images.push(imagesInQuestion.length > 1 ? imagesInQuestion[1].src : imagesInQuestion[0].src);
       }
-    });
-  }
 
-  // Check if the question contains an SVG image and remove it
-  const svgImage = question.parentElement.querySelector('img[src^="data:image/svg+xml"]');
-  if (svgImage) {
-    // index++;
-    continue; // Remove the entire question if it contains an SVG image
-  }
+      // Remove numbering from the question text
+      const questionText = question.textContent.replace(/^\d+\.\s/, '').trim();
 
-  // Get image (the second is with the arrows)
-  const image = question.parentElement.querySelector('img.size-full:nth-child(2)');
-  if (image) {
-    // Check if the image src is valid (ends with .jpg or .png)
-    if (image.src.endsWith('.jpg') || image.src.endsWith('.png')) {
-      images.push(image.src);
+      const toPush = {
+        "question": questionText,
+        "options": optionsArr,
+        "answer": answerArr
+      };
+
+      if (images.length > 0) {
+        toPush.images = images;
+      }
+
+      questionArr.push(toPush);
     }
   }
-
-  const toPush = {
-    "question": question.textContent,
-    "options": optionsArr,
-    "answer": (answerArr.length === 1) ? answerArr[0] : answerArr,
-    "img": images
-  };
-
-  questionArr.push(toPush);
-  index++;
-}
+});
 
 obj.questions = questionArr;
-const jsonData = JSON.stringify(obj);
+const jsonData = JSON.stringify(obj, null, 2); // The 'null, 2' argument formats the JSON with indentation for readability
 console.log(jsonData);

@@ -1,1 +1,307 @@
-{"examData":{"holder":"Cisco Netacad","examName":"IT Essentials","abbreviation":"ITE","modules":"1-3","versionName":"ccna1-v7","versions":[7,7.02],"years":[2023,2024]},"questions":[{"question":"An administrator wants to create four subnetworks from the network address 192.168.1.0/24. What is the network address and subnet mask of the second useable subnet?","options":["subnetwork 192.168.1.64\nsubnet mask 255.255.255.192","subnetwork 192.168.1.32\nsubnet mask 255.255.255.240","subnetwork 192.168.1.64\nsubnet mask 255.255.255.240","subnetwork 192.168.1.128\nsubnet mask 255.255.255.192","subnetwork 192.168.1.8\nsubnet mask 255.255.255.224"],"answer":"subnetwork 192.168.1.64\nsubnet mask 255.255.255.192","img":[]},{"question":"How many bits must be borrowed from the host portion of an address to accommodate a router with five connected networks?","options":["two","three","four","five"],"answer":"three","img":[]},{"question":"How many host addresses are available on the 192.168.10.128/26 network?","options":["30","32","60","62","64"],"answer":"62","img":[]},{"question":"How many host addresses are available on the network 172.16.128.0 with a subnet mask of 255.255.252.0?","options":["510","512","1022 ","1024","2046","2048"],"answer":"1022 ","img":[]},{"question":"Match the subnetwork to a host address that would be included within the subnetwork. (Not all options are used.)","options":[],"answer":[],"img":["https://www.premiumexam.net/wp-content/uploads/2019/12/CCNA1-v7-ITN-IP-Addressing-Exam-Answers-001.png"]},{"question":"What three blocks of addresses are defined by RFC 1918 for private network use? (Choose three.)","options":["10.0.0.0/8 ","172.16.0.0/12 ","192.168.0.0/16","100.64.0.0/14","169.254.0.0/16","239.0.0.0/8"],"answer":["10.0.0.0/8 ","172.16.0.0/12 ","192.168.0.0/16"],"img":[]},{"question":"A site administrator has been told that a particular network at the site must accommodate 126 hosts. Which subnet mask would be used that contains the required number of host bits?","options":["255.255.255.0","255.255.255.128","255.255.255.224","255.255.255.240"],"answer":"255.255.255.128","img":[]},{"question":"What is the usable number of host IP addresses on a network that has a /26 mask?","options":["256","254","64","62","32","16"],"answer":"62","img":[]},{"question":"Which address prefix range is reserved for IPv4 multicast?","options":["240.0.0.0 – 254.255.255.255","224.0.0.0 – 239.255.255.255","169.254.0.0 – 169.254.255.255","127.0.0.0 – 127.255.255.255"],"answer":"224.0.0.0 – 239.255.255.255","img":[]},{"question":"A high school in New York (school A) is using videoconferencing technology to establish student interactions with another high school (school B) in Russia. The videoconferencing is conducted between two end devices through the Internet. The network administrator of school A configures the end device with the IP address 209.165.201.10. The administrator sends a request for the IP address for the end device in school B and the response is 192.168.25.10. Neither school is using a VPN. The administrator knows immediately that this IP will not work. Why?","options":["This is a loopback address.","This is a link-local address.","This is a private IP address.","There is an IP address conflict."],"answer":"This is a private IP address.","img":[]},{"question":"Which three addresses are valid public addresses? (Choose three.)","options":["198.133.219.17","192.168.1.245","10.15.250.5","128.107.12.117","172.31.1.25","64.104.78.227"],"answer":["198.133.219.17","128.107.12.117","64.104.78.227"],"img":[]},{"question":"A message is sent to all hosts on a remote network. Which type of message is it?","options":["limited broadcast","multicast","directed broadcast","unicast"],"answer":"directed broadcast","img":[]},{"question":"A company has a network address of 192.168.1.64 with a subnet mask of 255.255.255.192. The company wants to create two subnetworks that would contain 10 hosts and 18 hosts respectively. Which two networks would achieve that? (Choose two.)","options":["192.168.1.16/28","192.168.1.64/27","192.168.1.128/27","192.168.1.96/28","192.168.1.192/28"],"answer":["192.168.1.64/27","192.168.1.96/28"],"img":[]},{"question":"Which address is a valid IPv6 link-local unicast address?","options":["FEC8:1::FFFF","FD80::1:1234","FE80::1:4545:6578:ABC1","FE0A::100:7788:998F","FC90:5678:4251:FFFF"],"answer":"FE80::1:4545:6578:ABC1","img":[]},{"question":"Which of these addresses is the shortest abbreviation for the IP address:","options":["3FFE:1044::AB::57","3FFE:1044::00AB::0057","3FFE:1044:0:0:AB::57","3FFE:1044:0:0:00AB::0057","3FFE:1044:0000:0000:00AB::57","3FFE:1044:0000:0000:00AB::0057"],"answer":"3FFE:1044:0:0:AB::57","img":[]},{"question":"3FFE:1044:0000:0000:00AB:0000:0000:0057?","options":["3FFE:1044::AB::57","3FFE:1044::00AB::0057","3FFE:1044:0:0:AB::57","3FFE:1044:0:0:00AB::0057","3FFE:1044:0000:0000:00AB::57","3FFE:1044:0000:0000:00AB::0057"],"answer":"3FFE:1044:0:0:AB::57","img":[]},{"question":"A network administrator has received the IPv6 prefix 2001:DB8::/48 for subnetting. Assuming the administrator does not subnet into the interface ID portion of the address space, how many subnets can the administrator create from the /48 prefix?","options":["16","256","4096","65536"],"answer":"65536","img":[]},{"question":"Given IPv6 address prefix 2001:db8::/48, what will be the last subnet that is created if the subnet prefix is changed to /52?","options":["2001:db8:0:f00::/52","2001:db8:0:8000::/52","2001:db8:0:f::/52","2001:db8:0:f000::/52"],"answer":"2001:db8:0:f000::/52","img":[]},{"question":"Consider the following range of addresses:","options":[],"answer":[],"img":[]},{"question":"2001:0DB8:BC15:00A0:0000::","options":[],"answer":[],"img":[]},{"question":"2001:0DB8:BC15:00A1:0000::","options":[],"answer":[],"img":[]},{"question":"2001:0DB8:BC15:00A2:0000::","options":[],"answer":[],"img":[]},{"question":"…","options":[],"answer":[],"img":[]},{"question":"2001:0DB8:BC15:00AF:0000::","options":[],"answer":[],"img":[]},{"question":"The prefix-length for the range of addresses is                /60            .","options":[],"answer":[],"img":[]},{"question":"What type of IPv6 address is FE80::1?","options":["loopback","link-local","multicast","global unicast"],"answer":"link-local","img":[]},{"question":"What is used in the EUI-64 process to create an IPv6 interface ID on an IPv6 enabled interface?","options":["the MAC address of the IPv6 enabled interface","a randomly generated 64-bit hexadecimal address","an IPv6 address that is provided by a DHCPv6 server","an IPv4 address that is configured on the interface"],"answer":"the MAC address of the IPv6 enabled interface","img":[]},{"question":"What is the prefix for the host address 2001:DB8:BC15:A:12AB::1/64?","options":["2001:DB8:BC15","2001:DB8:BC15:A","2001:DB8:BC15:A:1","2001:DB8:BC15:A:12"],"answer":"2001:DB8:BC15:A","img":[]},{"question":"An IPv6 enabled device sends a data packet with the destination address of FF02::1. What is the target of this packet?​","options":["the one IPv6 device on the link that has been uniquely configured with this address","all IPv6 enabled devices on the local link​ or network","only IPv6 DHCP servers​","only IPv6 configured routers"],"answer":"all IPv6 enabled devices on the local link​ or network","img":[]},{"question":"Which IPv6 prefix is reserved for communication between devices on the same link?","options":["FC00::/7","2001::/32","FE80::/10","FDFF::/7"],"answer":"FE80::/10","img":[]},{"question":"Which type of IPv6 address refers to any unicast address that is assigned to multiple hosts?","options":["unique local","global unicast","link-local","anycast"],"answer":"anycast","img":[]},{"question":"What are two types of IPv6 unicast addresses? (Choose two.)","options":["multicast","loopback ","link-local","anycast","broadcast"],"answer":["loopback ","link-local"],"img":[]},{"question":"Which service provides dynamic global IPv6 addressing to end devices without using a server that keeps a record of available IPv6 addresses?","options":["stateful DHCPv6","SLAAC","static IPv6 addressing","stateless DHCPv6"],"answer":"SLAAC","img":[]},{"question":"Which protocol supports Stateless Address Autoconfiguration (SLAAC) for dynamic assignment of IPv6 addresses to a host?","options":["ARPv6","DHCPv6","ICMPv6","UDP"],"answer":"ICMPv6","img":[]},{"question":"A technician uses the ping 127.0.0.1 command. What is the technician testing?","options":["the TCP/IP stack on a network host","connectivity between two adjacent Cisco devices","connectivity between a PC and the default gateway","connectivity between two PCs on the same network","physical connectivity of a particular PC and the network"],"answer":"the TCP/IP stack on a network host","img":[]},{"question":"Which protocol is used by the traceroute command to send and receive echo-requests and echo-replies?","options":["SNMP","ICMP","Telnet","TCP"],"answer":"ICMP","img":[]},{"question":"Which ICMPv6 message is sent when the IPv6 hop limit field of a packet is decremented to zero and the packet cannot be forwarded?","options":["network unreachable","time exceeded","protocol unreachable","port unreachable"],"answer":"time exceeded","img":[]},{"question":"A user executes a traceroute over IPv6. At what point would a router in the path to the destination device drop the packet?","options":["when the value of the Hop Limit field reaches 255","when the value of the Hop Limit field reaches zero","when the router receives an ICMP time exceeded message","when the target host responds with an ICMP echo reply message"],"answer":"when the value of the Hop Limit field reaches zero","img":[]},{"question":"What is the purpose of ICMP messages?","options":["to inform routers about network topology changes","to ensure the delivery of an IP packet","to provide feedback of IP packet transmissions","to monitor the process of a domain name to IP address resolution"],"answer":"to provide feedback of IP packet transmissions","img":[]},{"question":"What source IP address does a router use by default when the traceroute command is issued?","options":["the highest configured IP address on the router","a loopback IP address","the IP address of the outbound interface","the lowest configured IP address on the router"],"answer":"the IP address of the outbound interface","img":[]},{"question":"What is the prefix length notation for the subnet mask 255.255.255.224?","options":["/25","/26","/27","/28"],"answer":"/27","img":[]},{"question":"Which subnet would include the address 192.168.1.96 as a usable host address?","options":["192.168.1.64/26","192.168.1.32/27","192.168.1.32/28","192.168.1.64/29"],"answer":"192.168.1.64/26","img":[]},{"question":"Open the PT Activity. Perform the tasks in the activity instructions and then answer the question.","options":["2001:DB8:1:1::1","2001:DB8:1:1::A","2001:DB8:1:2::2","2001:DB8:1:2::1","2001:DB8:1:3::1","2001:DB8:1:3::2","2001:DB8:1:4::1"],"answer":["2001:DB8:1:1::1","2001:DB8:1:2::1","2001:DB8:1:3::2"],"img":[]},{"question":"What are the three IPv6 addresses displayed when the route from PC1 to PC2 is traced? (Choose three.)","options":["2001:DB8:1:1::1","2001:DB8:1:1::A","2001:DB8:1:2::2","2001:DB8:1:2::1","2001:DB8:1:3::1","2001:DB8:1:3::2","2001:DB8:1:4::1"],"answer":["2001:DB8:1:1::1","2001:DB8:1:2::1","2001:DB8:1:3::2"],"img":[]},{"question":"A host is transmitting a broadcast. Which host or hosts will receive it?","options":["all hosts in the same subnet","a specially defined group of hosts","the closest neighbor on the same network","all hosts on the Internet"],"answer":"all hosts in the same subnet","img":[]},{"question":"A host is transmitting a unicast. Which host or hosts will receive it?","options":["one specific host","a specially defined group of hosts","all hosts on the Internet","the closest neighbor on the same network"],"answer":"one specific host","img":[]},{"question":"A host is transmitting a unicast. Which host or hosts will receive it?","options":["one specific host","a specially defined group of hosts","all hosts with the same IP address","the closest neighbor on the same network"],"answer":"one specific host","img":[]},{"question":"A host is transmitting a multicast. Which host or hosts will receive it?","options":["a specially defined group of hosts","one specific host","all hosts with the same IP address","the closest neighbor on the same network"],"answer":"a specially defined group of hosts","img":[]},{"question":"A host is transmitting a multicast. Which host or hosts will receive it?","options":["a specially defined group of hosts","one specific host","directly connected network devices","the closest neighbor on the same network"],"answer":"a specially defined group of hosts","img":[]},{"question":"A host is transmitting a multicast. Which host or hosts will receive it?","options":["a specially defined group of hosts","one specific host","all hosts with the same IP address","all hosts on the Internet"],"answer":"a specially defined group of hosts","img":[]},{"question":"A host is transmitting a multicast. Which host or hosts will receive it?","options":["a specially defined group of hosts","one specific host","directly connected network devices","all hosts on the Internet"],"answer":"a specially defined group of hosts","img":[]},{"question":"A host is transmitting a multicast. Which host or hosts will receive it?","options":["a specially defined group of hosts","all hosts in the same subnet","directly connected network devices","the closest neighbor on the same network"],"answer":"a specially defined group of hosts","img":[]},{"question":"A host is transmitting a broadcast. Which host or hosts will receive it?","options":["all hosts in the same subnet","one specific host","the closest neighbor on the same network","directly connected network devices"],"answer":"all hosts in the same subnet","img":[]},{"question":"A host is transmitting a broadcast. Which host or hosts will receive it?","options":["all hosts in the same subnet","one specific host","all hosts on the Internet","directly connected network devices"],"answer":"all hosts in the same subnet","img":[]},{"question":"Which is the compressed format of the IPv6 address 2001:0db8:0000:0000:0000:a0b0:0008:0001?","options":["2001:db8::a0b0:8:1","2001:db8::ab8:1:0:1000","2001:db80:0:1::80:1","2001:db80:::1::80:1"],"answer":"2001:db8::a0b0:8:1","img":[]},{"question":"Which is the compressed format of the IPv6 address fe80:09ea:0000:2200:0000:0000:0fe0:0290?","options":["fe80:9ea:0:2200::fe0:290","fe80:9:20::b000:290","fe80:9ea0::2020:0:bf:e0:9290","fe80:9ea0::2020::bf:e0:9290"],"answer":"fe80:9ea:0:2200::fe0:290","img":[]},{"question":"Which is the compressed format of the IPv6 address 2002:0042:0010:c400:0000:0000:0000:0909?","options":["2002:42:10:c400::909","200:420:110:c4b::910:0:90","2002:4200::25:1090:0:99","2002:42::25:1090:0:99"],"answer":"2002:42:10:c400::909","img":[]},{"question":"Which is the compressed format of the IPv6 address 2001:0db8:0000:0000:0ab8:0001:0000:1000?","options":["2001:db8::ab8:1:0:1000","2001:db8::a0b0:8:1","2001:db8:1::ab8:0:1","2001:db8:0:1::8:1"],"answer":"2001:db8::ab8:1:0:1000","img":[]},{"question":"Which is the compressed format of the IPv6 address 2002:0420:00c4:1008:0025:0190:0000:0990?","options":["2002:420:c4:1008:25:190::990","2002:42:10:c400::909","2002:4200::25:1090:0:99","2002:42::25:1090:0:99"],"answer":"2002:420:c4:1008:25:190::990","img":[]},{"question":"Which is the compressed format of the IPv6 address 2001:0db8:0000:0000:0000:a0b0:0008:0001?","options":["2001:db8::a0b0:8:1","2001:db8:1::ab8:0:1","2001:db8::ab8:1:0:1000","2001:db8:0:1::8:1"],"answer":"2001:db8::a0b0:8:1","img":[]},{"question":"Which is the compressed format of the IPv6 address fe80:0000:0000:0000:0220:0b3f:f0e0:0029?","options":["fe80::220:b3f:f0e0:29","fe80:9ea:0:2200::fe0:290","fe80:9ea0::2020:0:bf:e0:9290","fe80:9ea0::2020::bf:e0:9290"],"answer":"fe80::220:b3f:f0e0:29","img":[]},{"question":"Which is the compressed format of the IPv6 address 2001:0db8:0000:0000:0000:a0b0:0008:0001?","options":["2001:db8::a0b0:8:1","2001:db8::ab8:1:0:1000","2001:db80:0:1::80:1","2001:db8:0:1::8:1"],"answer":"2001:db8::a0b0:8:1","img":[]},{"question":"Which is the compressed format of the IPv6 address 2002:0042:0010:c400:0000:0000:0000:0909?","options":["2002:42:10:c400::909","2002:4200::25:1090:0:99","2002:420:c4:1008:25:190::990","2002:42::25:1090:0:99"],"answer":"2002:42:10:c400::909","img":[]},{"question":"Which is the compressed format of the IPv6 address fe80:09ea:0000:2200:0000:0000:0fe0:0290?","options":["fe80:9ea:0:2200::fe0:290","fe80:9ea0::2020:0:bf:e0:9290","fe80::220:b3f:f0e0:29","fe80::0220:0b3f:f0e0:0029"],"answer":"fe80:9ea:0:2200::fe0:290","img":[]},{"question":"A user issues a ping 2001:db8:FACE:39::10 command and receives a response that includes a code of 2. What does this code represent?","options":["beyond scope of the source address","communication with the destination administratively prohibited","address unreachable","no route to destination"],"answer":"beyond scope of the source address","img":[]},{"question":"A user issues a ping 192.135.250.103 command and receives a response that includes a code of 1. What does this code represent?","options":["host unreachable","beyond scope of the source address","address unreachable","communication with the destination administratively prohibited"],"answer":"host unreachable","img":[]},{"question":"A user issues a ping fe80:65ab:dcc1::100 command and receives a response that includes a code of 3. What does this code represent?","options":["address unreachable","communication with the destination administratively prohibited","beyond scope of the source address","no route to destination"],"answer":"address unreachable","img":[]},{"question":"A user issues a ping 10.10.14.67 command and receives a response that includes a code of 0. What does this code represent?","options":["network unreachable","protocol unreachable","port unreachable","host unreachable"],"answer":"network unreachable","img":[]},{"question":"A user issues a ping fe80:65ab:dcc1::100 command and receives a response that includes a code of 4. What does this code represent?","options":["port unreachable","host unreachable","protocol unreachable","network unreachable"],"answer":"port unreachable","img":[]},{"question":"A user issues a ping 198.133.219.8 command and receives a response that includes a code of 0. What does this code represent?","options":["network unreachable","protocol unreachable","port unreachable","host unreachable"],"answer":"network unreachable","img":[]},{"question":"A user issues a ping 2001:db8:3040:114::88 command and receives a response that includes a code of 4. What does this code represent?","options":["port unreachable","host unreachable","protocol unreachable","network unreachable"],"answer":"port unreachable","img":[]},{"question":"A user issues a ping 2001:db8:FACE:39::10 command and receives a response that includes a code of 2. What does this code represent?","options":["beyond scope of the source address","host unreachable","protocol unreachable","network unreachable"],"answer":"beyond scope of the source address","img":[]},{"question":"A user issues a ping 192.135.250.103 command and receives a response that includes a code of 1. What does this code represent?","options":["host unreachable","protocol unreachable","port unreachable","network unreachable"],"answer":"host unreachable","img":[]},{"question":"A user issues a ping 2001:db8:FACE:39::10 command and receives a response that includes a code of 3. What does this code represent?","options":["address unreachable","network unreachable","host unreachable","protocol unreachable"],"answer":"address unreachable","img":[]}]}
+{
+  "examData": {
+    "holder": "Cisco Netacad",
+    "examName": "IT Essentials",
+    "abbreviation": "CCNA",
+    "modules": "",
+    "versionName": "ccna1-v6.0",
+    "versions": 6,
+    "years": 2020
+  },
+  "questions": [
+    {
+      "question": "What are two reasons for physical layer protocols to use frame encoding techniques? (Choose two.)",
+      "options": [
+        "to reduce the number of collisions on the media",
+        "to distinguish data bits from control bits",
+        "to provide better media error correction",
+        "to identify where the frame starts and ends",
+        "to increase the media throughput",
+        "to distinguish data from control information"
+      ],
+      "answer": [
+        "to distinguish data bits from control bits",
+        "to identify where the frame starts and ends"
+      ]
+    },
+    {
+      "question": "What is indicated by the term throughput?",
+      "options": [
+        "the guaranteed data transfer rate offered by an ISP",
+        "the capacity of a particular medium to carry data",
+        "the measure of the usable data transferred across the media",
+        "the measure of the bits transferred across the media over a given period of time",
+        "the time it takes for a message to get from sender to receiver"
+      ],
+      "answer": [
+        "the measure of the bits transferred across the media over a given period of time"
+      ]
+    },
+    {
+      "question": "A network administrator notices that some newly installed Ethernet cabling is carrying corrupt and distorted data signals. The new cabling was installed in the ceiling close to fluorescent lights and electrical equipment. Which two factors may interfere with the copper cabling and result in signal distortion and data corruption? (Choose two.)",
+      "options": [
+        "EMI",
+        "crosstalk",
+        "RFI",
+        "signal attenuation",
+        "extended length of cabling"
+      ],
+      "answer": [
+        "EMI",
+        "RFI"
+      ]
+    },
+    {
+      "question": "Which characteristic describes crosstalk?",
+      "options": [
+        "the distortion of the network signal from fluorescent lighting",
+        "the distortion of the transmitted messages from signals carried in adjacent wires",
+        "the weakening of the network signal over long cable lengths",
+        "the loss of wireless signal over excessive distance from the access point"
+      ],
+      "answer": [
+        "the distortion of the transmitted messages from signals carried in adjacent wires"
+      ]
+    },
+    {
+      "question": "What technique is used with UTP cable to help protect against signal interference from crosstalk?",
+      "options": [
+        "twisting the wires together into pairs",
+        "wrapping a foil shield around the wire pairs",
+        "encasing the cables within a flexible plastic sheath",
+        "terminating the cable with special grounded connectors"
+      ],
+      "answer": [
+        "twisting the wires together into pairs"
+      ]
+    },
+    {
+      "question": "Refer to the exhibit. The PC is connected to the console port of the switch. All the other connections are made through FastEthernet links. Which types of UTP cables can be used to connect the devices?",
+      "options": [
+        "1 – rollover, 2 – crossover, 3 – straight-through",
+        "1 – rollover, 2 – straight-through, 3 – crossover",
+        "1 – crossover, 2 – straight-through, 3 – rollover",
+        "1 – crossover, 2 – rollover, 3 – straight-through"
+      ],
+      "answer": [
+        "1 – rollover, 2 – straight-through, 3 – crossover"
+      ],
+      "img": [
+        "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/i274301v1n1_206934.jpg"
+      ]
+    },
+    {
+      "question": "Refer to the exhibit. What is wrong with the displayed termination?",
+      "options": [
+        "The woven copper braid should not have been removed.",
+        "The wrong type of connector is being used.",
+        "The untwisted length of each wire is too long.",
+        "The wires are too thick for the connector that is used."
+      ],
+      "answer": [
+        "The untwisted length of each wire is too long."
+      ],
+      "img": [
+        "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/i274300v1n1_209630.jpg"
+      ]
+    },
+    {
+      "question": "Which type of connector does a network interface card use?",
+      "options": [
+        "DIN",
+        "PS-2",
+        "RJ-11",
+        "RJ-45"
+      ],
+      "answer": [
+        "RJ-45"
+      ]
+    },
+    {
+      "question": "What is one advantage of using fiber optic cabling rather than copper cabling?",
+      "options": [
+        "It is usually cheaper than copper cabling.",
+        "It is able to be installed around sharp bends.",
+        "It is easier to terminate and install than copper cabling.",
+        "It is able to carry signals much farther than copper cabling."
+      ],
+      "answer": [
+        "It is able to carry signals much farther than copper cabling."
+      ]
+    },
+    {
+      "question": "Why are two strands of fiber used for a single fiber optic connection?",
+      "options": [
+        "The two strands allow the data to travel for longer distances without degrading.",
+        "They prevent crosstalk from causing interference on the connection.",
+        "They increase the speed at which the data can travel.",
+        "They allow for full-duplex connectivity."
+      ],
+      "answer": [
+        "They allow for full-duplex connectivity."
+      ]
+    },
+    {
+      "question": "A network administrator is designing the layout of a new wireless network. Which three areas of concern should be accounted for when building a wireless network? (Choose three.)",
+      "options": [
+        "mobility options",
+        "security",
+        "interference",
+        "coverage area",
+        "extensive cabling",
+        "packet collision"
+      ],
+      "answer": [
+        "security",
+        "interference",
+        "coverage area"
+      ]
+    },
+    {
+      "question": "Which layer of the OSI model is responsible for specifying the encapsulation method used for specific types of media?",
+      "options": [
+        "application",
+        "transport",
+        "data link",
+        "physical"
+      ],
+      "answer": [
+        "data link"
+      ]
+    },
+    {
+      "question": "What are two services performed by the data link layer of the OSI model? (Choose two.)",
+      "options": [
+        "It encrypts data packets.",
+        "It determines the path to forward packets.",
+        "It accepts Layer 3 packets and encapsulates them into frames.",
+        "It provides media access control and performs error detection.",
+        "It monitors the Layer 2 communication by building a MAC address table."
+      ],
+      "answer": [
+        "It accepts Layer 3 packets and encapsulates them into frames.",
+        "It provides media access control and performs error detection."
+      ]
+    },
+    {
+      "question": "What is true concerning physical and logical topologies?",
+      "options": [
+        "The logical topology is always the same as the physical topology.",
+        "Physical topologies are concerned with how a network transfers frames.",
+        "Physical topologies display the IP addressing scheme of each network.",
+        "Logical topologies refer to how a network transfers data between devices."
+      ],
+      "answer": [
+        "Logical topologies refer to how a network transfers data between devices."
+      ]
+    },
+    {
+      "question": "Which method of data transfer allows information to be sent and received at the same time?",
+      "options": [
+        "full duplex",
+        "half duplex",
+        "multiplex",
+        "simplex"
+      ],
+      "answer": [
+        "full duplex"
+      ]
+    },
+    {
+      "question": "Which statement describes an extended star topology?",
+      "options": [
+        "End devices connect to a central intermediate device, which in turn connects to other central intermediate devices.",
+        "End devices are connected together by a bus and each bus connects to a central intermediate device.",
+        "Each end system is connected to its respective neighbor via an intermediate device.",
+        "All end and intermediate devices are connected in a chain to each other."
+      ],
+      "answer": [
+        "End devices connect to a central intermediate device, which in turn connects to other central intermediate devices."
+      ]
+    },
+    {
+      "question": "Refer to the exhibit. Which statement describes the media access control methods that are used by the networks in the exhibit?",
+      "options": [
+        "All three networks use CSMA/CA",
+        "None of the networks require media access control.",
+        "Network 1 uses CSMA/CD and Network 3 uses CSMA/CA.",
+        "Network 1 uses CSMA/CA and Network 2 uses CSMA/CD.",
+        "Network 2 uses CSMA/CA and Network 3 uses CSMA/CD."
+      ],
+      "answer": [
+        "Network 1 uses CSMA/CD and Network 3 uses CSMA/CA."
+      ],
+      "img": [
+        "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/i282597v1n1_208217.jpg"
+      ]
+    },
+    {
+      "question": "What is contained in the trailer of a data-link frame?",
+      "options": [
+        "logical address",
+        "physical address",
+        "data",
+        "error detection"
+      ],
+      "answer": [
+        "error detection"
+      ]
+    },
+    {
+      "question": "As data travels on the media in a stream of 1s and 0s how does a receiving node identify the beginning and end of a frame?",
+      "options": [
+        "The transmitting node inserts start and stop bits into the frame.",
+        "The transmitting node sends a beacon to notify that a data frame is attached.",
+        "The receiving node identifies the beginning of a frame by seeing a physical address.",
+        "The transmitting node sends an out-of-band signal to the receiver about the beginning of the frame."
+      ],
+      "answer": [
+        "The transmitting node inserts start and stop bits into the frame."
+      ]
+    },
+    {
+      "question": "What is a role of the Logical Link Control sublayer?",
+      "options": [
+        "to provide data link layer addressing",
+        "to provide access to various Layer 1 network technologies",
+        "to define the media access processes performed by network hardware",
+        "to mark frames to identify the network layer protocol being carried"
+      ],
+      "answer": [
+        "to mark frames to identify the network layer protocol being carried"
+      ]
+    },
+    {
+      "question": "What is the definition of bandwidth?",
+      "options": [
+        "the measure of usable data transferred over a given period of time",
+        "the speed at which bits travel on the network",
+        "the measure of the transfer of bits across the media over a given period of time",
+        "the amount of data that can flow from one place to another in a given amount of time"
+      ],
+      "answer": [
+        "the amount of data that can flow from one place to another in a given amount of time"
+      ]
+    },
+    {
+      "question": "What is the function of the CRC value that is found in the FCS field of a frame?",
+      "options": [
+        "to verify the integrity of the received frame",
+        "to verify the physical address in the frame",
+        "to verify the logical address in the frame",
+        "to compute the checksum header for the data field in the frame"
+      ],
+      "answer": [
+        "to verify the integrity of the received frame"
+      ]
+    },
+    {
+      "question": "Match the characteristics to the correct type of fiber. (Not all options are used.)",
+      "options": [],
+      "answer": [],
+      "img": [
+        "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/2017-05-22_164930-1.jpg"
+      ]
+    }
+  ]
+}

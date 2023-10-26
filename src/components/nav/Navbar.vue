@@ -58,7 +58,7 @@ import navFoot from '../FooterNav.vue'
 
     <!-- test CCNA -->
     <h1 class="font-bold text-xl sm:text-2xl mt-8 mb-4 mx-auto">Cisco <span class="m-0 p-0 underline">CCNA</span> 11
-      MODULES &#40; cooming soon &#41;</h1>
+      MODULES <strong class="text-red-500 pl-1">&#40;!ACTIVE NOW!&#41;</strong></h1>
     <select v-model="selected" @change="changeRoute($event)" class="dropdown flex items-center justify-center cursor-pointer text-neutral-900 w-full mt-2 py-4 mx-auto rounded-md shadow-sm bg-gray-100 
           border-transparent focus:border-gray-400 focus:bg-white focus:ring-0">
       <option disabled value="" class="bg-neutral-50 mr-auto font-sans text-lg">Select an option</option>
@@ -74,49 +74,38 @@ import navFoot from '../FooterNav.vue'
 </template>
 
 <script>
-  import { useRouter } from 'vue-router'
-  const $router = useRouter()
-  export default {
-    data() {
-      return {
-        selected: '',
-        answers: [
-          {text: '/Answers/ITE/1', number: 1}, {text: '/Answers/ITE/2', number: 2},
-          {text: '/Answers/ITE/3', number: 3}, {text: '/Answers/ITE/4', number: 4},
-          {text: '/Answers/ITE/5', number: 5}, {text: '/Answers/ITE/6', number: 6},
-          {text: '/Answers/ITE/7', number: 7}, {text: '/Answers/ITE/8', number: 8},
-          {text: '/Answers/ITE/9', number: 9}, {text: '/Answers/ITE/10', number: 11},
-          {text: '/Answers/ITE/11', number: 11}, {text: '/Answers/ITE/12', number: 12},
-          {text: '/Answers/ITE/13', number: 13}, {text: '/Answers/ITE/14', number: 14}, 
-        ],
-        answersCCNA: [
-          {text: '/Answers/CCNA/1', number: 1}, {text: '/Answers/CCNA/2', number: 2},
-          {text: '/Answers/CCNA/3', number: 3}, {text: '/Answers/CCNA/4', number: 4},
-          {text: '/Answers/CCNA/5', number: 5}, {text: '/Answers/CCNA/6', number: 6},
-          {text: '/Answers/CCNA/7', number: 7} 
-        ],
-        ite: [
-          {text: '/test/ITE/1', number: 1}, {text: '/test/ITE/2', number: 2},
-          {text: '/test/ITE/3', number: 3}, {text: '/test/ITE/4', number: 4},
-          {text: '/test/ITE/5', number: 5}, {text: '/test/ITE/6', number: 6},
-          {text: '/test/ITE/7', number: 7}, {text: '/test/ITE/8', number: 8},
-          {text: '/test/ITE/9', number: 9}, {text: '/test/ITE/10', number: 11},
-          {text: '/test/ITE/11', number: 11}, {text: '/test/ITE/12', number: 12},
-          {text: '/test/ITE/13', number: 13}, {text: '/test/ITE/14', number: 14}
-        ],
-        ccna: [
-          {text: '/test/CCNA/1', number: 1}, {text: '/test/CCNA/2', number: 2},
-          {text: '/test/CCNA/3', number: 3}, {text: '/test/CCNA/4', number: 4},
-          {text: '/test/CCNA/5', number: 5}, {text: '/test/CCNA/6', number: 6},
-          {text: '/test/CCNA/7', number: 7}
-        ]
-      }
+import { useRouter } from 'vue-router';
+export default {
+  data() {
+    return {
+      selected: '',
+      answers: [],
+      answersCCNA: [],
+      ite: [],
+      ccna: [],
+    };
+  },
+  created() {
+    this.initializeData();
+  },
+  methods: {
+    initializeData() {
+      this.answers = this.generateData('/Answers/ITE/', 14);
+      this.answersCCNA = this.generateData('/Answers/CCNA/', 11);
+      this.ite = this.generateData('/test/ITE/', 14);
+      this.ccna = this.generateData('/test/CCNA/', 11);
     },
-    methods: {
-      // works well
-      changeRoute(e) { this.$router.push("" + e.target.value); },
-    }
-  }
+    generateData(basePath, count) {
+      return Array.from({ length: count }, (_, i) => ({
+        text: `${basePath}${i + 1}`,
+        number: i + 1,
+      }));
+    },
+    changeRoute(e) {
+      this.$router.push('' + e.target.value);
+    },
+  },
+};
 </script>
 
 <style scoped>
