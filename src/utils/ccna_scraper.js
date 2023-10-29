@@ -31,7 +31,7 @@ const obj = {
 
 optionsLists.forEach((optionsList) => {
     const questionContainer = optionsList.previousElementSibling
-    const options = [...optionsList.children]
+    const options = [...optionsList.children ]
 
     obj.questions.push({
         question: questionContainer.textContent.replace(/^\d+\.\s/, ""),
