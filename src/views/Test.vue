@@ -19,8 +19,8 @@
           ref="questionImage" 
         />
 
-        <template v-if="question.options || question.answer">
-          <template v-if="Array.isArray(question.answer)">
+        <template v-if="question.options || question.answers">
+          <template v-if="question.answers.length > 1">
             <label v-for="(option, oIndex) in question.options" :key="oIndex" class="pl-4 text-base sm:text-lg">
               <input type="checkbox" :value="option" v-model="selectedAnswers[index]" :disabled="formSubmitted" />
               {{ option }}
@@ -35,7 +35,7 @@
           </template>
           <p v-if="submitted && !rightAnswers[index]"
             class="Wrong list-disc text-xl md:text-2xl text-red-500 font-semibold pl-3 pt-1.5">
-            {{ question.answer }}
+            {{ question.answers }}
           </p>
         </template>
       </ul>
@@ -75,8 +75,7 @@ export default {
       numCap: null,
       formSubmitted: false,
       rightAnswers: [],
-      dataIsReady: false,
-      importType: null,
+      dataIsReady: false
     };
   },
   async created() {
@@ -143,30 +142,26 @@ export default {
     checkAnswers() {
       this.correctAnswers = 0;
       this.questions.forEach((question, index) => {
-        const selected = this.selectedAnswers[index];
-        const correctAnswer = question.answer;
-        if (selected && selected.length > 0) {
-          if (Array.isArray(correctAnswer)) {
-            if (
-              correctAnswer.every((answer) => selected.includes(answer)) &&
-              correctAnswer.length === selected.length
-            ) {
-              this.correctAnswers++;
-              this.rightAnswers.push(true);
-            } else {
-              this.rightAnswers.push(false);
-            }
+        const selected = this.selectedAnswers[index] 
+        const correctAnswer = question.answers;
+        
+        if (question.answers.length > 1) {
+          if (
+            correctAnswer.every((answer) => selected.includes(answer)) &&
+            correctAnswer.length === selected.length
+          ) {
+            this.correctAnswers++;
+            this.rightAnswers.push(true);
           } else {
-            if (selected === correctAnswer) {
-              this.correctAnswers++;
-              this.rightAnswers.push(true);
-            } else {
-              this.rightAnswers.push(false);
-            }
+            this.rightAnswers.push(false);
           }
         } else {
-          // No selection made for this question, so it's marked as incorrect
-          this.rightAnswers.push(false);
+          if (selected === correctAnswer[0]) {
+            this.correctAnswers++;
+            this.rightAnswers.push(true);
+          } else {
+            this.rightAnswers.push(false);
+          }
         }
       });
     },
