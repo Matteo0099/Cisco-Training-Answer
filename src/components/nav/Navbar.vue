@@ -1,12 +1,15 @@
 <script setup>
-import backToHome from '../return.vue'
-import navFoot from '../FooterNav.vue'
+import backToHome from '../return.vue';
+import DialogNormale from '../DialogNorm.vue';
 </script>
 
 <template>
   <div class="w-full mt-[17.5%] 2xl:mt-[25%] h-fit" id="top">
+    <!-- 1 first disclaimer < 1024px -->
+    <div class="block lg:hidden">
+      <DialogNormale />
+    </div>
     <!-- custom components -->
-    <navFoot />
     <backToHome class="cursor-pointer"></backToHome>
 
     <!-- answers ITE -->

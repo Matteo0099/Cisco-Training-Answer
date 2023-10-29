@@ -4,19 +4,26 @@ import { RouterView } from 'vue-router';
 import Navbar from './components/nav/Navbar.vue';
 import Footer from './components/Footer.vue';
 import btnDark from './components/btn-dark.vue';
+import DialogFixed from './components/DialogFixed.vue';
 </script>
 
 <template>
-  <div class="w-full max-w-full h-[100vh] font-primary min-h-full relative top-0" data-aos="fade-down"
+  <div class="w-full max-w-full font-primary min-h-screen relative top-0" data-aos="fade-down"
     data-aos-anchor-placement="bottom" data-aos-duration="375" data-aos-dealy="0">
+    <!-- 2 second disclaimer 1024px > (DIO CANE NON STA FIXED) -->
+    <div class="fixed top-[200px] right-[2px] w-[160px] h-[60px] hidden lg:block">
+      <DialogFixed />
+    </div>
     <div class="btn-dark w-fit mt-4 ml-auto lg:fixed lg:right-2">
       <btnDark data-aos="zoom-in" data-aos-duration="375" data-aos-delay="125" type="button" role="button" />
       <!-- google translate (to implement => api google.translate.it)-->
       <div id="google_translate_element" class="w-max"></div>
     </div>
+    <div class="block lg:hidden"></div>
     <main class="container relative min-h-screen font-primary grid px-4 sm:p-0 sm:mx-auto max-w-2xl rounded-xl">
       <!-- Main navigation -->
       <Navbar data-aos="zoom-out" data-aos-duration="400" data-aos-delay="150"></Navbar> <!-- pagine renderizzate ↓ -->
+      <!-- main content -->
       <div class="pages container mx-auto max-w-3xl text-left min-h-fit">
         <!-- for content of the page -->
         <router-view :key="$route.fullPath" v-slot="{ Component, route }">
