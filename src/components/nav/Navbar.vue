@@ -4,7 +4,7 @@ import DialogNormale from '../DialogNorm.vue';
 </script>
 
 <template>
-  <div class="w-full mt-[17.5%] 2xl:mt-[25%] h-fit" id="top">
+  <div class="w-full mt-[12.5%] 2xl:mt-[25%] h-fit" id="top">
     <!-- 1 first disclaimer < 1024px -->
     <div class="block lg:hidden">
       <DialogNormale />

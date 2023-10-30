@@ -11,6 +11,7 @@
   "dependencies": {
     "@tailwindcss/forms": "^0.5.3",
     "@vercel/analytics": "^1.0.0",
+    "@vueuse/core": "^10.5.0",
     "aos": "^2.3.4",
     "vue": "^3.2.47",
     "vue-confetti": "^2.3.0",
