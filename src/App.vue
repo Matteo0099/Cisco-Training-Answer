@@ -8,35 +8,33 @@ import DialogFixed from './components/DialogFixed.vue';
 </script>
 
 <template>
-  <div class="w-full max-w-full font-primary min-h-screen relative top-0" data-aos="fade-down"
+  <!-- 2 FIXED ELEMENTS -->
+  <div class="btn-dark w-fit mt-4 z-[9999] ml-auto lg:mt-0 lg:top-[90px] lg:fixed lg:right-2 xl:right-5">
+    <btnDark data-aos="zoom-in" data-aos-duration="375" data-aos-delay="125" type="button" role="button" />
+    <!-- google translate (to implement => api google.translate.it)-->
+    <div id="google_translate_element" class="w-max"></div>
+  </div>
+  <DialogFixed class="hidden lg:block z-[9999] lg:fixed lg:top-[200px] lg:right-2 xl:right-5" />
+  <!-- ALL THE CONTENT -->
+  <div class="w-full relative top-0" data-aos="fade-down"
     data-aos-anchor-placement="bottom" data-aos-duration="375" data-aos-dealy="0">
-    <!-- 2 second disclaimer 1024px > (DIO CANE NON STA FIXED) -->
-    <div class="fixed top-[200px] right-[2px] w-[160px] h-[60px] hidden lg:block">
-      <DialogFixed />
-    </div>
-    <div class="btn-dark w-fit mt-4 ml-auto lg:fixed lg:right-2">
-      <btnDark data-aos="zoom-in" data-aos-duration="375" data-aos-delay="125" type="button" role="button" />
-      <!-- google translate (to implement => api google.translate.it)-->
-      <div id="google_translate_element" class="w-max"></div>
-    </div>
-    <div class="block lg:hidden"></div>
-    <main class="container relative min-h-screen font-primary grid px-4 sm:p-0 sm:mx-auto max-w-2xl rounded-xl">
-      <!-- Main navigation -->
-      <Navbar data-aos="zoom-out" data-aos-duration="400" data-aos-delay="150"></Navbar> <!-- pagine renderizzate ↓ -->
-      <!-- main content -->
-      <div class="pages container mx-auto max-w-3xl text-left min-h-fit">
-        <!-- for content of the page -->
-        <router-view :key="$route.fullPath" v-slot="{ Component, route }">
-          <div :key="route.name" data-aos="fade-in" data-aos-duration="600" data-aos-easing="ease" data-aos-dealy="100"
-            class="container mx-auto max-w-full min-h-full overflow-x-hidden">
-            <keep-alive>
-              <component :is="Component"></component>
-            </keep-alive>
-          </div>
-        </router-view>
-      </div>
-      <Footer class="relative h-fit" />
-    </main>
+      <main class="container relative min-h-screen font-primary grid px-4 sm:p-0 sm:mx-auto max-w-2xl rounded-xl">
+        <!-- Main navigation -->
+        <Navbar data-aos="zoom-out" data-aos-duration="400" data-aos-delay="150"></Navbar> <!-- pagine renderizzate ↓ -->
+        <!-- main content -->
+        <div class="pages container mx-auto max-w-3xl text-left min-h-fit">
+          <!-- for content of the page -->
+          <router-view :key="$route.fullPath" v-slot="{ Component, route }">
+            <div :key="route.name" data-aos="fade-in" data-aos-duration="600" data-aos-easing="ease" data-aos-dealy="100"
+              class="container mx-auto max-w-full min-h-full overflow-x-hidden">
+              <keep-alive>
+                <component :is="Component"></component>
+              </keep-alive>
+            </div>
+          </router-view>
+        </div>
+        <Footer class="relative h-fit" />
+      </main>
   </div>
 </template>
 

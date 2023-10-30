@@ -1,7 +1,7 @@
 <template>
-  <div class="relative">
+  <div>
     <button @click="openModal"
-      class="py-3 px-6 relative border w-full text-red-400 font-bold my-2 mx-auto rounded-lg hover:opacity-75 active:border-2 border-neutral-300">
+      class="py-3 px-6 min-h-[70px] text-lg lg:text-xl h-full max-h-[90px] relative border w-full text-red-400 font-bold my-2 mx-auto rounded-lg hover:opacity-75 active:border-2 border-neutral-300">
       !DISCLAIMER!
     </button>
     <dialog class="modal relative rounded-lg">
