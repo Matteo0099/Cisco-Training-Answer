@@ -1,7 +1,8 @@
 <template>
   <div>
     <button @click="openModal" title="DISCLAIMER" alt="button" role="button" aria-label="DISCALIMER"
-      class="py-3 px-6 min-h-[70px] text-lg min-w-full max-w-[190px] lg:text-xl h-full max-h-[90px] relative border text-red-400 font-bold my-2 mx-auto rounded-lg hover:opacity-75 active:border-2 border-neutral-300">
+      class="px-2 min-h-[55px] min-w-[130px] text-base xl:text-lg max-w-[180px] xl:max-w-[180px] h-full max-h-[90px] relative 
+            border text-red-400 font-bold my-2 mx-auto rounded-lg hover:opacity-75 active:border-2 border-neutral-300">
       !DISCLAIMER!
     </button> 
     <dialog class="modal relative rounded-lg">

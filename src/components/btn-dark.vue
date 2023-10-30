@@ -13,16 +13,13 @@
 export default {
   data() {
     return {
-      userTheme: "light-theme",
-      state: "off",
+      userTheme: "light-theme", state: "off",
     };
   },
   computed: {
     isDarkTheme() { return this.userTheme === "dark-theme"; }
   },
-  mounted() {
-    this.initializeTheme();
-  },
+  mounted() { this.initializeTheme(); },
   methods: {
     toggleTheme() {
       this.userTheme = this.isDarkTheme ? "light-theme" : "dark-theme";
