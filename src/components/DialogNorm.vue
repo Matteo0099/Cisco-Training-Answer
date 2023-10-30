@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button @click="openModalOne"
+    <button @click="openModalOne" title="DISCLAIMER" alt="button" role="button" aria-label="DISCALIMER"
       class="py-3 px-6 relative border w-full text-red-400 font-bold my-2 mx-auto rounded-lg hover:opacity-75 active:border-2 border-neutral-300">
       !DISCLAIMER!
     </button>
@@ -13,7 +13,7 @@
             e nei moduli di cisco, perché sono presenti anche le domande <i class="italic underline">Drag and drop</i>
             che non sono state ancora implementate.
           </p>
-          <button @click="closeModal" class="border w-20 h-8 mx-0 px-2 mb-auto bg-red-400 text-neutral-50 
+          <button title="X" alt="button" role="button" aria-label="X" @click="closeModal" class="border w-20 h-8 mx-0 px-2 mb-auto bg-red-400 text-neutral-50 
             hover:opacity-90 active:border active:border-red-500 text-lg sm:text-xl rounded-lg">
             X
           </button>

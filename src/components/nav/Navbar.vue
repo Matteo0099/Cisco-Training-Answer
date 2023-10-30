@@ -16,7 +16,7 @@ import DialogNormale from '../DialogNorm.vue';
     <h1 class="font-bold text-xl sm:text-2xl mt-8 mb-4 mx-auto">
       Cisco <span class="m-0 p-0 underline">Answers</span> chapter 1-14
     </h1>
-    <select v-model="selected" @change="changeRoute($event)" class="dropdown flex items-center justify-center cursor-pointer text-neutral-900 w-full mt-2 py-4 mx-auto rounded-md shadow-sm bg-gray-100 
+    <select aria-label="select" :aria-label="select" v-model="selected" @change="changeRoute($event)" class="dropdown flex items-center justify-center cursor-pointer text-neutral-900 w-full mt-2 py-4 mx-auto rounded-md shadow-sm bg-gray-100 
           border-transparent focus:border-gray-400 focus:bg-white focus:ring-0">
       <option disabled value="" class="bg-neutral-50 mr-auto font-sans text-lg">Select an option</option>
       <option 
@@ -32,7 +32,7 @@ import DialogNormale from '../DialogNorm.vue';
     <h1 class="font-bold text-xl sm:text-2xl mt-8 mb-4 mx-auto">
       Cisco <span class="m-0 p-0 underline">Answers</span> CCNA v.7.0
     </h1>
-    <select v-model="selected" @change="changeRoute($event)" class="dropdown flex items-center justify-center cursor-pointer text-neutral-900 w-full mt-2 py-4 mx-auto rounded-md shadow-sm bg-gray-100 
+    <select aria-label="select" :aria-label="select" v-model="selected" @change="changeRoute($event)" class="dropdown flex items-center justify-center cursor-pointer text-neutral-900 w-full mt-2 py-4 mx-auto rounded-md shadow-sm bg-gray-100 
           border-transparent focus:border-gray-400 focus:bg-white focus:ring-0">
       <option disabled value="" class="bg-neutral-50 mr-auto font-sans text-lg">Select an option</option>
       <option 
@@ -47,7 +47,7 @@ import DialogNormale from '../DialogNorm.vue';
     <!-- test ITE -->
     <h1 class="font-bold text-xl sm:text-2xl mt-8 mb-4 mx-auto">Cisco <span class="m-0 p-0 underline">Test</span>
       chapter 1-14</h1>
-    <select v-model="selected" v-on:change="changeRoute($event)" class="dropdown flex items-center justify-center cursor-pointer text-neutral-900 w-full mt-2 py-4 mx-auto rounded-md shadow-sm bg-gray-100 
+    <select aria-label="select" :aria-label="select" v-model="selected" v-on:change="changeRoute($event)" class="dropdown flex items-center justify-center cursor-pointer text-neutral-900 w-full mt-2 py-4 mx-auto rounded-md shadow-sm bg-gray-100 
           border-transparent focus:border-gray-400 focus:bg-white focus:ring-0 disabled:bg-blue-gray-50">
       <option disabled value="" class="bg-neutral-50 mr-auto font-sans text-lg">Select an option</option>
       <option 
@@ -62,7 +62,7 @@ import DialogNormale from '../DialogNorm.vue';
     <!-- test CCNA -->
     <h1 class="font-bold text-xl sm:text-2xl mt-8 mb-4 mx-auto">Cisco <span class="m-0 p-0 underline">CCNA</span> 11
       MODULES <strong class="text-red-500 pl-1">&#40;!ACTIVE NOW!&#41;</strong></h1>
-    <select v-model="selected" @change="changeRoute($event)" class="dropdown flex items-center justify-center cursor-pointer text-neutral-900 w-full mt-2 py-4 mx-auto rounded-md shadow-sm bg-gray-100 
+    <select aria-label="select" :aria-label="select" v-model="selected" @change="changeRoute($event)" class="dropdown flex items-center justify-center cursor-pointer text-neutral-900 w-full mt-2 py-4 mx-auto rounded-md shadow-sm bg-gray-100 
           border-transparent focus:border-gray-400 focus:bg-white focus:ring-0">
       <option disabled value="" class="bg-neutral-50 mr-auto font-sans text-lg">Select an option</option>
       <option 

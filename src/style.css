@@ -4,4 +4,12 @@
 
 @layer {
   @font-face{font-family:var(--font-fam);src:url(../public/proxima/ProximaNova-Regular.woff) format("opentype");font-weight:400;font-style:normal}@font-face{font-family:var(--font-fam);src:url(../public/proxima/Proxima-Nova-Thin.woff) format("opentype");font-weight:300;font-style:normal}@font-face{font-family:var(--font-fam);src:url(../public/proxima/Proxima-Nova-Bold.woff) format("opentype");font-weight:700;font-style:normal}@font-face{font-family:var(--font-fam);src:url(../public/proxima/Proxima-Nova-Extrabold.woff) format("opentype");font-weight:800;font-style:normal}:root{--font-fam:ProximaNova-Regular,sans-serif}body,html{font-family:var(--font-fam)!important;margin:0!important;padding:0!important;font-feature-settings:liga;-webkit-font-feature-settings:"liga";-webkit-font-smoothing:antialiased}.VIpgJd-ZVi9od-aZ2wEe-wOHMyf,.VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc{display:none!important;visibility:hidden!important;opacity:0!important}button,input,label,option,select,textarea{cursor:pointer!important}input{margin-right:.375rem!important;appearance:none}body::-webkit-scrollbar,select::-webkit-scrollbar-thumb{width:.75em!important}body::-webkit-scrollbar-track{box-shadow:inset 0 0 6px rgba(0,0,0,.3)}body::-webkit-scrollbar-thumb{background:linear-gradient(145deg,rgba(0,255,0,.8),rgba(0,0,255,.8));border-radius:11px}select::-webkit-scrollbar-thumb:hover{background-color:#555!important}select::-webkit-scrollbar-corner,select::-webkit-scrollbar-corner:hover,select::-webkit-scrollbar-track,select::-webkit-scrollbar-track:hover{background-color:#f1f1f1!important}select::-webkit-scrollbar-thumb:active{opacity:.5!important}
+  /* Remove all animations and transitions for people that prefer not to see them */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important; animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important; scroll-behavior: auto !important;
+    }
+  }
+  button:focus{outline:currentColor dashed;outline-offset:-0.25em}button:focus:not(:focus-visible){outline:0}button:focus-visible{outline:currentColor dashed;outline-offset:-0.25em}
 }

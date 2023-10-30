@@ -5,7 +5,7 @@
         <span>copyright Cisco Answer &copy; 2023</span>
         <span>by @noyazz @Matteo0099</span>
         <!-- info -->
-        <button @click="openModal2"
+        <button @click="openModal2" title="More info" alt="button" role="button" aria-label="More info"
           class="py-3 px-6 border my-2 mx-auto rounded-lg hover:opacity-75 active:border-2 border-neutral-300">
           More info
         </button>
