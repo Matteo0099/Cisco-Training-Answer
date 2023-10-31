@@ -7,6 +7,8 @@
     <!-- template for all caps -->
     <form ref="examForm" @submit.prevent="submitForm" class="flex flex-col gap-2 mt-10">
       <h1 v-if="dataIsReady" class="text-xl sm:text-2xl font-bold mt-8 mb-4">Test cap {{ numCap }} - complete</h1>
+      <h1 v-if="dataIsReady" class="text-xl sm:text-2xl font-bold mt-8 mb-4">Remember to study all questions from the (drag-and-drop and completion questions are not here):</h1>
+      <a :href=link>{{ link }}</a>
       <ul v-for="(question, index) in questions" :key="index" class="flex flex-col list-disc my-4">
         <h1 class="home text-xl sm:text-2xl mb-2">
           <span v-if="type != 'CCNA'">{{ index + 1 }}</span> - {{ question.question }}</h1>
@@ -75,7 +77,8 @@ export default {
       numCap: null,
       formSubmitted: false,
       rightAnswers: [],
-      dataIsReady: false
+      dataIsReady: false,
+      link: null
     };
   },
   async created() {
@@ -89,6 +92,7 @@ export default {
     this.selectedAnswers = this.questions.map(() => []);
     this.totalQuestions = this.questions.length;
     this.numCap = data.examData.cap;
+    this.link = data.examData.abbreviation === "ITN" ? `https://itexamanswers.net/ccna-1-v5-1-v6-0-chapter-${data.examData.cap}-exam-answers-100-full.html` : `https://infraexam.com/it-essentials-7/it-essentials-7-0-chapter-${data.examData.cap}-exam-answers-ite-7-0-ite-7-02/`;
     this.dataIsReady = true;
   },
   mounted() {

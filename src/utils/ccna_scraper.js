@@ -23,15 +23,15 @@ const obj = {
         abbreviation: "ITN",
         cap: 3,
         versionName: null,
-        versions: [5.1, 6.0],
-        years: [2020],
+        versions: [ 5.1, 6.0 ],
+        years: [ 2020 ],
     },
     questions: [],
 }
 
 optionsLists.forEach((optionsList) => {
     const questionContainer = optionsList.previousElementSibling
-    const options = [...optionsList.children ]
+    const options = [ ...optionsList.children ]
 
     obj.questions.push({
         question: questionContainer.textContent.replace(/^\d+\.\s/, ""),
