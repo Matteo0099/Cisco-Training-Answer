@@ -7,7 +7,7 @@
     <!-- template for all caps -->
     <form ref="examForm" @submit.prevent="submitForm" class="flex flex-col gap-2 mt-10">
       <h1 v-if="dataIsReady" class="text-xl sm:text-2xl font-bold mt-8 mb-4">Test cap {{ numCap }} - complete</h1>
-      <h1 v-if="dataIsReady" class="text-xl sm:text-2xl font-bold mt-8 mb-4">Remember to study all questions from the (drag-and-drop and completion questions are not here):</h1>
+      <h1 v-if="dataIsReady" class="text-xl sm:text-2xl font-bold mt-8 mb-4">Remember to study all questions from the following site (drag-and-drop and completion questions are not here):</h1>
       <a :href=link>{{ link }}</a>
       <ul v-for="(question, index) in questions" :key="index" class="flex flex-col list-disc my-4">
         <h1 class="home text-xl sm:text-2xl mb-2">
