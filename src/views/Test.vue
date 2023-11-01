@@ -7,12 +7,29 @@
     <!-- template for all caps -->
     <form ref="examForm" @submit.prevent="submitForm" class="flex flex-col gap-2 mt-10">
       <h1 v-if="dataIsReady" class="text-xl sm:text-2xl font-bold mt-8 mb-4">Test cap {{ numCap }} - complete</h1>
-      <h1 v-if="dataIsReady" class="text-xl sm:text-2xl font-bold mt-8 mb-4">Remember to study all questions from the following site (drag-and-drop and completion questions are not here):</h1>
-      <a :href=link>{{ link }}</a>
+      
+      <!-- remember -->
+      <div class="mb-5 border rounded-lg p-4">
+        <!-- remember where are the drag and drop question -->
+        <h1 v-if="dataIsReady" class="text-xl sm:text-2xl font-bold mt-8 mb-4">
+          Remember to study all questions from the following site 
+          (drag-and-drop & completion questions:
+          <a 
+            :href=link target="_blank" :target="_blank" 
+            class="text-blue-600 hover:underline hover:underline-offset-2">
+            link site
+          </a>):
+        </h1>
+        <p>complete link: </p>
+        <a 
+          :href=link target="_blank" :target="_blank" 
+          class="text-blue-600 hover:underline hover:underline-offset-2"> {{ link }}</a>
+      </div>
+      
+      <!-- ALL QUESTIONS -->
       <ul v-for="(question, index) in questions" :key="index" class="flex flex-col list-disc my-4">
         <h1 class="home text-xl sm:text-2xl mb-2">
-          <span v-if="type != 'CCNA'">{{ index + 1 }}</span> - {{ question.question }}</h1>
-
+        <span v-if="type != 'CCNA'">{{ index + 1 }}</span> - {{ question.question }}</h1>
         <!-- Display the image if it exists -->
         <img 
           v-if="question.photo || question.img" 
@@ -20,13 +37,16 @@
           class="w-max image-q"
           ref="questionImage" 
         />
-
-        <template v-if="question.options || question.answers">
-          <template v-if="question.answers.length > 1">
+        <!-- questions -->
+        <template v-if="question.options && question.answers">  <!--both control-->
+          <template v-if="question.answers.length > 1">  <!--in cap 6 was variable "answer", didn't working XD-->
             <label v-for="(option, oIndex) in question.options" :key="oIndex" class="pl-4 text-base sm:text-lg">
               <input type="checkbox" :value="option" v-model="selectedAnswers[index]" :disabled="formSubmitted" />
               {{ option }}
             </label>
+          </template>
+          <template v-else-if="question.answers.length == undefined || question.answers.length == null || question.answers.length == 0">  <!--in cap 6 not working-->
+            <p>null question</p>
           </template>
           <template v-else>
             <label v-for="(option, oIndex) in question.options" :key="oIndex" class="pl-4 text-lg sm:text-xl">
@@ -48,11 +68,10 @@
         <span v-if="!formSubmitted">Submit</span>
         <span v-else>Submitting...</span>
       </button>
-      <!-- <button @click="stop">Stop</button> without click, after 3sec stop it -->
-      <!-- refresh -->
+      <!-- <button @click="stop">Stop</button> without click, after 3sec stop it --><!-- refresh -->
       <button type="button" role="button"
-              class="py-2 px-4 border rounded-lg w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto"
-              @click="refreshForm">
+            class="py-2 px-4 border rounded-lg w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto"
+            @click="refreshForm">
         <span><i class="bi bi-arrow-clockwise"></i></span>
       </button>
     </form>
@@ -66,7 +85,6 @@
 
 <script>
 import { useRoute } from 'vue-router';
-
 export default {
   data() {
     return {
@@ -95,9 +113,7 @@ export default {
     this.link = data.examData.abbreviation === "ITN" ? `https://itexamanswers.net/ccna-1-v5-1-v6-0-chapter-${data.examData.cap}-exam-answers-100-full.html` : `https://infraexam.com/it-essentials-7/it-essentials-7-0-chapter-${data.examData.cap}-exam-answers-ite-7-0-ite-7-02/`;
     this.dataIsReady = true;
   },
-  mounted() {
-    window.addEventListener('scroll', this.handleScroll);
-  },
+  mounted() {window.addEventListener('scroll', this.handleScroll);},
   methods: {
     async submitForm() {
       const canvas = document.getElementById('confetti-canvas');
@@ -133,9 +149,7 @@ export default {
     hideCanvas() {
       // Hide the canvas element by setting display to 'none' and visibility to 'hidden'
       const canvas = document.getElementById('confetti-canvas');
-      if (canvas) {
-        canvas.style.opacity = '0.5';
-      }
+      if (canvas) canvas.style.opacity = '0.5';
       setTimeout(() => {
         if (canvas) {
           canvas.style.display = 'none';
@@ -169,26 +183,16 @@ export default {
         }
       });
     },
-    start() {
-      this.$confetti.start();
-    },
-    stop() {
-      this.$confetti.stop();
-    },
+    start() { this.$confetti.start(); },
+    stop() { this.$confetti.stop(); },
     love() {
       this.$confetti.update({
         particles: [
-          {
-            type: 'heart',
-          },
-          {
-            type: 'circle',
-          },
+          {type: 'heart'},
+          {type: 'circle'},
         ],
         defaultColors: [
-          'red',
-          'pink',
-          '#ba0000'
+          'red','pink','#ba0000'
         ],
       });
     },
@@ -207,5 +211,4 @@ export default {
   },
 };
 </script>
-
 <style scoped>.Wrong::first-letter { text-transform: uppercase !important }</style>
