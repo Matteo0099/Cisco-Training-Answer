@@ -20,6 +20,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 // all pages
 const Test = () => import('./views/Test.vue')
 const Answers = () => import('./views/Answers.vue')
+const DragAndDrop = () => import('./views/DragAndDrop.vue')
 
 const router = createRouter({
   history: createWebHistory(),
@@ -34,6 +35,12 @@ const router = createRouter({
       path: '/test/:type/:number',
       name: 'Test',
       component: Test,
+      props: true
+    },
+    {
+      path: '/DragAndDrop/:type/:number',
+      name: 'DragAndDrop',
+      component: DragAndDrop,
       props: true
     }
   ]

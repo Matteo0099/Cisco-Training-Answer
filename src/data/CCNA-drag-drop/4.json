@@ -1,0 +1,22 @@
+{
+  "examData": {
+    "holder": "Cisco Netacad",
+    "examName": "CCNAv7: Introduction to Networks",
+    "abbreviation": "ITN",
+    "cap": 4,
+    "versions": [5.1, 6],
+    "years": [2020]
+  },
+  "questions": [
+    {
+      "question": {
+        "photo": "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/2017-05-22_164930-1.jpg"
+      }
+    },
+    {
+      "question": {
+        "photo": "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/p23-exa4-cdsfdgcna1.png"
+      }
+    }
+  ]
+}

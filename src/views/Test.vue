@@ -7,7 +7,6 @@
     <!-- template for all caps -->
     <form ref="examForm" @submit.prevent="submitForm" class="flex flex-col gap-2 mt-10">
       <h1 v-if="dataIsReady" class="text-xl sm:text-2xl font-bold mt-8 mb-4">Test cap {{ numCap }} - complete</h1>
-      
       <!-- remember -->
       <div class="mb-5 border rounded-lg p-4">
         <!-- remember where are the drag and drop question -->
@@ -20,13 +19,15 @@
             link site
           </a>):
         </h1>
-        <p>complete link: </p>
+        <p class="font-thin">complete link: </p>
         <a 
           :href=link target="_blank" :target="_blank" 
           class="text-blue-600 hover:underline hover:underline-offset-2"> {{ link }}</a>
       </div>
       
+      <!-- ************* -->
       <!-- ALL QUESTIONS -->
+      <!-- ************* -->
       <ul v-for="(question, index) in questions" :key="index" class="flex flex-col list-disc my-4">
         <h1 class="home text-xl sm:text-2xl mb-2">
         <span v-if="type != 'CCNA'">{{ index + 1 }}</span> - {{ question.question }}</h1>

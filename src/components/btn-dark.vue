@@ -4,7 +4,8 @@
       <button type="button" aria-label="Dark mode" class="switch-toggle active:scale-95 h-11 w-11 rounded-[50%]"
         :class="{ 'switch-toggle-checked': isDarkTheme }" id="button" title="Dark Mode" alt="button" role="button" @click="toggleTheme">
         <i class="bi bi-moon text-2xl sm:text3xl" role="banner"></i>
-      </button> <span class="font-primary"> Dark mode {{ state }} </span>
+      </button> 
+      Dark mode {{ state }} 
     </div>
   </div>
 </template>
