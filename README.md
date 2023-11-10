@@ -1,7 +1,8 @@
 
 # Cisco Training portal
 
-E' un sito per allenarsi a imparare gli argomenti che vanno dal capitolo 1 al capitolo 10 di cisco versione 7.0
+E' un sito per allenarsi a imparare gli argomenti che vanno dal capitolo 1-14 della sezione ITE, fino ai capitoli 1-11 della sezione CCNA di cisco versione 5.0,6.0,7-0
+(2020-2023)
 
 
 ## API Reference
