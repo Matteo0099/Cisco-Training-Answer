@@ -1,5 +1,5 @@
 <script setup>
-import turnTop from '../components/TurnTop.vue';
+import turnTop from '../components/turnTop.vue';
 </script>
 
 <template>
