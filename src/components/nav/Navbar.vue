@@ -22,7 +22,7 @@ import DialogNormale from '../DialogNorm.vue';
       <span class="m-0 p-0 underline">Answers</span> 
     </h1>
     <select aria-label="select" :aria-label="select" v-model="selected" @change="changeRoute($event)" 
-      class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500">
       <option disabled value="" class="bg-neutral-50 mr-auto font-sans text-lg">Select a chapter</option>
       <option 
         v-for="(list, number) in answers" 
@@ -39,7 +39,7 @@ import DialogNormale from '../DialogNorm.vue';
       <span class="m-0 p-0 underline">Test</span>
     </h1>
     <select aria-label="select" :aria-label="select" v-model="selected" v-on:change="changeRoute($event)" 
-      class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 disabled:bg-blue-gray-50">
+      class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500 disabled:bg-blue-gray-50">
       <option disabled value="" class="bg-neutral-50 mr-auto font-sans text-lg">Select a chapter</option>
       <option 
         v-for="(list, number) in ite" 
@@ -57,7 +57,7 @@ import DialogNormale from '../DialogNorm.vue';
       <span class="m-0 p-0 underline">Answers</span> 
     </h1>
     <select aria-label="select" :aria-label="select" v-model="selected" @change="changeRoute($event)" 
-      class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500">
       <option disabled value="" class="bg-neutral-50 mr-auto font-sans text-lg">Select a chapter</option>
       <option 
         v-for="(list, number) in answersCCNA" 
@@ -74,7 +74,7 @@ import DialogNormale from '../DialogNorm.vue';
       <span class="m-0 p-0 underline">Test</span> 
     </h1>
     <select aria-label="select" :aria-label="select" v-model="selected" @change="changeRoute($event)" 
-      class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500">
       <option disabled value="" class="bg-neutral-50 mr-auto font-sans text-lg">Select a chapter</option>
       <option 
         v-for="(list, number) in ccna" 
@@ -93,7 +93,7 @@ import DialogNormale from '../DialogNorm.vue';
       <span class="font-thin text-md">&ensp;<sup>**</sup>NEW<sup>**</sup></span>
     </h1>
     <select aria-label="select" :aria-label="select" v-model="selected" @change="changeRoute($event)" 
-      class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500">
       <option disabled value="" class="bg-neutral-50 mr-auto font-sans text-lg">Select a chapter</option>
       <option 
         v-for="(list, number) in ccnaDrag" 
