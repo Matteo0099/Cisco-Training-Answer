@@ -41,7 +41,7 @@
         <!-- questions -->
         <template v-if="question.options && question.answers">  <!--both control-->
           <template v-if="question.answers.length > 1">  <!--in cap 6 was variable "answer", didn't working XD-->
-            <label v-for="(option, oIndex) in question.options" :key="oIndex" class="pl-4 text-base sm:text-lg">
+            <label v-for="(option, oIndex) in question.options" :key="oIndex" class="flex justify-start my-1 items-center pl-4 text-base sm:text-lg">
               <input type="checkbox" :value="option" v-model="selectedAnswers[index]" :disabled="formSubmitted" />
               {{ option }}
             </label>
@@ -50,7 +50,7 @@
             <p>null question</p>
           </template>
           <template v-else>
-            <label v-for="(option, oIndex) in question.options" :key="oIndex" class="pl-4 text-lg sm:text-xl">
+            <label v-for="(option, oIndex) in question.options" :key="oIndex" class="flex justify-start my-1 items-center pl-4 text-lg sm:text-xl">
               <input type="radio" :name="`radio-${index}`" :value="option" v-model="selectedAnswers[index]"
                 :disabled="formSubmitted" />
               {{ option }}
