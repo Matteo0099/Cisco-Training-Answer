@@ -30,7 +30,7 @@
       <!-- ************* -->
       <ul v-for="(question, index) in questions" :key="index" class="flex flex-col list-disc my-4">
         <h1 class="home text-xl sm:text-2xl mb-2">
-        <span v-if="type != 'CCNA'">{{ index + 1 }}</span> - {{ question.question }}</h1>
+        <span>{{ index + 1 }}</span> - {{ question.question }}</h1> <!--v-if="type != 'CCNA'"-->
         <!-- Display the image if it exists -->
         <img 
           v-if="question.photo || question.img" 
@@ -42,7 +42,7 @@
         <template v-if="question.options && question.answers">  <!--both control-->
           <template v-if="question.answers.length > 1">  <!--in cap 6 was variable "answer", didn't working XD-->
             <label v-for="(option, oIndex) in question.options" :key="oIndex" class="flex justify-start my-1 items-center pl-4 text-base sm:text-lg">
-              <input type="checkbox" :value="option" v-model="selectedAnswers[index]" :disabled="formSubmitted" />
+              <input type="checkbox" :value="option" @input="saveToLocalStorage(index)" v-model="selectedAnswers[index]" :disabled="formSubmitted" />
               {{ option }}
             </label>
           </template>
@@ -51,7 +51,7 @@
           </template>
           <template v-else>
             <label v-for="(option, oIndex) in question.options" :key="oIndex" class="flex justify-start my-1 items-center pl-4 text-lg sm:text-xl">
-              <input type="radio" :name="`radio-${index}`" :value="option" v-model="selectedAnswers[index]"
+              <input type="radio" :name="`radio-${index}`" :value="option" @input="saveToLocalStorage(index)" v-model="selectedAnswers[index]"
                 :disabled="formSubmitted" />
               {{ option }}
             </label>
@@ -65,13 +65,18 @@
 
       <!-- on submit -->
       <button type="submit" @click="start" role="button" :disabled="formSubmitted"
-              class="py-2 px-4 border rounded-lg w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto">
+              class="mt-6 py-3 px-4 border rounded-lg w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto">
         <span v-if="!formSubmitted">Submit</span>
         <span v-else>Submitting...</span>
       </button>
+      <!-- randomize answers -->
+      <a @click="randomize" role="button"
+          class="py-3 px-4 border flex justify-center items-center rounded-lg w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto">
+        randomize answers
+      </a>
       <!-- <button @click="stop">Stop</button> without click, after 3sec stop it --><!-- refresh -->
       <button type="button" role="button"
-            class="py-2 px-4 border rounded-lg w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto"
+            class="py-3 px-4 border rounded-lg w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto"
             @click="refreshForm">
         <span><i class="bi bi-arrow-clockwise"></i></span>
       </button>
@@ -105,22 +110,49 @@ export default {
     const { type, number } = route.params;
     const data = await import(`../../src/data/${type}/${number}.json`);
 
-    data.questions.sort(() => Math.random() - 0.5);
-    data.questions.forEach((question) => question.options.sort(() => Math.random() - 0.5));
     this.questions = data.questions;
     this.selectedAnswers = this.questions.map(() => []);
     this.totalQuestions = this.questions.length;
     this.numCap = data.examData.cap;
     this.link = data.examData.abbreviation === "ITN" ? `https://itexamanswers.net/ccna-1-v5-1-v6-0-chapter-${data.examData.cap}-exam-answers-100-full.html` : `https://infraexam.com/it-essentials-7/it-essentials-7-0-chapter-${data.examData.cap}-exam-answers-ite-7-0-ite-7-02/`;
     this.dataIsReady = true;
+    this.loadFromLocalStorage(); 
   },
   mounted() {window.addEventListener('scroll', this.handleScroll);},
+  // localStorage saving data
+  watch: {
+    selectedAnswers: {
+      deep: true,
+      handler(newAnswers) {
+        this.saveToLocalStorage(newAnswers); // save selectedAnswers to localStorage if it changes
+      },
+    },
+  },
   methods: {
+    saveToLocalStorage(selectedAnswers) {
+      // Save selectedAnswers to localStorage
+      localStorage.setItem('selectedAnswers', JSON.stringify(selectedAnswers));
+    },
+    loadFromLocalStorage() {
+      // Load selectedAnswers from localStorage
+      const storedData = localStorage.getItem('selectedAnswers');
+      if (storedData) {
+        this.selectedAnswers = JSON.parse(storedData);
+      }
+    },
+    randomize() {
+      this.questions.sort(() => Math.random() - 0.5);
+      this.questions.forEach((question) => question.options.sort(() => Math.random() - 0.5));
+      // Reset the submitted and formSubmitted flags
+      this.submitted = false;
+      this.formSubmitted = false;
+      this.refreshForm();
+    },
     async submitForm() {
-      const canvas = document.getElementById('confetti-canvas');
-      this.formSubmitted = true;
       await this.checkAnswers();
+      this.formSubmitted = true;
       this.submitted = true;
+      const canvas = document.getElementById('confetti-canvas');
       setTimeout(() => {
         this.formSubmitted = false;
         this.hideCanvas();
@@ -203,6 +235,7 @@ export default {
       this.selectedAnswers = this.questions.map(() => []);
       this.correctAnswers = 0;
       this.rightAnswers = [];
+      localStorage.removeItem('selectedAnswers');
     },
   },
   computed: {
