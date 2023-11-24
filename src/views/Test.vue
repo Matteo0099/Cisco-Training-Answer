@@ -131,11 +131,6 @@ export default {
     },
   },
   methods: {  
-    leaving() {
-      window.addEventListener('beforeunload', function() {
-        localStorage.removeItem('selectedAnswers');
-      })
-    },
     saveToLocalStorage(selectedAnswers) {
       // Save selectedAnswers to localStorage
       localStorage.setItem('selectedAnswers', JSON.stringify(selectedAnswers));
@@ -243,8 +238,6 @@ export default {
       this.correctAnswers = 0;
       this.rightAnswers = [];
       localStorage.removeItem('selectedAnswers');
-      localStorage.clear();
-      window.addEventListener('beforeunload', this.leaving);
     },
   },
   computed: {
