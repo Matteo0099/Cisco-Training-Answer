@@ -118,7 +118,9 @@ export default {
     this.dataIsReady = true;
     this.loadFromLocalStorage(); 
   },
-  mounted() {window.addEventListener('scroll', this.handleScroll);},
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
   // localStorage saving data
   watch: {
     selectedAnswers: {
@@ -128,7 +130,12 @@ export default {
       },
     },
   },
-  methods: {
+  methods: {  
+    leaving() {
+      window.addEventListener('beforeunload', function() {
+        localStorage.removeItem('selectedAnswers');
+      })
+    },
     saveToLocalStorage(selectedAnswers) {
       // Save selectedAnswers to localStorage
       localStorage.setItem('selectedAnswers', JSON.stringify(selectedAnswers));
@@ -236,6 +243,8 @@ export default {
       this.correctAnswers = 0;
       this.rightAnswers = [];
       localStorage.removeItem('selectedAnswers');
+      localStorage.clear();
+      window.addEventListener('beforeunload', this.leaving);
     },
   },
   computed: {
