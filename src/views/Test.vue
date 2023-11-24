@@ -24,6 +24,17 @@
           :href=link target="_blank" :target="_blank" 
           class="text-blue-600 hover:underline hover:underline-offset-2"> {{ link }}</a>
       </div>
+
+      <div class="mt-2 text-neutral-900">
+        <h1 class="my-2 mb-3 p-2 font-thin text-2xl md:text-3xl">
+          **if you have any bug, go to the bottom of the page, and click 
+          on <strong class="text-red-600 font-bold">REFRESH BUTTON</strong> and you can complete the form**
+        </h1>
+        <h2 class="my-2 mb-3 p-2 font-thin text-lg md:text-xl">
+          °this happen because the <i class="text-red-500 font-bold">localStorage</i> of your browser can be full.
+          with that button, you clean it.
+        </h2>
+      </div>
       
       <!-- ************* -->
       <!-- ALL QUESTIONS -->
