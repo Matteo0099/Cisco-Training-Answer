@@ -1,1 +1,530 @@
-{"examData":{"holder":"Cisco Netacad","examName":"CCNAv7: Introduction to Networks","abbreviation":"ITN","cap":5,"versionName":null,"versions":[5.1,6],"years":[2020]},"questions":[{"question":"What happens to runt frames received by a Cisco Ethernet switch?","options":["The frame is dropped.","The frame is returned to the originating network device.","The frame is broadcast to all other devices on the same network.","The frame is sent to the default gateway."],"answers":["The frame is dropped."]},{"question":"What are the two sizes (minimum and maximum) of an Ethernet frame? (Choose two.)","options":["56 bytes","64 bytes","128 bytes","1024 bytes","1518 bytes"],"answers":["64 bytes","1518 bytes"]},{"question":"What statement describes Ethernet?","options":["It defines the most common LAN type in the world.","It is the required Layer 1 and 2 standard for Internet communication.","It defines a standard model used to describe how networking works.","It connects multiple sites such as routers located in different countries."],"answers":["It defines the most common LAN type in the world."]},{"question":"Which two statements describe features or functions of the logical link control sublayer in Ethernet standards? (Choose two.)","options":[" Logical link control is implemented in software.","Logical link control is specified in the IEEE 802.3 standard.","The LLC sublayer adds a header and a trailer to the data.","The data link layer uses LLC to communicate with the upper layers of the protocol suite.","The LLC sublayer is responsible for the placement and retrieval of frames on and off the media."],"answers":[" Logical link control is implemented in software.","The data link layer uses LLC to communicate with the upper layers of the protocol suite."]},{"question":"What statement describes a characteristic of MAC addresses?","options":["They must be globally unique.","They are only routable within the private network.","They are added as part of a Layer 3 PDU.","They have a 32-bit binary value."],"answers":["They must be globally unique."]},{"question":"Which statement is true about MAC addresses?","options":["MAC addresses are implemented by software.","A NIC only needs a MAC address if connected to a WAN.","The first three bytes are used by the vendor assigned OUI.","The ISO is responsible for MAC addresses regulations."],"answers":["The first three bytes are used by the vendor assigned OUI."]},{"question":"Which destination address is used in an ARP request frame?","options":["0.0.0.0","255.255.255.255","FFFF.FFFF.FFFF","127.0.0.1","01-00-5E-00-AA-23"],"answers":["FFFF.FFFF.FFFF"]},{"question":"What addressing information is recorded by a switch to build its MAC address table?","options":["the destination Layer 3 address of incoming packets","the destination Layer 2 address of outgoing frames","the source Layer 3 address of outgoing packets","the source Layer 2 address of incoming frames"],"answers":["the source Layer 2 address of incoming frames"]},{"question":"Refer to the exhibit. The exhibit shows a small switched network and the contents of the MAC address table of the switch. PC1 has sent a frame addressed to PC3. What will the switch do with the frame?","options":["The switch will discard the frame.","The switch will forward the frame only to port 2.","The switch will forward the frame to all ports except port 4.","The switch will forward the frame to all ports.","The switch will forward the frame only to ports 1 and 3."],"answers":["The switch will forward the frame to all ports except port 4."],"img":"https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/i275394v1n1_207267.jpg"},{"question":"Which switching method uses the CRC value in a frame?","options":["cut-through","fast-forward","fragment-free","store-and-forward"],"answers":["store-and-forward"]},{"question":"What is auto-MDIX?","options":["a type of Cisco switch","an Ethernet connector type","a type of port on a Cisco switch","a feature that detects Ethernet cable type"],"answers":["a feature that detects Ethernet cable type"]},{"question":"Refer to the exhibit. PC1 issues an ARP request because it needs to send a packet to PC2. In this scenario, what will happen next?","options":[" PC2 will send an ARP reply with its MAC address.","RT1 will send an ARP reply with its Fa0/0 MAC address.","RT1 will send an ARP reply with the PC2 MAC address.","SW1 will send an ARP reply with the PC2 MAC address.","SW1 will send an ARP reply with its Fa0/1 MAC address."],"answers":[" PC2 will send an ARP reply with its MAC address."],"img":"https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/i209824v1n1_209824.jpg"},{"question":"What is the aim of an ARP spoofing attack?","options":["to associate IP addresses to the wrong MAC address","to overwhelm network hosts with ARP requests","to flood the network with ARP reply broadcasts","to fill switch MAC address tables with bogus addresses"],"answers":["to associate IP addresses to the wrong MAC address"]},{"question":"What is a characteristic of port-based memory buffering?","options":["Frames in the memory buffer are dynamically linked to destination ports.","All frames are stored in a common memory buffer.","Frames are buffered in queues linked to specific ports.","All ports on a switch share a single memory buffer."],"answers":["Frames are buffered in queues linked to specific ports."]},{"question":"What is the minimum Ethernet frame size that will not be discarded by the receiver as a runt frame?","options":["64 bytes","512 bytes","1024 bytes","1500 bytes"],"answers":["64 bytes"]},{"question":"What are two potential network problems that can result from ARP operation? (Choose two.)","options":["Manually configuring static ARP associations could facilitate ARP poisoning or MAC address spoofing.","On large networks with low bandwidth, multiple ARP broadcasts could cause data communication delays. ","Network attackers could manipulate MAC address and IP address mappings in ARP messages with the intent of intercepting network traffic.","Large numbers of ARP request broadcasts could cause the host MAC address table to overflow and prevent the host from communicating on the network.","Multiple ARP replies result in the switch MAC address table containing entries that match the MAC addresses of hosts that are connected to the relevant switch port."],"answers":["On large networks with low bandwidth, multiple ARP broadcasts could cause data communication delays. ","Network attackers could manipulate MAC address and IP address mappings in ARP messages with the intent of intercepting network traffic."]},{"question":"Which statement describes the treatment of ARP requests on the local link?","options":["They must be forwarded by all routers on the local network.","They are received and processed by every device on the local network.","They are dropped by all switches on the local network.","They are received and processed only by the target device."],"answers":["They are received and processed by every device on the local network."]},{"question":"Refer to the exhibit. The switches are in their default configuration. Host A needs to communicate with host D, but host A does not have the MAC address for its default gateway. Which network hosts will receive the ARP request sent by host A?","options":["only host D","only router R1","only hosts A, B, and C","only hosts A, B, C, and D","only hosts B and C","only hosts B, C, and router R1"],"answers":["only hosts B, C, and router R1"],"img":"https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/i275353v1n1_275353.jpg"},{"question":"Refer to the exhibit. A switch with a default configuration connects four hosts. The ARP table for host A is shown. What happens when host A wants to send an IP packet to host D?","options":["Host A sends an ARP request to the MAC address of host D.","Host D sends an ARP request to host A.","Host A sends out the packet to the switch. The switch sends the packet only to the host D, which in turn responds.","Host A sends out a broadcast of FF:FF:FF:FF:FF:FF. Every other host connected to the switch receives the broadcast and host D responds with its MAC address."],"answers":["Host A sends out a broadcast of FF:FF:FF:FF:FF:FF. Every other host connected to the switch receives the broadcast and host D responds with its MAC address."],"img":"https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/i274591v1n1_274591.jpg"},{"question":"True or False?When a device is sending data to another device on a remote network, the Ethernet frame is sent to the MAC address of the default gateway.","options":["true","false"],"answers":["true"]},{"question":"The ARP table in a switch maps which two types of address together?","options":["Layer 3 address to a Layer 2 address","Layer 3 address to a Layer 4 address","Layer 4 address to a Layer 2 address","Layer 2 address to a Layer 4 address"],"answers":["Layer 3 address to a Layer 2 address"]},{"question":"What is a characteristic of a contention-based access method?","options":["It processes more overhead than the controlled access methods do.","It has mechanisms to track the turns to access the media.","It is a nondeterministic method.","It scales very well under heavy media use."],"answers":["It is a nondeterministic method."]},{"question":"What is the purpose of the preamble in an Ethernet frame?","options":["is used as a padding for data","is used for timing synchronization","is used to identify the source address","is used to identify the destination address"],"answers":["is used for timing synchronization"]},{"question":"What is the Layer 2 multicast MAC address that corresponds to the Layer 3 IPv4 multicast address 224.139.34.56?","options":["00-00-00-0B-22-38","01-00-5E-0B-22-38","01-5E-00-0B-22-38","FE-80-00-0B-22-38","FF-FF-FF-0B-22-38"],"answers":["01-00-5E-0B-22-38"]},{"question":"Which two statements are correct about MAC and IP addresses during data transmission if NAT is not involved? (Choose two.)","options":["A packet that has crossed four routers has changed the destination IP address four times.","Destination MAC addresses will never change in a frame that goes across seven routers.","Destination and source MAC addresses have local significance and change every time a frame goes from one LAN to another. ","Destination IP addresses in a packet header remain constant along the entire path to a target host.","Every time a frame is encapsulated with a new destination MAC address, a new destination IP address is needed."],"answers":["Destination and source MAC addresses have local significance and change every time a frame goes from one LAN to another. ","Destination IP addresses in a packet header remain constant along the entire path to a target host."]},{"question":"What are two features of ARP? (Choose two.)","options":["If a host is ready to send a packet to a local destination device and it has the IP address but not the MAC address of the destination, it generates an ARP broadcast.","An ARP request is sent to all devices on the Ethernet LAN and contains the IP address of the destination host and its multicast MAC address.","When a host is encapsulating a packet into a frame, it refers to the MAC address table to determine the mapping of IP addresses to MAC addresses.","If no device responds to the ARP request, then the originating node will broadcast the data packet to all devices on the network segment.","If a device receiving an ARP request has the destination IPv4 address, it responds with an ARP reply."],"answers":["If a host is ready to send a packet to a local destination device and it has the IP address but not the MAC address of the destination, it generates an ARP broadcast.","If a device receiving an ARP request has the destination IPv4 address, it responds with an ARP reply."]},{"question":"A host is trying to send a packet to a device on a remote LAN segment, but there are currently no mappings in its ARP cache. How will the device obtain a destination MAC address?","options":["It will send an ARP request for the MAC address of the destination device.","It will send an ARP request for the MAC address of the default gateway. ","It will send the frame and use its own MAC address as the destination.","It will send the frame with a broadcast MAC address.","It will send a request to the DNS server for the destination MAC address."],"answers":["It will send an ARP request for the MAC address of the default gateway. ","It will send the frame and use its own MAC address as the destination."]},{"question":"A network administrator is connecting two modern switches using a straight-through cable. The switches are new and have never been configured. Which three statements are correct about the final result of the connection? (Choose three.)","options":["The link between the switches will work at the fastest speed that is supported by both switches. ","The link between switches will work as full-duplex.","If both switches support different speeds, they will each work at their own fastest speed.","The auto-MDIX feature will configure the interfaces eliminating the need for a crossover cable.","The connection will not be possible unless the administrator changes the cable to a crossover cable.","The duplex capability has to be manually configured because it cannot be negotiated."],"answers":["The link between the switches will work at the fastest speed that is supported by both switches. ","The link between switches will work as full-duplex.","The auto-MDIX feature will configure the interfaces eliminating the need for a crossover cable."]},{"question":"A Layer 2 switch is used to switch incoming frames from a 1000BASE-T port to a port connected to a 100Base-T network. Which method of memory buffering would work best for this task?","options":["port-based buffering","level 1 cache buffering","shared memory buffering","fixed configuration buffering"],"answers":["shared memory buffering"]},{"question":"When would a switch record multiple entries for a single switch port in its MAC address table?","options":["when a router is connected to the switch port","when multiple ARP broadcasts have been forwarded","when another switch is connected to the switch port","when the switch is configured for Layer 3 switching"],"answers":["when another switch is connected to the switch port"]},{"question":"Which two statements describe a fixed configuration Ethernet switch? (Choose two.)","options":["The switch cannot be configured with multiple VLANs.","An SVI cannot be configured on the switch.","A fixed configuration switch may be stackable. ","The number of ports on the switch cannot be increased.","The port density of the switch is determined by the Cisco IOS."],"answers":["A fixed configuration switch may be stackable. ","The number of ports on the switch cannot be increased."]},{"question":"How does adding an Ethernet line card affect the form factor of a switch?","options":["by increasing the back plane switching speed","by expanding the port density","by making the switch stackable","by expanding the NVRAM capacity"],"answers":["by expanding the port density"]},{"question":"Which address or combination of addresses does a Layer 3 switch use to make forwarding decisions?","options":["IP address only","port address only","MAC address only","MAC and port addresses","MAC and IP addresses"],"answers":["MAC and IP addresses"]},{"question":"What statement illustrates a drawback of the CSMA/CD access method?","options":["Deterministic media access protocols slow network performance.","It is more complex than non-deterministic protocols.","Collisions can decrease network performance.","CSMA/CD LAN technologies are only available at slower speeds than other LAN technologies."],"answers":["Collisions can decrease network performance."]},{"question":"Open the PT Activity. Perform the tasks in the activity instruction and then answer the question.What destination address will PC1 include in the destination address field of the Ethernet frame that it sends to PC2?","options":["192.168.0.17","192.168.0.34","0030.a3e5.0401","00e0.b0be.8014","0007.ec35.a5c6"],"answers":["0030.a3e5.0401"]},{"question":"Which address or combination of addresses does a Layer 3 switch use to make forwarding decisions?","options":["MAC and IP addresses","MAC address only","MAC and port addresses","port address only","IP address only"],"answers":["MAC and IP addresses"]},{"question":"Launch PT. Hide and Save PTOpen the PT Activity. Perform the tasks in the activity instruction and then answer the question. What destination address will PC1 include in the destination address field of the Ethernet frame that it sends to PC2?","options":["00e0.b0be.8014","0030.a3e5.0401","192.168.0.34","192.168.0.17","0007.ec35.a5c6"],"answers":["0030.a3e5.0401"],"img":"https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/p5-exa5-ccna1-1024x549-1024x549.jpg"},{"question":"How does adding an Ethernet line card affect the form factor of a switch?","options":["by increasing the back plane switching speed","by expanding the port density","by expanding the NVRAM capacity","by making the switch stackable"],"answers":["by expanding the port density"]},{"question":"What statement illustrates a drawback of the CSMA/CD access method?","options":["Collisions can decrease network performance.","Deterministic media access protocols slow network performance.","CSMA/CD LAN technologies are only available at slower speeds than other LAN technologies.","It is more complex than non-deterministic protocols."],"answers":["Collisions can decrease network performance."]},{"question":"A network administrator issues the following commands on a Layer 3 switch. What is the administrator configuring?","options":["a Cisco Express Forwarding instance","a routed port","a trunk interface","a switched virtual interface"],"answers":["a routed port"],"img":"/src/views/screenshot/cap5.png"}]}
+{
+  "examData": {
+    "holder": "Cisco Netacad",
+    "examName": "CCNAv7: Introduction to Networks",
+    "abbreviation": "ITN",
+    "cap": 5,
+    "versionName": null,
+    "versions": [
+      5.1,
+      6
+    ],
+    "years": [
+      2020
+    ]
+  },
+  "questions": [
+    {
+      "question": "What happens to runt frames received by a Cisco Ethernet switch?",
+      "options": [
+        "The frame is dropped.",
+        "The frame is returned to the originating network device.",
+        "The frame is broadcast to all other devices on the same network.",
+        "The frame is sent to the default gateway."
+      ],
+      "answers": [
+        "The frame is dropped."
+      ]
+    },
+    {
+      "question": "What are the two sizes (minimum and maximum) of an Ethernet frame? (Choose two.)",
+      "options": [
+        "56 bytes",
+        "64 bytes",
+        "128 bytes",
+        "1024 bytes",
+        "1518 bytes"
+      ],
+      "answers": [
+        "64 bytes",
+        "1518 bytes"
+      ]
+    },
+    {
+      "question": "What statement describes Ethernet?",
+      "options": [
+        "It defines the most common LAN type in the world.",
+        "It is the required Layer 1 and 2 standard for Internet communication.",
+        "It defines a standard model used to describe how networking works.",
+        "It connects multiple sites such as routers located in different countries."
+      ],
+      "answers": [
+        "It defines the most common LAN type in the world."
+      ]
+    },
+    {
+      "question": "Which two statements describe features or functions of the logical link control sublayer in Ethernet standards? (Choose two.)",
+      "options": [
+        " Logical link control is implemented in software.",
+        "Logical link control is specified in the IEEE 802.3 standard.",
+        "The LLC sublayer adds a header and a trailer to the data.",
+        "The data link layer uses LLC to communicate with the upper layers of the protocol suite.",
+        "The LLC sublayer is responsible for the placement and retrieval of frames on and off the media."
+      ],
+      "answers": [
+        " Logical link control is implemented in software.",
+        "The data link layer uses LLC to communicate with the upper layers of the protocol suite."
+      ]
+    },
+    {
+      "question": "What statement describes a characteristic of MAC addresses?",
+      "options": [
+        "They must be globally unique.",
+        "They are only routable within the private network.",
+        "They are added as part of a Layer 3 PDU.",
+        "They have a 32-bit binary value."
+      ],
+      "answers": [
+        "They must be globally unique."
+      ]
+    },
+    {
+      "question": "Which statement is true about MAC addresses?",
+      "options": [
+        "MAC addresses are implemented by software.",
+        "A NIC only needs a MAC address if connected to a WAN.",
+        "The first three bytes are used by the vendor assigned OUI.",
+        "The ISO is responsible for MAC addresses regulations."
+      ],
+      "answers": [
+        "The first three bytes are used by the vendor assigned OUI."
+      ]
+    },
+    {
+      "question": "Which destination address is used in an ARP request frame?",
+      "options": [
+        "0.0.0.0",
+        "255.255.255.255",
+        "FFFF.FFFF.FFFF",
+        "127.0.0.1",
+        "01-00-5E-00-AA-23"
+      ],
+      "answers": [
+        "FFFF.FFFF.FFFF"
+      ]
+    },
+    {
+      "question": "What addressing information is recorded by a switch to build its MAC address table?",
+      "options": [
+        "the destination Layer 3 address of incoming packets",
+        "the destination Layer 2 address of outgoing frames",
+        "the source Layer 3 address of outgoing packets",
+        "the source Layer 2 address of incoming frames"
+      ],
+      "answers": [
+        "the source Layer 2 address of incoming frames"
+      ]
+    },
+    {
+      "question": "Refer to the exhibit. The exhibit shows a small switched network and the contents of the MAC address table of the switch. PC1 has sent a frame addressed to PC3. What will the switch do with the frame?",
+      "options": [
+        "The switch will discard the frame.",
+        "The switch will forward the frame only to port 2.",
+        "The switch will forward the frame to all ports except port 4.",
+        "The switch will forward the frame to all ports.",
+        "The switch will forward the frame only to ports 1 and 3."
+      ],
+      "answers": [
+        "The switch will forward the frame to all ports except port 4."
+      ],
+      "img": "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/i275394v1n1_207267.jpg"
+    },
+    {
+      "question": "Which switching method uses the CRC value in a frame?",
+      "options": [
+        "cut-through",
+        "fast-forward",
+        "fragment-free",
+        "store-and-forward"
+      ],
+      "answers": [
+        "store-and-forward"
+      ]
+    },
+    {
+      "question": "What is auto-MDIX?",
+      "options": [
+        "a type of Cisco switch",
+        "an Ethernet connector type",
+        "a type of port on a Cisco switch",
+        "a feature that detects Ethernet cable type"
+      ],
+      "answers": [
+        "a feature that detects Ethernet cable type"
+      ]
+    },
+    {
+      "question": "Refer to the exhibit. PC1 issues an ARP request because it needs to send a packet to PC2. In this scenario, what will happen next?",
+      "options": [
+        " PC2 will send an ARP reply with its MAC address.",
+        "RT1 will send an ARP reply with its Fa0/0 MAC address.",
+        "RT1 will send an ARP reply with the PC2 MAC address.",
+        "SW1 will send an ARP reply with the PC2 MAC address.",
+        "SW1 will send an ARP reply with its Fa0/1 MAC address."
+      ],
+      "answers": [
+        " PC2 will send an ARP reply with its MAC address."
+      ],
+      "img": "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/i209824v1n1_209824.jpg"
+    },
+    {
+      "question": "What is the aim of an ARP spoofing attack?",
+      "options": [
+        "to associate IP addresses to the wrong MAC address",
+        "to overwhelm network hosts with ARP requests",
+        "to flood the network with ARP reply broadcasts",
+        "to fill switch MAC address tables with bogus addresses"
+      ],
+      "answers": [
+        "to associate IP addresses to the wrong MAC address"
+      ]
+    },
+    {
+      "question": "What is a characteristic of port-based memory buffering?",
+      "options": [
+        "Frames in the memory buffer are dynamically linked to destination ports.",
+        "All frames are stored in a common memory buffer.",
+        "Frames are buffered in queues linked to specific ports.",
+        "All ports on a switch share a single memory buffer."
+      ],
+      "answers": [
+        "Frames are buffered in queues linked to specific ports."
+      ]
+    },
+    {
+      "question": "What is the minimum Ethernet frame size that will not be discarded by the receiver as a runt frame?",
+      "options": [
+        "64 bytes",
+        "512 bytes",
+        "1024 bytes",
+        "1500 bytes"
+      ],
+      "answers": [
+        "64 bytes"
+      ]
+    },
+    {
+      "question": "What are two potential network problems that can result from ARP operation? (Choose two.)",
+      "options": [
+        "Manually configuring static ARP associations could facilitate ARP poisoning or MAC address spoofing.",
+        "On large networks with low bandwidth, multiple ARP broadcasts could cause data communication delays. ",
+        "Network attackers could manipulate MAC address and IP address mappings in ARP messages with the intent of intercepting network traffic.",
+        "Large numbers of ARP request broadcasts could cause the host MAC address table to overflow and prevent the host from communicating on the network.",
+        "Multiple ARP replies result in the switch MAC address table containing entries that match the MAC addresses of hosts that are connected to the relevant switch port."
+      ],
+      "answers": [
+        "On large networks with low bandwidth, multiple ARP broadcasts could cause data communication delays. ",
+        "Network attackers could manipulate MAC address and IP address mappings in ARP messages with the intent of intercepting network traffic."
+      ]
+    },
+    {
+      "question": "Which statement describes the treatment of ARP requests on the local link?",
+      "options": [
+        "They must be forwarded by all routers on the local network.",
+        "They are received and processed by every device on the local network.",
+        "They are dropped by all switches on the local network.",
+        "They are received and processed only by the target device."
+      ],
+      "answers": [
+        "They are received and processed by every device on the local network."
+      ]
+    },
+    {
+      "question": "Refer to the exhibit. The switches are in their default configuration. Host A needs to communicate with host D, but host A does not have the MAC address for its default gateway. Which network hosts will receive the ARP request sent by host A?",
+      "options": [
+        "only host D",
+        "only router R1",
+        "only hosts A, B, and C",
+        "only hosts A, B, C, and D",
+        "only hosts B and C",
+        "only hosts B, C, and router R1"
+      ],
+      "answers": [
+        "only hosts B, C, and router R1"
+      ],
+      "img": "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/i275353v1n1_275353.jpg"
+    },
+    {
+      "question": "Refer to the exhibit. A switch with a default configuration connects four hosts. The ARP table for host A is shown. What happens when host A wants to send an IP packet to host D?",
+      "options": [
+        "Host A sends an ARP request to the MAC address of host D.",
+        "Host D sends an ARP request to host A.",
+        "Host A sends out the packet to the switch. The switch sends the packet only to the host D, which in turn responds.",
+        "Host A sends out a broadcast of FF:FF:FF:FF:FF:FF. Every other host connected to the switch receives the broadcast and host D responds with its MAC address."
+      ],
+      "answers": [
+        "Host A sends out a broadcast of FF:FF:FF:FF:FF:FF. Every other host connected to the switch receives the broadcast and host D responds with its MAC address."
+      ],
+      "img": "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/i274591v1n1_274591.jpg"
+    },
+    {
+      "question": "True or False?When a device is sending data to another device on a remote network, the Ethernet frame is sent to the MAC address of the default gateway.",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answers": [
+        "true"
+      ]
+    },
+    {
+      "question": "The ARP table in a switch maps which two types of address together?",
+      "options": [
+        "Layer 3 address to a Layer 2 address",
+        "Layer 3 address to a Layer 4 address",
+        "Layer 4 address to a Layer 2 address",
+        "Layer 2 address to a Layer 4 address"
+      ],
+      "answers": [
+        "Layer 3 address to a Layer 2 address"
+      ]
+    },
+    {
+      "question": "What is a characteristic of a contention-based access method?",
+      "options": [
+        "It processes more overhead than the controlled access methods do.",
+        "It has mechanisms to track the turns to access the media.",
+        "It is a nondeterministic method.",
+        "It scales very well under heavy media use."
+      ],
+      "answers": [
+        "It is a nondeterministic method."
+      ]
+    },
+    {
+      "question": "What is the purpose of the preamble in an Ethernet frame?",
+      "options": [
+        "is used as a padding for data",
+        "is used for timing synchronization",
+        "is used to identify the source address",
+        "is used to identify the destination address"
+      ],
+      "answers": [
+        "is used for timing synchronization"
+      ]
+    },
+    {
+      "question": "What is the Layer 2 multicast MAC address that corresponds to the Layer 3 IPv4 multicast address 224.139.34.56?",
+      "options": [
+        "00-00-00-0B-22-38",
+        "01-00-5E-0B-22-38",
+        "01-5E-00-0B-22-38",
+        "FE-80-00-0B-22-38",
+        "FF-FF-FF-0B-22-38"
+      ],
+      "answers": [
+        "01-00-5E-0B-22-38"
+      ]
+    },
+    {
+      "question": "Which two statements are correct about MAC and IP addresses during data transmission if NAT is not involved? (Choose two.)",
+      "options": [
+        "A packet that has crossed four routers has changed the destination IP address four times.",
+        "Destination MAC addresses will never change in a frame that goes across seven routers.",
+        "Destination and source MAC addresses have local significance and change every time a frame goes from one LAN to another. ",
+        "Destination IP addresses in a packet header remain constant along the entire path to a target host.",
+        "Every time a frame is encapsulated with a new destination MAC address, a new destination IP address is needed."
+      ],
+      "answers": [
+        "Destination and source MAC addresses have local significance and change every time a frame goes from one LAN to another. ",
+        "Destination IP addresses in a packet header remain constant along the entire path to a target host."
+      ]
+    },
+    {
+      "question": "What are two features of ARP? (Choose two.)",
+      "options": [
+        "If a host is ready to send a packet to a local destination device and it has the IP address but not the MAC address of the destination, it generates an ARP broadcast.",
+        "An ARP request is sent to all devices on the Ethernet LAN and contains the IP address of the destination host and its multicast MAC address.",
+        "When a host is encapsulating a packet into a frame, it refers to the MAC address table to determine the mapping of IP addresses to MAC addresses.",
+        "If no device responds to the ARP request, then the originating node will broadcast the data packet to all devices on the network segment.",
+        "If a device receiving an ARP request has the destination IPv4 address, it responds with an ARP reply."
+      ],
+      "answers": [
+        "If a host is ready to send a packet to a local destination device and it has the IP address but not the MAC address of the destination, it generates an ARP broadcast.",
+        "If a device receiving an ARP request has the destination IPv4 address, it responds with an ARP reply."
+      ]
+    },
+    {
+      "question": "A host is trying to send a packet to a device on a remote LAN segment, but there are currently no mappings in its ARP cache. How will the device obtain a destination MAC address?",
+      "options": [
+        "It will send an ARP request for the MAC address of the destination device.",
+        "It will send an ARP request for the MAC address of the default gateway. ",
+        "It will send the frame and use its own MAC address as the destination.",
+        "It will send the frame with a broadcast MAC address.",
+        "It will send a request to the DNS server for the destination MAC address."
+      ],
+      "answers": [
+        "It will send an ARP request for the MAC address of the default gateway. ",
+        "It will send the frame and use its own MAC address as the destination."
+      ]
+    },
+    {
+      "question": "A network administrator is connecting two modern switches using a straight-through cable. The switches are new and have never been configured. Which three statements are correct about the final result of the connection? (Choose three.)",
+      "options": [
+        "The link between the switches will work at the fastest speed that is supported by both switches. ",
+        "The link between switches will work as full-duplex.",
+        "If both switches support different speeds, they will each work at their own fastest speed.",
+        "The auto-MDIX feature will configure the interfaces eliminating the need for a crossover cable.",
+        "The connection will not be possible unless the administrator changes the cable to a crossover cable.",
+        "The duplex capability has to be manually configured because it cannot be negotiated."
+      ],
+      "answers": [
+        "The link between the switches will work at the fastest speed that is supported by both switches. ",
+        "The link between switches will work as full-duplex.",
+        "The auto-MDIX feature will configure the interfaces eliminating the need for a crossover cable."
+      ]
+    },
+    {
+      "question": "A Layer 2 switch is used to switch incoming frames from a 1000BASE-T port to a port connected to a 100Base-T network. Which method of memory buffering would work best for this task?",
+      "options": [
+        "port-based buffering",
+        "level 1 cache buffering",
+        "shared memory buffering",
+        "fixed configuration buffering"
+      ],
+      "answers": [
+        "shared memory buffering"
+      ]
+    },
+    {
+      "question": "When would a switch record multiple entries for a single switch port in its MAC address table?",
+      "options": [
+        "when a router is connected to the switch port",
+        "when multiple ARP broadcasts have been forwarded",
+        "when another switch is connected to the switch port",
+        "when the switch is configured for Layer 3 switching"
+      ],
+      "answers": [
+        "when another switch is connected to the switch port"
+      ]
+    },
+    {
+      "question": "Which two statements describe a fixed configuration Ethernet switch? (Choose two.)",
+      "options": [
+        "The switch cannot be configured with multiple VLANs.",
+        "An SVI cannot be configured on the switch.",
+        "A fixed configuration switch may be stackable. ",
+        "The number of ports on the switch cannot be increased.",
+        "The port density of the switch is determined by the Cisco IOS."
+      ],
+      "answers": [
+        "A fixed configuration switch may be stackable. ",
+        "The number of ports on the switch cannot be increased."
+      ]
+    },
+    {
+      "question": "How does adding an Ethernet line card affect the form factor of a switch?",
+      "options": [
+        "by increasing the back plane switching speed",
+        "by expanding the port density",
+        "by making the switch stackable",
+        "by expanding the NVRAM capacity"
+      ],
+      "answers": [
+        "by expanding the port density"
+      ]
+    },
+    {
+      "question": "Which address or combination of addresses does a Layer 3 switch use to make forwarding decisions?",
+      "options": [
+        "IP address only",
+        "port address only",
+        "MAC address only",
+        "MAC and port addresses",
+        "MAC and IP addresses"
+      ],
+      "answers": [
+        "MAC and IP addresses"
+      ]
+    },
+    {
+      "question": "What statement illustrates a drawback of the CSMA/CD access method?",
+      "options": [
+        "Deterministic media access protocols slow network performance.",
+        "It is more complex than non-deterministic protocols.",
+        "Collisions can decrease network performance.",
+        "CSMA/CD LAN technologies are only available at slower speeds than other LAN technologies."
+      ],
+      "answers": [
+        "Collisions can decrease network performance."
+      ]
+    },
+    {
+      "question": "Open the PT Activity. Perform the tasks in the activity instruction and then answer the question.What destination address will PC1 include in the destination address field of the Ethernet frame that it sends to PC2?",
+      "options": [
+        "192.168.0.17",
+        "192.168.0.34",
+        "0030.a3e5.0401",
+        "00e0.b0be.8014",
+        "0007.ec35.a5c6"
+      ],
+      "answers": [
+        "0030.a3e5.0401"
+      ]
+    },
+    {
+      "question": "Which address or combination of addresses does a Layer 3 switch use to make forwarding decisions?",
+      "options": [
+        "MAC and IP addresses",
+        "MAC address only",
+        "MAC and port addresses",
+        "port address only",
+        "IP address only"
+      ],
+      "answers": [
+        "MAC and IP addresses"
+      ]
+    },
+    {
+      "question": "Launch PT. Hide and Save PTOpen the PT Activity. Perform the tasks in the activity instruction and then answer the question. What destination address will PC1 include in the destination address field of the Ethernet frame that it sends to PC2?",
+      "options": [
+        "00e0.b0be.8014",
+        "0030.a3e5.0401",
+        "192.168.0.34",
+        "192.168.0.17",
+        "0007.ec35.a5c6"
+      ],
+      "answers": [
+        "0030.a3e5.0401"
+      ],
+      "img": "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/p5-exa5-ccna1-1024x549-1024x549.jpg"
+    },
+    {
+      "question": "How does adding an Ethernet line card affect the form factor of a switch?",
+      "options": [
+        "by increasing the back plane switching speed",
+        "by expanding the port density",
+        "by expanding the NVRAM capacity",
+        "by making the switch stackable"
+      ],
+      "answers": [
+        "by expanding the port density"
+      ]
+    },
+    {
+      "question": "What statement illustrates a drawback of the CSMA/CD access method?",
+      "options": [
+        "Collisions can decrease network performance.",
+        "Deterministic media access protocols slow network performance.",
+        "CSMA/CD LAN technologies are only available at slower speeds than other LAN technologies.",
+        "It is more complex than non-deterministic protocols."
+      ],
+      "answers": [
+        "Collisions can decrease network performance."
+      ]
+    },
+    {
+      "question": "A network administrator issues the following commands on a Layer 3 switch. What is the administrator configuring?",
+      "options": [
+        "a Cisco Express Forwarding instance",
+        "a routed port",
+        "a trunk interface",
+        "a switched virtual interface"
+      ],
+      "answers": [
+        "a routed port"
+      ],
+      "img": "https://ciscoanswer.vercel.app/public/screenshots/cap5.png"
+    }
+  ]
+}
