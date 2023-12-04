@@ -45,7 +45,7 @@
         <!-- Display the image if it exists -->
         <img 
           v-if="question.photo || question.img" 
-          :src="question.photo || question.img" 
+          :src="getImageUrl(question)"
           class="w-max image-q"
           ref="questionImage" 
         />
@@ -113,14 +113,14 @@ export default {
       formSubmitted: false,
       rightAnswers: [],
       dataIsReady: false,
-      link: null
+      link: null,
+      publicUrl: 'https://raw.githubusercontent.com/Matteo0099/Cisco-Training-Answer/main/public/screenshot'
     };
   },
   async created() {
     const route = useRoute();
     const { type, number } = route.params;
     const data = await import(`../../src/data/${type}/${number}.json`);
-
     this.questions = data.questions;
     this.selectedAnswers = this.questions.map(() => []);
     this.totalQuestions = this.questions.length;
@@ -152,6 +152,11 @@ export default {
       if (storedData) {
         this.selectedAnswers = JSON.parse(storedData);
       }
+    },
+    getImageUrl(question) {
+      const imageUrl = question.photo || question.img;
+      if (imageUrl && !imageUrl.includes("https://")) return this.publicUrl + imageUrl;
+      return imageUrl;
     },
     randomize() {
       this.questions.sort(() => Math.random() - 0.5);
