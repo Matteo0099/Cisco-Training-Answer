@@ -13,21 +13,19 @@
         <h1 v-if="dataIsReady" class="text-xl sm:text-2xl font-bold mt-8 mb-4">
           Remember to study all questions from the following site 
           (drag-and-drop & completion questions:
-          <a 
-            :href=link target="_blank" :target="_blank" 
+          <a :href=link target="_blank" :target="_blank" 
             class="text-blue-600 hover:underline hover:underline-offset-2">
             link site
           </a>):
         </h1>
         <p class="font-thin">complete link: </p>
-        <a 
-          :href=link target="_blank" :target="_blank" 
+        <a :href=link target="_blank" :target="_blank" 
           class="text-blue-600 hover:underline hover:underline-offset-2"> {{ link }}</a>
       </div>
 
       <div class="mt-2 text-neutral-900">
         <h1 class="my-2 mb-3 p-2 font-thin text-2xl md:text-3xl">
-          **if you have any bug, go to the bottom of the page, and click 
+          **if you have a <strong>bug</strong>, go to the bottom of the page, and click 
           on <strong class="text-red-600 font-bold">REFRESH BUTTON</strong> and you can complete the form**
         </h1>
         <h2 class="my-2 mb-3 p-2 font-thin text-lg md:text-xl">
@@ -75,7 +73,7 @@
       </ul>
 
       <!-- on submit -->
-      <button type="submit" @click="start" role="button" :disabled="formSubmitted"
+      <button type="submit" @click="submitForm" role="button" :disabled="formSubmitted"
               class="mt-6 py-3 px-4 border rounded-lg w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto">
         <span v-if="!formSubmitted">Submit</span>
         <span v-else>Submitting...</span>
@@ -132,8 +130,7 @@ export default {
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
   },
-  // localStorage saving data
-  watch: {
+  watch: { // localStorage saving data
     selectedAnswers: {
       deep: true,
       handler(newAnswers) {
@@ -142,13 +139,11 @@ export default {
     },
   },
   methods: {  
-    saveToLocalStorage(selectedAnswers) {
-      // Save selectedAnswers to localStorage
+    saveToLocalStorage(selectedAnswers) { // Save selectedAnswers to localStorage
       localStorage.setItem('selectedAnswers', JSON.stringify(selectedAnswers));
     },
     loadFromLocalStorage() {
-      // Load selectedAnswers from localStorage
-      const storedData = localStorage.getItem('selectedAnswers');
+      const storedData = localStorage.getItem('selectedAnswers'); // Load selectedAnswers from localStorage
       if (storedData) {
         this.selectedAnswers = JSON.parse(storedData);
       }
@@ -171,15 +166,13 @@ export default {
       this.formSubmitted = true;
       this.submitted = true;
       const canvas = document.getElementById('confetti-canvas');
-      setTimeout(() => {
-        this.formSubmitted = false;
-        this.hideCanvas();
-      }, 2250);
-      if(this.submitted) {
-        if(canvas) {
-          canvas.style.display = 'block';
-          canvas.style.opacity = '1';
-        }
+      if(this.correctAnswers >= 1) { // almeno 60/100
+        this.start();
+        setTimeout(() => {
+          this.formSubmitted = false;
+          this.hideCanvas();
+          this.stop();
+        }, 2500);
       }
     },
     handleScroll: function () {
@@ -196,7 +189,6 @@ export default {
         behavior: "smooth"
       });
     },
-  
     hideCanvas() {
       // Hide the canvas element by setting display to 'none' and visibility to 'hidden'
       const canvas = document.getElementById('confetti-canvas');
@@ -206,7 +198,7 @@ export default {
           canvas.style.display = 'none';
           canvas.style.opacity = '0';
         }
-      }, 500);
+      }, 1000);
     },
     checkAnswers() {
       this.correctAnswers = 0;
@@ -221,16 +213,12 @@ export default {
           ) {
             this.correctAnswers++;
             this.rightAnswers.push(true);
-          } else {
-            this.rightAnswers.push(false);
-          }
+          } else this.rightAnswers.push(false);
         } else {
           if (selected === correctAnswer[0]) {
             this.correctAnswers++;
             this.rightAnswers.push(true);
-          } else {
-            this.rightAnswers.push(false);
-          }
+          } else this.rightAnswers.push(false);
         }
       });
     },
@@ -238,13 +226,8 @@ export default {
     stop() { this.$confetti.stop(); },
     love() {
       this.$confetti.update({
-        particles: [
-          {type: 'heart'},
-          {type: 'circle'},
-        ],
-        defaultColors: [
-          'red','pink','#ba0000'
-        ],
+        particles: [{type: 'heart'},{type: 'circle'},],
+        defaultColors: ['red','pink','#ba0000'],
       });
     },
     refreshForm() {

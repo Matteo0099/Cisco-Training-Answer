@@ -5,9 +5,7 @@ import turnTop from '../components/turnTop.vue';
 <template>
   <div>
     <div class="mx-3 sm:mx-auto mt-8 min-h-screen">
-      <h1 v-if="dataIsReady" class="home text-2xl">
-        Answer of cap {{ numCap }}
-      </h1>
+      <h1 v-if="dataIsReady" class="home text-2xl"> Drag and drops of cap {{ numCap }} </h1>
       <ul class="min-h-screen list-none relative mt-4 mx-0">
         <li v-for="(question, index) in questions" :key="index" 
             class="py-4 mx-0 sm:mx-auto px-0">
@@ -32,12 +30,11 @@ import turnTop from '../components/turnTop.vue';
 
 <script>
 import { useRoute } from 'vue-router';
-
 export default {
   data() {
     return {
       photos: [],
-      questions: [],  // Changed from 'question' to 'questions'
+      questions: [],  // changed from 'question' to 'questions'
       numCap: null,
       dataIsReady: false
     };
@@ -47,7 +44,7 @@ export default {
     const route = useRoute();
     const { number } = route.params;
     const data = await import(`../../src/data/CCNA-drag-drop/${number}.json`);
-    this.questions = data.questions;  // Changed from 'this.question' to 'this.questions'
+    this.questions = data.questions;  // changed from 'this.question' to 'this.questions'
     this.numCap = data.examData.cap;
     this.dataIsReady = true;
   },
