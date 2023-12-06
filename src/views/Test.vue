@@ -166,7 +166,7 @@ export default {
       this.formSubmitted = true;
       this.submitted = true;
       const canvas = document.getElementById('confetti-canvas');
-      if(this.correctAnswers >= 1) { // almeno 60/100
+      if(this.correctAnswers >= 60) { // almeno 60/100
         this.start();
         setTimeout(() => {
           this.formSubmitted = false;
