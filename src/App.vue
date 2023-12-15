@@ -5,9 +5,11 @@
   import Footer from './components/Footer.vue';
   import btnDark from './components/btn-dark.vue';
   import DialogFixed from './components/DialogFixed.vue';
+  import { SpeedInsights } from "@vercel/speed-insights/vue";
 </script>
 
 <template>
+  <SpeedInsights/>
   <!-- 2 FIXED ELEMENTS -->
   <div class="btn-dark w-fit my-0 mr-3 mt-3 z-[9999] ml-auto lg:mt-4 lg:min-w-[116px] lg:top-[90px] lg:fixed lg:right-3 xl:right-5">
     <btnDark data-aos="zoom-in" data-aos-duration="375" data-aos-delay="125" type="button" role="button" />
