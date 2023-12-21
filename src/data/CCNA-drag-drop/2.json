@@ -10,28 +10,17 @@
   "questions": [
     {
       "question": {
-        "photo": "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/2017-05-26_100439-1.jpg"
+        "photo": "https://itexamanswers.net/wp-content/uploads/2016/03/2017-05-26_100439-1.jpg"
       }
     },
     {
       "question": {
-        "photo": "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/2017-05-26_101146.jpg"
+        "photo": "https://itexamanswers.net/wp-content/uploads/2016/03/2017-05-26_101146.jpg"
       }
     },
     {
       "question": {
-        "answer": {
-          "Tab": "Completes abbreviated commands and parameters",
-          "Ctrl-R": "returns directly to the privileged EXEC mode",
-          "Ctrl-Z": "cancels any command currently being entered and returns directly to privileged EXEC mode",
-          "Ctrl-C": "Redisplays, on a new line, the command currently being typed"
-        },
-        "photo": "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/p9-exa2-ccna1.png"
-      }
-    },
-    {
-      "question": {
-        "photo": "https://a5m9a8c3.rocketcdn.me/wp-content/uploads/2016/03/p20-exa2-ccna1.png"
+        "photo": "https://itexamanswers.net/wp-content/uploads/2016/03/p20-exa2-ccna1.png"
       }
     }
   ]

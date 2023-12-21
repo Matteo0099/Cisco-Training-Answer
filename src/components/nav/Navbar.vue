@@ -21,7 +21,7 @@ import DialogNormale from '../DialogNorm.vue';
       Chapter 1-14 
       <span class="m-0 p-0 underline">Answers</span> 
     </h1>
-    <select aria-label="select" :aria-label="select" v-model="selected" @change="changeRoute($event)" 
+    <select aria-label="select" :aria-label="select" v-model="selected" @change="changeRoute($event)" name="ITE14answ"
       class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500">
       <option disabled value="" class="bg-neutral-50 mr-auto font-sans text-lg">Select a chapter</option>
       <option 
@@ -38,7 +38,7 @@ import DialogNormale from '../DialogNorm.vue';
       chapter 1-14 
       <span class="m-0 p-0 underline">Test</span>
     </h1>
-    <select aria-label="select" :aria-label="select" v-model="selected" v-on:change="changeRoute($event)" 
+    <select aria-label="select" :aria-label="select" v-model="selected" v-on:change="changeRoute($event)" name="ITE14test"
       class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500 disabled:bg-blue-gray-50">
       <option disabled value="" class="bg-neutral-50 mr-auto font-sans text-lg">Select a chapter</option>
       <option 
@@ -56,7 +56,7 @@ import DialogNormale from '../DialogNorm.vue';
       chapter 1-11 
       <span class="m-0 p-0 underline">Answers</span> 
     </h1>
-    <select aria-label="select" :aria-label="select" v-model="selected" @change="changeRoute($event)" 
+    <select aria-label="select" :aria-label="select" v-model="selected" @change="changeRoute($event)" name="CCNA5answ"
       class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500">
       <option disabled value="" class="bg-neutral-50 mr-auto font-sans text-lg">Select a chapter</option>
       <option 
@@ -73,7 +73,7 @@ import DialogNormale from '../DialogNorm.vue';
       chapter 1-11 
       <span class="m-0 p-0 underline">Test</span> 
     </h1>
-    <select aria-label="select" :aria-label="select" v-model="selected" @change="changeRoute($event)" 
+    <select aria-label="select" :aria-label="select" v-model="selected" @change="changeRoute($event)" name="CCNA5test"
       class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500">
       <option disabled value="" class="bg-neutral-50 mr-auto font-sans text-lg">Select a chapter</option>
       <option 
@@ -92,7 +92,7 @@ import DialogNormale from '../DialogNorm.vue';
       <span class="m-0 p-0 underline">Drag and Drop </span> 
       <span class="font-thin text-md">&ensp;<sup>**</sup>NEW<sup>**</sup></span>
     </h1>
-    <select aria-label="select" :aria-label="select" v-model="selected" @change="changeRoute($event)" 
+    <select aria-label="select" :aria-label="select" v-model="selected" @change="changeRoute($event)" name="CCNA5dragdrop"
       class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500">
       <option disabled value="" class="bg-neutral-50 mr-auto font-sans text-lg">Select a chapter</option>
       <option 
@@ -144,11 +144,5 @@ export default {
 </script>
 
 <style scoped>
-select, option {
-  overflow-y: scroll !important;
-  scroll-timeline-axis: vertical !important;
-  overflow: scroll !important;
-  scrollbar-width: thin !important;
-}
-option::first-letter { text-transform: uppercase !important }
+option,select{overflow-y:scroll !important;scroll-timeline-axis:vertical !important;overflow:scroll !important;scrollbar-width:thin !important}option::first-letter{text-transform:uppercase !important}
 </style>

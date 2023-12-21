@@ -3,7 +3,7 @@
     <footer class="w-full min-h-[75px] border p-2 mt-28 mb-6 rounded-lg flex flex-col justify-center items-center text-base">
       <div class="mx-auto min-h-full leading-loose max-w-3xl py-4 px-0 text-center flex flex-col">
         <span>copyright Cisco Answer &copy; 2023</span>
-        <span>by @noyazz @Matteo0099</span>
+        <span>by @noyaz, @Matteo0099.</span>
         <!-- info -->
         <button @click="openModal2" title="More info" alt="button" role="button" aria-label="More info"
           class="py-3 px-6 border my-2 mx-auto rounded-lg hover:opacity-75 active:border-2 border-neutral-300">
@@ -45,20 +45,18 @@ export default {
   methods: {
     openModal2() {
       const dialog = document.querySelector(".modal2")
-      dialog.showModal() // Opens the modal 
+      dialog.showModal() //Opens the modal 
       dialog.addEventListener("click", e => {
         const dialogDimensions = dialog.getBoundingClientRect()
         if (
-          e.clientX < dialogDimensions.left ||
-          e.clientX > dialogDimensions.right ||
-          e.clientY < dialogDimensions.top ||
-          e.clientY > dialogDimensions.bottom
+          e.clientX < dialogDimensions.left || e.clientX > dialogDimensions.right ||
+          e.clientY < dialogDimensions.top || e.clientY > dialogDimensions.bottom
         ) dialog.close()  /*(click outside)*/
       })
     },
     closeModal2() {
       const dialog = document.querySelector(".modal2")
-      dialog.close() // Closes the modal 
+      dialog.close() //Closes the modal 
     }
   },
 }

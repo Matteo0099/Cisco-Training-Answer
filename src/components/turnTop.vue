@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- torna su -->
-    <a @click="toTop" role="link" type="button" href="#top" target="_self" class="w-full text-center">
+    <a @click="toTop" role="link" type="button" target="_self" class="w-full text-center">
       <button
         type="button" title="turn top" alt="button" role="button" aria-label="turn top"
         class="mx-auto mt-2 flex h-14 w-72 flex-row items-center justify-center rounded-lg border px-4 py-2 font-semibold hover:opacity-75 active:border-4 active:border-neutral-200"
