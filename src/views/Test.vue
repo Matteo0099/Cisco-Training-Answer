@@ -170,9 +170,15 @@ export default {
         document.querySelector('.normal-submit').innerHTML = 'Submit';
       }, 1000)
 
+      // calcolo 60% delle risposte (dinamico)
+      let count = 0; 
+      let percentageCorrected = 0;
+      for(count in this.questions) count++;
+      percentageCorrected = (count * 60) / 100;
+      
       // confetti animation
       const canvas = document.getElementById('confetti-canvas');
-      if(this.correctAnswers >= 60) { // almeno 60/100
+      if(this.correctAnswers >= percentageCorrected) { // almeno 60% delle risposte totali
         this.start();
         setTimeout(() => {
           this.formSubmitted = false;
