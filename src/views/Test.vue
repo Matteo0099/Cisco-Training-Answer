@@ -51,7 +51,7 @@
         <template v-if="question.options && question.answers">  <!--both control-->
           <template v-if="question.answers.length > 1">  <!--in cap 6 was variable "answer", didn't working XD-->
             <label v-for="(option, oIndex) in question.options" :key="oIndex" class="flex justify-start my-1 items-center pl-4 text-base sm:text-lg">
-              <input type="checkbox" :value="option" @input="saveToLocalStorage(index)" v-model="selectedAnswers[index]" :disabled="formSubmitted" />
+              <input type="checkbox" :value="option" @input="saveToLocalStorage(index)" v-model="selectedAnswers[index]"  />
               {{ option }}
             </label>
           </template>
@@ -60,8 +60,7 @@
           </template>
           <template v-else>
             <label v-for="(option, oIndex) in question.options" :key="oIndex" class="flex justify-start my-1 items-center pl-4 text-lg sm:text-xl">
-              <input type="radio" :name="`radio-${index}`" :value="option" @input="saveToLocalStorage(index)" v-model="selectedAnswers[index]"
-                :disabled="formSubmitted" />
+              <input type="radio" :name="`radio-${index}`" :value="option" @input="saveToLocalStorage(index)" v-model="selectedAnswers[index]" />
               {{ option }}
             </label>
           </template>
@@ -73,10 +72,9 @@
       </ul>
 
       <!-- on submit -->
-      <button type="submit" @click="submitForm" role="button" :disabled="formSubmitted"
+      <button type="submit" @click="submitForm" role="button" 
               class="mt-6 py-3 px-4 border rounded-lg w-72 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto">
-        <span v-if="!formSubmitted">Submit</span>
-        <span v-else>Submitting...</span>
+        <span class="normal-submit">Submit</span>
       </button>
       <!-- randomize answers -->
       <a @click="randomize" role="button"
@@ -163,8 +161,16 @@ export default {
     },
     async submitForm() {
       await this.checkAnswers();
-      this.formSubmitted = true;
-      this.submitted = true;
+
+      // check answers to test
+      document.querySelector('.normal-submit').innerHTML = '...Correction...';
+      setTimeout(() => {
+        this.formSubmitted = true;
+        this.submitted = true;
+        document.querySelector('.normal-submit').innerHTML = 'Submit';
+      }, 1000)
+
+      // confetti animation
       const canvas = document.getElementById('confetti-canvas');
       if(this.correctAnswers >= 60) { // almeno 60/100
         this.start();
