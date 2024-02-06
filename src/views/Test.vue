@@ -110,7 +110,7 @@ export default {
       rightAnswers: [],
       dataIsReady: false,
       link: null,
-      publicUrl: 'https://raw.githubusercontent.com/Matteo0099/Cisco-Training-Answer/main/public/screenshot'
+      // publicUrl: 'https://raw.githubusercontent.com/Matteo0099/Cisco-Training-Answer/main/public/screenshot'
     };
   },
   async created() {
@@ -148,7 +148,7 @@ export default {
     },
     getImageUrl(question) {
       const imageUrl = question.photo || question.img;
-      if (imageUrl && !imageUrl.includes("https://")) return this.publicUrl + imageUrl;
+      // if (imageUrl && !imageUrl.includes("https://")) return this.publicUrl + imageUrl;
       return imageUrl;
     },
     randomize() {
