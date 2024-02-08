@@ -11,24 +11,33 @@
 <template>
   <SpeedInsights/>
   <!-- 2 FIXED ELEMENTS -->
-  <div class="btn-dark w-fit my-0 mr-3 mt-3 z-[9999] ml-auto lg:mt-4 lg:min-w-[116px] lg:top-[90px] lg:fixed lg:right-3 xl:right-5">
+  <div class="btn-dark w-fit flex justify-center items-center my-0 mr-4 mt-4 z-[9999] ml-auto lg:mt-4 lg:min-w-[116px] lg:top-[115px] lg:fixed lg:right-3 xl:right-5">
     <btnDark data-aos="zoom-in" data-aos-duration="375" data-aos-delay="125" type="button" role="button" />
   </div>
   <!-- MINI DISCLAIMER -->
   <DialogFixed class="hidden lg:block z-[9999] lg:fixed lg:top-[184px] lg:right-3 xl:right-5" />
   <!-- POP UP WITH TRANSLATE CHOICE -->
   <div v-if="showPopup" ref="popUp"
-    class="pop-up font-sans w-full max-w-[135px] xl:max-w-[145px] btn-dark absolute top-2 left-4 mr-auto lg:mr-0 lg:mt-0 z-[9999]
+    class="pop-up font-sans w-full max-w-[135px] xl:max-w-[145px] btn-dark absolute top-4 left-4 mr-auto lg:mr-0 lg:mt-1 z-[9999]
           lg:top-[265px] lg:fixed lg:right-3 lg:left-auto xl:right-5 flex flex-col justify-center items-center">
     <span class="font-bold text-base">Google translate?</span>
     <div class="flex justify-center popUpbtn items-center mt-2 gap-3 w-full max-w-[125px] text-base">
       <button @click="closePopup()"
         class="rounded-md border border-gray-200 bg-neutral-50 hover:bg-neutral-200 transition-all px-3 py-2 w-full text-neutral-900">
-        NO
+        <svg width="32px" height="32px" viewBox="0 0 20 20" class="bg-red-500 rounded-md p-0.5" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" fill="none" width="20" height="20"/>
+          <g>
+          <path d="M14.95 6.46L11.41 10l3.54 3.54-1.41 1.41L10 11.42l-3.53 3.53-1.42-1.42L8.58 10 5.05 6.47l1.42-1.42L10 8.58l3.54-3.53z"/>
+          </g>
+        </svg>
       </button>
       <button ref="yesbtn"
         class="rounded-md border border-gray-200 bg-neutral-50 hover:bg-neutral-200 transition-all px-3 py-2 w-full text-neutral-900">
-        SI/YES
+        <svg width="32px" height="32px" viewBox="0 0 48 48" class="bg-green-500 rounded-md p-0.5" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="white" fill-opacity="0.01"/>
+          <path d="M14 24L15.25 25.25M44 14L24 34L22.75 32.75" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M4 24L14 34L34 14" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
       </button>
     </div>
   </div>

@@ -5,22 +5,16 @@
         :class="{ 'switch-toggle-checked': isDarkTheme }" id="button" title="Dark Mode" alt="button" role="button" @click="toggleTheme">
         <i class="bi bi-moon text-2xl sm:text3xl" role="banner"></i>
       </button> 
-      Dark mode {{ state }} 
     </div>
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  data() {
-    return {
-      userTheme: "light-theme", state: "off",
-    };
-  },
-  computed: {
-    isDarkTheme() { return this.userTheme === "dark-theme"; }
-  },
+  data() { return { userTheme: "light-theme", state: "off" } },
+  computed: { isDarkTheme() { return this.userTheme === "dark-theme"; } },
   mounted() { this.initializeTheme(); },
+  
   methods: {
     toggleTheme() {
       this.userTheme = this.isDarkTheme ? "light-theme" : "dark-theme";

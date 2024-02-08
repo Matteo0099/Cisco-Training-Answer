@@ -11,12 +11,7 @@
       <div class="mb-5 border rounded-lg p-4">
         <!-- remember where are the drag and drop question -->
         <h1 v-if="dataIsReady" class="text-xl sm:text-2xl font-bold mt-8 mb-4">
-          Remember to study all questions from the following site 
-          (drag-and-drop & completion questions:
-          <a :href=link target="_blank" :target="_blank" 
-            class="text-blue-600 hover:underline hover:underline-offset-2">
-            link site
-          </a>):
+          All questions:
         </h1>
         <p class="font-thin">complete link: </p>
         <a :href=link target="_blank" :target="_blank" 
@@ -24,14 +19,24 @@
       </div>
 
       <div class="mt-2 text-neutral-900">
-        <h1 class="my-2 mb-3 p-2 font-thin text-2xl md:text-3xl">
-          **if you have a <strong>bug</strong>, go to the bottom of the page, and click 
-          on <strong class="text-red-600 font-bold">REFRESH BUTTON</strong> and you can complete the form**
+        <h1 class="my-2 mb-3 p-2 font-thin text-xl md:text-2xl">
+          Before doing the test, click this
+          <strong class="text-red-600 font-bold">REFRESH BUTTON</strong> 
         </h1>
-        <h2 class="my-2 mb-3 p-2 font-thin text-lg md:text-xl">
+        <!-- <h2 class="my-1 p-2 font-thin text-lg md:text-xl">
           °this happen because the <i class="text-red-500 font-bold">localStorage</i> of your browser can be full.
           with that button, you clean it.
-        </h2>
+        </h2> -->
+      </div>
+      <!-- clean browser data -->
+      <div class="container mt-1 pb-8 mb-2">
+        <button type="button" role="button"
+              class="py-3 px-4 border rounded-lg w-full mt-2 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto"
+              @click="refreshForm">
+          <span>
+            clean browser cache
+            <i class="bi bi-arrow-clockwise pl-2"></i></span>
+        </button>
       </div>
       
       <!-- ************* -->
@@ -242,6 +247,7 @@ export default {
         defaultColors: ['red','pink','#ba0000'],
       });
     },
+    // clean form and browser cache
     refreshForm() {
       this.formSubmitted = false;
       this.submitted = false;
