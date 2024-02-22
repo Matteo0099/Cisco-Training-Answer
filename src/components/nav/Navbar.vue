@@ -126,8 +126,8 @@ export default {
     initializeData() {
       this.answers = this.generateData('/Answers/ITE/', 14);
       this.ite = this.generateData('/test/ITE/', 14);
-      this.answersCCNA = this.generateData('/Answers/CCNA/', 11);
-      this.ccna = this.generateData('/test/CCNA/', 11);
+      this.answersCCNA = this.generateData('/Answers/CCNA/', 12);
+      this.ccna = this.generateData('/test/CCNA/', 12);
       this.ccnaDrag = this.generateData('/DragAndDrop/CCNA-drag-drop/', 11);
     },
     generateData(basePath, count) {
