@@ -18,6 +18,13 @@ const optionsLists = document
 const secondOptionsList = document.querySelectorAll("div.thecontent.clearfix strong ~ ul")
 const brs = document.querySelectorAll('br').forEach(shitty => shitty.remove());
 
+// info box
+const infoBox = document.querySelectorAll('.message_box');
+infoBox.forEach(info => info.remove());
+// paragrafi titoli
+const h2s = document.querySelectorAll('h2');
+h2s.forEach(h2 => h2.remove());
+
 const paragraphs = document.querySelectorAll('.thecontent.clearfix p');
 paragraphs.forEach(pTag => {
     if (pTag.textContent.trim() === '' && pTag.children.length === 0) {

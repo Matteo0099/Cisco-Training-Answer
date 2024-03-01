@@ -99,7 +99,7 @@
       ]
     },
     {
-      "question": "",
+      "question": "Refer to the exhibit. A network administrator is configuring access control to switch SW1. If the administrator uses a console connection to connect to the switch, which password is needed to access user EXEC mode?",
       "options": [
         "letmein",
         "secretin",
@@ -375,7 +375,7 @@
       ]
     },
     {
-      "question": "",
+      "question": "Refer to the exhibit. If host A sends an IP packet to host B, what will the destination address be in the frame when it leaves host A?",
       "options": [
         "DD:DD:DD:DD:DD:DD",
         "172.168.10.99",
@@ -427,7 +427,7 @@
       ]
     },
     {
-      "question": "",
+      "question": "Refer to the exhibit. The network administrator for a small advertising company has chosen to use the 192.168.5.96/27 network for internal LAN addressing. As shown in the exhibit, a static IP address is assigned to the company web server. However, the web server cannot access the Internet. The administrator verifies that local workstations with IP addresses that are assigned by a DHCP server can access the Internet, and the web server is able to ping local workstations. Which component is incorrectly configured?",
       "options": [
         "subnet mask",
         "DNS address",
@@ -465,7 +465,7 @@
       ]
     },
     {
-      "question": "",
+      "question": "Refer to the exhibit. What will be the result of entering this configuration the next time a network administrator connects a console cable to the router and no additional commands have been entered?",
       "options": [
         "The administrator will be required to enter Cisco123.",
         "The administrator will be required to enter Cisco234.",
@@ -1063,7 +1063,7 @@
       ]
     },
     {
-      "question": "",
+      "question": "Refer to the exhibit. A network administrator is configuring access control to switch SW1. If the administrator has already logged into a Telnet session on the switch, which password is needed to access privileged EXEC mode?",
       "options": [
         "letmein",
         "secretin",
@@ -1075,7 +1075,7 @@
       ]
     },
     {
-      "question": "",
+      "question": "Match each item to the type of topology diagram on which it is typically identified. (Not all options are used.) Question:",
       "options": [
         "physical topology diagramlocation of a desktop PC in a classroompath of cables that connect rooms to wiring closets",
         "logical topology diagramIP address of a server"
@@ -3629,7 +3629,7 @@
       ]
     },
     {
-      "question": "",
+      "question": "Refer to the exhibit. A company uses the address block of 128.107.0.0/16 for its network. What subnet mask would provide the maximum number of equal size subnets while providing enough host addresses for each subnet in the exhibit?",
       "options": [
         "255.255.255.192",
         "255.255.255.0",
