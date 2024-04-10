@@ -18,20 +18,20 @@
           class="text-blue-600 hover:underline hover:underline-offset-2"> {{ link }}</a>
       </div>
 
-      <div class="mt-2 text-neutral-900">
-        <h1 class="my-2 mb-3 p-2 font-thin text-xl md:text-2xl">
-          Before doing the test, click this
-          <strong class="text-red-600 font-bold">REFRESH BUTTON</strong> 
+      <div class="mt-8 mb-3">
+        <h1 class="p-1 font-thin text-xl md:text-2xl">
+          !After multiple test, click this to prevent browser fault! <br>
+          <strong class="text-red-600 font-bold">
+            <i class="bi bi-arrow-down pl-2"></i>
+            REFRESH BUTTON
+            <i class="bi bi-arrow-down pl-2"></i>
+          </strong> 
         </h1>
-        <!-- <h2 class="my-1 p-2 font-thin text-lg md:text-xl">
-          °this happen because the <i class="text-red-500 font-bold">localStorage</i> of your browser can be full.
-          with that button, you clean it.
-        </h2> -->
       </div>
       <!-- clean browser data -->
       <div class="container mt-1 pb-8 mb-2">
         <button type="button" role="button"
-              class="py-3 px-4 border rounded-lg w-full mt-2 active:border-4 font-semibold active:border-neutral-200 hover:opacity-75 h-14 mx-auto"
+              class="py-3 px-4 border rounded-lg border-neutral-400 w-full mt-2 active:border-4 font-semibold active:border-neutral-300 hover:opacity-75 h-14 mx-auto"
               @click="refreshForm">
           <span>
             clean browser cache
@@ -255,6 +255,8 @@ export default {
       this.correctAnswers = 0;
       this.rightAnswers = [];
       localStorage.removeItem('selectedAnswers');
+      localStorage.clear();
+      window.localStorage.clear();
     },
   },
   computed: {
