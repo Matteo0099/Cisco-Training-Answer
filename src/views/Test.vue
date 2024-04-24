@@ -69,10 +69,12 @@
               {{ option }}
             </label>
           </template>
-          <p v-if="submitted && !rightAnswers[index]"
-            class="Wrong list-disc text-xl md:text-2xl text-red-500 font-semibold pl-3 pt-1.5">
-            {{ question.answers }}
-          </p>
+          <div class="container ml-0 mr-auto min-h-[75px] lg:min-h-[32.5px]">
+            <p v-if="submitted && !rightAnswers[index]"
+              class="Wrong list-disc text-xl md:text-2xl text-red-500 font-semibold pl-3 pt-1.5">
+              {{ question.answers }}
+            </p>
+          </div>
         </template>
       </ul>
 
