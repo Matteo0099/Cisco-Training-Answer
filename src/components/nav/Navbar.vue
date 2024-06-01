@@ -19,7 +19,7 @@ import DialogNormale from '../DialogNorm.vue';
     <h1 class="mt-16 pb-2 text-lg sm:text-xl lg:text-2xl">
       <span class="text-red-500 font-bold">ITE</span>
       Chapter 1-14 
-      <span class="m-0 p-0 underline">Answers</span> 
+      <span class="m-0 p-0 font-bold text-blue-700">Answers</span> 
     </h1>
     <select aria-label="select" :aria-label="select" v-model="selected" @change="changeRoute($event)" name="ITE14answ"
       class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -36,7 +36,7 @@ import DialogNormale from '../DialogNorm.vue';
     <h1 class="mt-10 pb-2 text-lg sm:text-xl lg:text-2xl">
       <span class="text-red-500 font-bold">ITE </span>
       chapter 1-14 
-      <span class="m-0 p-0 underline">Test</span>
+      <span class="m-0 p-0 font-bold text-blue-700">Test</span>
     </h1>
     <select aria-label="select" :aria-label="select" v-model="selected" v-on:change="changeRoute($event)" name="ITE14test"
       class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500 disabled:bg-blue-gray-50">
@@ -53,8 +53,8 @@ import DialogNormale from '../DialogNorm.vue';
     <!-- answers CCNA -->
     <h1 class="mt-10 pb-2 text-lg sm:text-xl lg:text-2xl">
       <span class="text-red-500 font-bold">CCNA </span>
-      chapter 1-11 
-      <span class="m-0 p-0 underline">Answers</span> 
+      chapter 1-11 (12,13 for <span class="underline">final exam</span>) 
+      <span class="m-0 p-0 font-bold text-blue-700">Answers</span> 
     </h1>
     <select aria-label="select" :aria-label="select" v-model="selected" @change="changeRoute($event)" name="CCNA5answ"
       class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -70,8 +70,8 @@ import DialogNormale from '../DialogNorm.vue';
     <!-- test CCNA -->
     <h1 class="mt-10 pb-2 text-lg sm:text-xl lg:text-2xl">
       <span class="text-red-500 font-bold">CCNA </span>
-      chapter 1-11 
-      <span class="m-0 p-0 underline">Test</span> 
+      chapter 1-11 (12,13 for <span class="underline">final exam</span>) 
+      <span class="m-0 p-0 font-bold text-blue-700">Test</span> 
     </h1>
     <select aria-label="select" :aria-label="select" v-model="selected" @change="changeRoute($event)" name="CCNA5test"
       class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -88,9 +88,8 @@ import DialogNormale from '../DialogNorm.vue';
     <!-- drag and drop CCNA -->
     <h1 class="mt-10 pb-2 text-lg sm:text-xl lg:text-2xl">
       <span class="text-red-500 font-bold">CCNA </span>
-      chapter 1-11 
-      <span class="m-0 p-0 underline">Drag and Drop </span> 
-      <span class="font-thin text-md">&ensp;<sup>**</sup>NEW<sup>**</sup></span>
+      chapter 1-11 (12,13 for <span class="underline">final exam</span>) 
+      <span class="m-0 p-0 font-bold text-blue-700">Drag and Drop<sup>*</sup></span>
     </h1>
     <select aria-label="select" :aria-label="select" v-model="selected" @change="changeRoute($event)" name="CCNA5dragdrop"
       class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -126,9 +125,9 @@ export default {
     initializeData() {
       this.answers = this.generateData('/Answers/ITE/', 14);
       this.ite = this.generateData('/test/ITE/', 14);
-      this.answersCCNA = this.generateData('/Answers/CCNA/', 12);
-      this.ccna = this.generateData('/test/CCNA/', 12);
-      this.ccnaDrag = this.generateData('/DragAndDrop/CCNA-drag-drop/', 12);
+      this.answersCCNA = this.generateData('/Answers/CCNA/', 13);
+      this.ccna = this.generateData('/test/CCNA/', 13);
+      this.ccnaDrag = this.generateData('/DragAndDrop/CCNA-drag-drop/', 13);
     },
     generateData(basePath, count) {
       return Array.from({ length: count }, (_, i) => ({
